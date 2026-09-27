@@ -1,0 +1,333 @@
+import { usePageTitle, usePageMeta } from '@autional-cn/shared';
+import {
+	useAuditFindings,
+	useComplianceStatus,
+	useSecurityScore,
+	usePublicCertifications,
+} from '@/hooks/useTrustApi';
+import { PageHeader, SectionCard, StatusBadge, EmptyState } from '@autional-cn/ui';
+import { useTranslation } from 'react-i18next';
+import {
+	Shield,
+	FileCheck,
+	Lock,
+	Globe,
+	CheckCircle2,
+	Calendar,
+	ExternalLink,
+	Loader2,
+	AlertTriangle,
+	Award,
+	FileText,
+} from 'lucide-react';
+
+const certIcons: Record<string, React.ComponentType<{ className?: string }>> = {
+	iso27001: FileCheck,
+	soc2: Shield,
+	gdpr: Lock,
+	djbh: Globe,
+};
+const certKeys = ['iso27001', 'soc2', 'gdpr', 'djbh'] as const;
+
+export default function CompliancePage() {
+	const { t, i18n } = useTranslation();
+	usePageTitle(t('compliance.title'));
+	usePageMeta(
+		i18n.language === 'zh-CN'
+			? 'Autional 合规认证 — ISO 27001、SOC 2 Type II、GDPR、等保三级等权威安全与合规认证详情。'
+			: 'Autional Compliance Certifications — ISO 27001, SOC 2 Type II, GDPR, DJCP Level 3, and other authoritative security and compliance certification details.',
+	);
+
+	const { data: findingsData, isLoading, isError } = useAuditFindings(undefined, undefined, 1, 5);
+	const { data: statusData } = useComplianceStatus();
+	const { data: scoreData } = useSecurityScore();
+	const { data: certsData, isLoading: certsLoading } = usePublicCertifications();
+	const publicScore = scoreData?.overallScore ?? null;
+	const publicStandards = (statusData as any)?.frameworks_enabled ?? [];
+	const apiCerts = certsData?.items?.length ? certsData.items : null;
+
+	return (
+		<div className="px-4 py-12 sm:px-6 lg:px-8">
+			<div className="mx-auto max-w-7xl">
+				<PageHeader title={t('compliance.title')} subtitle={t('compliance.subtitle')} />
+
+				{/* Dynamic Compliance Score */}
+				{publicScore != null && (
+					<div className="mt-8 rounded-xl border border-primary-200 bg-gradient-to-br from-primary-50 to-white p-6 dark:border-primary-800 dark:from-primary-900/20 dark:to-slate-900">
+						<div className="flex flex-col items-start gap-4 sm:flex-row sm:items-center sm:justify-between">
+							<div className="flex items-center gap-4">
+								<div className="flex h-14 w-14 items-center justify-center rounded-xl bg-primary-100 dark:bg-primary-800">
+									<Award className="h-7 w-7 text-primary-600" />
+								</div>
+								<div>
+									<h2 className="text-lg font-bold text-neutral-900 dark:text-white">
+										{t('compliance.liveScore', '实时合规评分')}
+									</h2>
+									<p className="text-sm text-neutral-500 dark:text-neutral-400">
+										{t('compliance.liveScoreDesc', '当前系统的安全合规指标综合评分')}
+									</p>
+								</div>
+							</div>
+							<div className="flex items-baseline gap-2">
+								<span className="text-4xl font-bold text-primary-600">{publicScore}</span>
+								<span className="text-lg text-neutral-400">/ 100</span>
+							</div>
+						</div>
+						{publicStandards.length > 0 && (
+							<div className="mt-4 flex flex-wrap gap-2">
+								{publicStandards.map((s: string) => (
+									<span
+										key={s}
+										className="rounded-full bg-primary-100 px-3 py-1 text-xs font-medium text-primary-700 dark:bg-primary-800 dark:text-primary-300"
+									>
+										{s}
+									</span>
+								))}
+							</div>
+						)}
+					</div>
+				)}
+
+				{/* Certifications */}
+				<div className="mt-12 space-y-8">
+					{apiCerts && apiCerts.length > 0 && (
+						<div className="mb-4 rounded-lg border border-primary-200 bg-primary-50 px-4 py-2 text-xs text-primary-700 dark:border-primary-800 dark:bg-primary-900/20">
+							{t('compliance.liveCertData', '以下数据来自认证管理 API，实时同步')}
+						</div>
+					)}
+					{apiCerts && apiCerts.length > 0
+						? apiCerts.map((cert) => (
+								<SectionCard key={cert.framework || cert.auditor} padding="lg">
+									<div className="flex flex-col gap-6 md:flex-row md:items-start">
+										<div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-xl bg-primary-50 dark:bg-primary-900/20">
+											<FileText className="h-7 w-7 text-primary-600" />
+										</div>
+										<div className="flex-1">
+											<div className="flex flex-wrap items-center gap-3">
+												<h2 className="text-xl font-bold text-neutral-900 dark:text-white">
+													{cert.framework || cert.auditor}
+												</h2>
+												<StatusBadge variant="success">
+													<CheckCircle2 className="h-3.5 w-3.5" />
+													{t('common.certified')}
+												</StatusBadge>
+											</div>
+											<div className="mt-3 grid gap-2 text-sm text-neutral-600 dark:text-neutral-400 sm:grid-cols-3">
+												{cert.auditor && (
+													<div>
+														<span className="text-neutral-400 dark:text-neutral-500">
+															{t('common.auditor')}:{' '}
+														</span>
+														<span className="text-neutral-700 dark:text-neutral-300">
+															{cert.auditor}
+														</span>
+													</div>
+												)}
+												{cert.criteriaScopes && (
+													<div>
+														<span className="text-neutral-400 dark:text-neutral-500">
+															{t('common.scope')}:{' '}
+														</span>
+														<span className="text-neutral-700 dark:text-neutral-300">
+															{cert.criteriaScopes}
+														</span>
+													</div>
+												)}
+												<div className="flex items-center gap-1">
+													<Calendar className="h-3.5 w-3.5 text-neutral-400" />
+													{cert.lastAuditedDate && <span>{cert.lastAuditedDate}</span>}
+													{cert.nextAuditDate && <span> – {cert.nextAuditDate}</span>}
+												</div>
+											</div>
+											{cert.certificateUrl && (
+												<a
+													href={cert.certificateUrl}
+													target="_blank"
+													rel="noopener noreferrer"
+													className="mt-4 inline-flex items-center gap-1 text-sm text-primary-600 hover:text-primary-700"
+												>
+													{t('common.viewCertificate')} <ExternalLink className="h-3 w-3" />
+												</a>
+											)}
+										</div>
+									</div>
+								</SectionCard>
+							))
+						: certKeys.map((key) => {
+								const cert = {
+									name: t(`compliance.certifications.${key}.name`),
+									status: t(`compliance.certifications.${key}.status`),
+									certNo: t(`compliance.certifications.${key}.certNo`),
+									validFrom: t(`compliance.certifications.${key}.validFrom`),
+									validTo: t(`compliance.certifications.${key}.validTo`),
+									scope: t(`compliance.certifications.${key}.scope`),
+									controls: t(`compliance.certifications.${key}.controls`, {
+										returnObjects: true,
+									}) as string[],
+								};
+								const Icon = certIcons[key];
+								return (
+									<SectionCard key={key} padding="lg">
+										<div className="flex flex-col gap-6 md:flex-row md:items-start">
+											<div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-xl bg-primary-50 dark:bg-primary-900/20">
+												<Icon className="h-7 w-7 text-primary-600" />
+											</div>
+											<div className="flex-1">
+												<div className="flex flex-wrap items-center gap-3">
+													<h2 className="text-xl font-bold text-neutral-900 dark:text-white">
+														{cert.name}
+													</h2>
+													<StatusBadge
+														variant={
+															cert.status === '未认证' || cert.status === 'Not Certified'
+																? 'neutral'
+																: 'success'
+														}
+													>
+														{cert.status !== '未认证' && cert.status !== 'Not Certified' && (
+															<CheckCircle2 className="h-3.5 w-3.5" />
+														)}
+														{cert.status}
+													</StatusBadge>
+												</div>
+												<div className="mt-3 grid gap-2 text-sm text-neutral-600 dark:text-neutral-400 sm:grid-cols-3">
+													<div>
+														<span className="text-neutral-400 dark:text-neutral-500">
+															{t('common.certNo')}
+														</span>
+														<span className="font-mono text-neutral-700 dark:text-neutral-300">
+															{cert.certNo}
+														</span>
+													</div>
+													<div className="flex items-center gap-1">
+														<Calendar className="h-3.5 w-3.5 text-neutral-400" />
+														<span>
+															{t('common.validPeriod')}
+															{cert.validFrom} – {cert.validTo}
+														</span>
+													</div>
+												</div>
+												<p className="mt-4 text-sm leading-relaxed text-neutral-600 dark:text-neutral-300">
+													{cert.scope}
+												</p>
+												<div className="mt-5">
+													<h3 className="text-sm font-semibold text-neutral-900 dark:text-white">
+														{t('common.controlsCovered')}
+													</h3>
+													<div className="mt-3 grid gap-2 sm:grid-cols-2 lg:grid-cols-3">
+														{cert.controls.map((ctrl) => (
+															<div
+																key={ctrl}
+																className="flex items-center gap-2 text-sm text-neutral-600 dark:text-neutral-400"
+															>
+																<CheckCircle2 className="h-4 w-4 shrink-0 text-success" />
+																{ctrl}
+															</div>
+														))}
+													</div>
+												</div>
+											</div>
+										</div>
+									</SectionCard>
+								);
+							})}
+				</div>
+
+				{/* Dynamic Audit Findings */}
+				<div className="mt-12">
+					<h2 className="text-xl font-bold text-neutral-900 dark:text-white">
+						{t('compliance.latestFindings')}
+					</h2>
+					<p className="mt-1 text-sm text-neutral-500 dark:text-neutral-400">
+						{t('compliance.findingsDesc')}
+					</p>
+
+					{isLoading && (
+						<div className="mt-4 flex items-center gap-2 text-sm text-neutral-500 dark:text-neutral-400">
+							<Loader2 className="h-4 w-4 animate-spin" />
+							{t('compliance.loadingFindings')}
+						</div>
+					)}
+
+					{isError && (
+						<div className="mt-4 rounded-lg border border-neutral-200 bg-neutral-50 p-4 text-sm text-neutral-500 dark:border-neutral-800 dark:bg-slate-900/50">
+							<AlertTriangle className="mb-1 inline h-4 w-4" />
+							{t('compliance.findingsLoadFailed')}
+						</div>
+					)}
+
+					{findingsData && findingsData.items.length > 0 && (
+						<div className="mt-4 space-y-3">
+							{findingsData.items.map((finding) => {
+								const severity = finding.severity?.toLowerCase();
+								const variant =
+									severity === 'critical'
+										? 'danger'
+										: severity === 'high'
+											? 'warning'
+											: severity === 'medium'
+												? 'info'
+												: 'neutral';
+								return (
+									<div
+										key={finding.id}
+										className="flex flex-col gap-2 rounded-xl border border-neutral-200 bg-white p-4 dark:border-neutral-800 dark:bg-slate-900 sm:flex-row sm:items-center sm:justify-between"
+									>
+										<div className="flex-1">
+											<div className="flex flex-wrap items-center gap-2">
+												<span className="text-sm font-semibold text-neutral-900 dark:text-white">
+													{finding.title}
+												</span>
+												<StatusBadge variant={variant}>{finding.severity}</StatusBadge>
+												<StatusBadge variant="neutral">{finding.status}</StatusBadge>
+											</div>
+											<p className="mt-1 text-xs text-neutral-500 dark:text-neutral-400">
+												{t('common.controlType')}
+												{finding.controlType} · {t('common.controlId')}
+												{finding.controlId}
+											</p>
+										</div>
+										<div className="text-xs text-neutral-400 dark:text-neutral-500">
+											{t('common.dueDate')}
+											{finding.dueDate || '—'}
+										</div>
+									</div>
+								);
+							})}
+						</div>
+					)}
+
+					{findingsData && findingsData.items.length === 0 && (
+						<div className="mt-4">
+							<EmptyState
+								title={t('compliance.noFindings')}
+								description={t('compliance.noFindingsDesc')}
+								icon={<CheckCircle2 className="h-6 w-6 text-success" />}
+							/>
+						</div>
+					)}
+				</div>
+
+				<div className="mt-12 rounded-xl border border-primary-200 bg-primary-50 p-6 dark:border-primary-800 dark:bg-primary-900/20">
+					<div className="flex flex-col items-start gap-4 sm:flex-row sm:items-center sm:justify-between">
+						<div>
+							<h3 className="text-base font-semibold text-primary-900 dark:text-primary-200">
+								{t('compliance.needReport')}
+							</h3>
+							<p className="mt-1 text-sm text-primary-700 dark:text-primary-300">
+								{t('compliance.needReportDesc')}
+							</p>
+						</div>
+						<a
+							href={`mailto:tianv@tianv.com?subject=${encodeURIComponent(i18n.language === 'zh-CN' ? '合规报告申请' : 'Compliance Report Request')}`}
+							className="inline-flex shrink-0 items-center gap-2 rounded-md bg-primary-600 px-4 py-2 text-sm font-medium text-white transition-colors hover:bg-primary-700"
+						>
+							{t('compliance.applyReport')}
+							<ExternalLink className="h-4 w-4" />
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	);
+}

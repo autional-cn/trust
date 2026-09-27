@@ -1,0 +1,1432 @@
+{
+  "nav": {
+    "overview": "总览",
+    "compliance": "合规认证",
+    "security": "安全架构",
+    "dataResidency": "数据驻留",
+    "auditReports": "审计报告",
+    "incidents": "事件响应",
+    "privacy": "隐私政策",
+    "subprocessors": "子处理商",
+    "vulnerabilityDisclosure": "漏洞披露",
+    "storageSecurity": "存储安全",
+    "securityAlerts": "安全告警"
+  },
+  "layout": {
+    "backToTop": "回到顶部",
+    "trustCenter": "Trust Center",
+    "description": "透明、可信、可验证的安全与合规信息平台。",
+    "security": "安全",
+    "compliance": "合规",
+    "authms": "Autional",
+    "officialSite": "官网",
+    "systemStatus": "系统状态",
+    "developerDocs": "开发者文档"
+  },
+  "overview": {
+    "title": "安全与合规",
+    "subtitle": "安全不是功能，而是 Autional 的基石。我们采用零信任架构，通过多项国际安全认证，确保您的数据安全与合规。",
+    "securityArchitecture": "安全技术架构",
+    "quickLinks": "快速入口",
+    "complianceChecklist": "合规控制项清单",
+    "needReport": "需要合规报告？",
+    "needReportDesc": "用户可获取 SOC 2 报告、渗透测试摘要、数据处理协议 (DPA) 等合规文档。",
+    "requestDoc": "申请合规文档",
+    "loadingStatus": "正在加载实时合规状态...",
+    "loadFailed": "实时合规状态加载失败，显示静态参考信息。",
+    "lastAudit": "上次审计",
+    "lastAuditLine": "上次审计：{{date}} · 待处理问题：{{count}} 项",
+    "openIssues": "待处理问题",
+    "securityScore": "安全评分",
+    "securityScoreDesc": "基于实时合规状态与审计发现的综合安全评分。",
+    "calculatedAt": "计算时间",
+    "trustCenterBadge": "Trust Center",
+    "certifications": {
+      "iso27001": {
+        "name": "ISO 27001",
+        "desc": "未认证"
+      },
+      "soc2": {
+        "name": "SOC 2 Type II",
+        "desc": "未认证"
+      },
+      "gdpr": {
+        "name": "GDPR",
+        "desc": "未认证"
+      },
+      "djbh": {
+        "name": "等保三级",
+        "desc": "未认证"
+      }
+    },
+    "pillars": {
+      "endToEndEncryption": {
+        "title": "端到端加密",
+        "desc": "传输层 TLS 1.3，静态数据 AES-256 加密，密钥由 HSM 安全模块管理。"
+      },
+      "zeroTrust": {
+        "title": "零信任架构",
+        "desc": "永不信任，始终验证。基于设备指纹、IP 信誉、行为生物特征的风险评分模型。"
+      },
+      "immutableAudit": {
+        "title": "审计日志不可篡改",
+        "desc": "所有关键操作记录到审计日志，并通过哈希链验证确保日志完整性。"
+      },
+      "highAvailability": {
+        "title": "高可用与灾备",
+        "desc": "多区域部署、自动故障转移、RPO < 1分钟、RTO < 5分钟。"
+      },
+      "soc247": {
+        "title": "7x24 安全运营",
+        "desc": "专属安全运营中心 (SOC) 持续监控威胁情报，平均检测时间 (MTTD) < 15 分钟。"
+      },
+      "penTest": {
+        "title": "渗透测试",
+        "desc": "每季度第三方渗透测试，年度红蓝对抗演练，漏洞赏金计划持续运行。"
+      }
+    },
+    "quickLinkItems": {
+      "complianceDetail": {
+        "title": "合规认证详情",
+        "desc": "查看所有安全认证的详细信息与有效期。"
+      },
+      "auditDownload": {
+        "title": "审计报告下载",
+        "desc": "获取 SOC 2、渗透测试摘要及数据处理协议。"
+      },
+      "dataResidency": {
+        "title": "数据驻留",
+        "desc": "了解数据存储位置、跨境传输与留存策略。"
+      },
+      "incidents": {
+        "title": "事件响应",
+        "desc": "查看安全事件时间线与响应流程。"
+      }
+    },
+    "checklistItems": [
+      "数据分类与分级保护",
+      "访问控制最小权限原则",
+      "定期身份与权限复核",
+      "安全事件响应预案 (IRP)",
+      "业务连续性计划 (BCP)",
+      "供应商安全评估",
+      "员工背景调查与安全意识培训",
+      "代码安全审计与依赖漏洞扫描"
+    ]
+  },
+  "security": {
+    "title": "安全架构",
+    "subtitle": "纵深防御、零信任、加密优先 — 我们的安全架构在每个层面保护您的数据。",
+    "zeroTrust": "零信任安全架构",
+    "zeroTrustDesc": "Autional 采用零信任（Zero Trust）安全模型，核心原则为「永不信任，始终验证」。所有访问请求无论来源内外网，均须经过身份验证、设备信任评估与动态授权。",
+    "encryption": "端到端加密",
+    "encryptionDesc": "从数据传输到静态存储，全链路采用行业领先的加密标准，确保数据在任一状态下均受到保护。",
+    "infrastructure": "基础设施安全",
+    "infrastructureDesc": "多区域云基础设施部署，结合纵深防御策略，构建高可用、抗攻击的运行环境。",
+    "observability": "审计与可观测性",
+    "observabilityDesc": "全量操作可追溯，审计日志不可篡改，为安全事件调查与合规审计提供完整证据链。",
+    "securityPrograms": "安全计划",
+    "penTest": "第三方渗透测试",
+    "penTestDesc": "每季度聘请国际知名安全厂商进行黑盒/灰盒渗透测试，覆盖 Web 应用、API、移动客户端与云基础设施。",
+    "bugBounty": "漏洞赏金计划",
+    "bugBountyDesc": "通过公开漏洞披露平台接受全球安全研究者的漏洞报告，高危漏洞平均修复时间（MTTR）< 48 小时。",
+    "codeAudit": "代码安全审计",
+    "codeAuditDesc": "所有代码合并前须通过 SAST（静态分析）、SCA（依赖扫描）与密钥泄露检测三道关卡。",
+    "soc247": "7x24 SOC 运营",
+    "soc247Desc": "专属安全运营中心持续监控全球威胁情报，平均检测时间（MTTD）< 15 分钟，平均响应时间（MTTR）< 1 小时。",
+    "vulnerabilityDisclosure": "发现安全漏洞？",
+    "vulnerabilityDisclosureDesc": "我们欢迎负责任的安全披露。请通过  与我们联系，通常在 24 小时内确认收到。",
+    "items": {
+      "zeroTrust": [
+        "最小权限原则（PoLP）—— 默认拒绝所有访问",
+        "微隔离（Micro-segmentation）—— 服务间通信强制 mTLS",
+        "动态风险评估 —— 基于设备指纹、IP 信誉、行为生物特征的实时评分",
+        "持续验证 —— 会话周期内周期性重新评估信任等级"
+      ],
+      "encryption": [
+        "传输加密：TLS 1.3（强制前向保密 PFS）",
+        "静态加密：AES-256-GCM",
+        "密钥管理：HSM（硬件安全模块）托管，支持自动轮换",
+        "数据库加密：列级加密 + TDE（透明数据加密）"
+      ],
+      "infrastructure": [
+        "多可用区（Multi-AZ）部署，自动故障转移",
+        "DDoS 防护与 WAF 层过滤",
+        "容器运行时安全扫描与镜像签名验证",
+        "VPC 网络隔离与安全组最小开放"
+      ],
+      "observability": [
+        "审计日志哈希链验证，防止事后篡改",
+        "SIEM 集成，实时安全事件关联分析",
+        "全链路分布式追踪（OpenTelemetry）",
+        "异常行为检测（UEBA）与自动告警"
+      ]
+    }
+  },
+  "dataResidency": {
+    "title": "数据驻留",
+    "subtitle": "您的数据，您的选择。Autional 在全球多个区域部署数据中心，支持数据主权与合规驻留要求。",
+    "regionTitle": "全球数据中心",
+    "regionTable": {
+      "region": "区域",
+      "location": "数据中心位置",
+      "status": "状态",
+      "features": "关键特性"
+    },
+    "commitments": "数据驻留承诺",
+    "transparency": "数据存储位置透明",
+    "transparencyDesc": "在租户创建时明确告知数据将存储的地理区域，支持按应用粒度选择数据中心。",
+    "noCrossBorder": "默认数据不出境",
+    "noCrossBorderDesc": "对于中国大陆租户，默认数据存储于境内数据中心，未经明确授权不跨境传输。",
+    "crossBorderCompliance": "跨境传输合规",
+    "crossBorderComplianceDesc": "当数据需要跨境时，采用标准合同条款（SCC）、约束性公司规则（BCR）或当地法律认可的合法机制。",
+    "retention": "数据保留与删除",
+    "retentionDesc": "支持按租户策略配置数据保留期限，到期自动归档或安全擦除，满足 GDPR 「被遗忘权」。",
+    "checklist": "合规检查清单",
+    "regions": [
+      {
+        "code": "CN-NORTH",
+        "name": "中国大陆",
+        "location": "北京 / 上海 / 广州",
+        "features": [
+          "等保三级备案",
+          "数据不出境",
+          "本地化支持"
+        ]
+      },
+      {
+        "code": "AP-SOUTHEAST",
+        "name": "亚太地区",
+        "location": "新加坡 / 东京 / 悉尼",
+        "features": [
+          "GDPR 兼容",
+          "低延迟覆盖东南亚",
+          "多可用区"
+        ]
+      },
+      {
+        "code": "EU-WEST",
+        "name": "欧洲",
+        "location": "法兰克福 / 阿姆斯特丹 / 都柏林",
+        "features": [
+          "GDPR 完全合规",
+          "数据主权",
+          "SCC 标准合同条款"
+        ]
+      },
+      {
+        "code": "US-EAST",
+        "name": "美国东部",
+        "location": "弗吉尼亚 / 俄亥俄",
+        "features": [
+          "SOC 2 认证区域",
+          "高可用冗余",
+          " FedRAMP Ready"
+        ]
+      },
+      {
+        "code": "US-WEST",
+        "name": "美国西部",
+        "location": "俄勒冈 / 加利福尼亚",
+        "features": [
+          "灾难恢复站点",
+          "跨区域复制",
+          "低延迟美西"
+        ]
+      }
+    ],
+    "checklistItems": [
+      "数据分类与分级存储策略",
+      "跨境数据传输合法性审查",
+      "数据主体访问与删除请求",
+      "数据保留期限自动化执行",
+      "备份数据地理位置隔离",
+      "第三方子处理商数据驻留审查",
+      "数据主权法律变更跟踪",
+      "数据泄露跨境通报机制"
+    ]
+  },
+  "auditReports": {
+    "title": "审计报告",
+    "subtitle": "透明即信任。我们定期接受独立审计，并将报告向客户开放，以支持您的内部合规与安全评估。",
+    "penTestReports": "渗透测试报告",
+    "penTestDesc": "来自合规系统的实时报告列表（需登录查看）",
+    "labels": {
+      "conductedAt": "执行日期：",
+      "severity": "严重级别：",
+      "nextTest": "下次测试："
+    },
+    "loadingPenTest": "加载渗透测试报告...",
+    "penTestLoadFailed": "渗透测试报告加载失败，请登录后查看完整信息。",
+    "noPenTestReports": "暂无渗透测试报告",
+    "noPenTestReportsDesc": "当前系统中没有渗透测试报告记录。",
+    "standardDocs": "标准合规文档",
+    "notFound": "无法找到需要的报告？",
+    "notFoundDesc": "如果您需要特定行业的合规文档（如 HIPAA、PCI-DSS），请联系我们的合规团队。",
+    "contactTeam": "联系合规团队",
+    "reports": {
+      "iso27001": {
+        "title": "ISO 27001 认证证书",
+        "desc": "信息安全管理体系（ISMS）认证证书，证明 Autional 具备系统化的信息安全管理能力。",
+        "access": "所有客户"
+      },
+      "dpa": {
+        "title": "数据处理协议 (DPA)",
+        "desc": "Autional 数据处理协议，明确数据处理者与控制者的责任边界、数据处理目的、子处理商清单与数据安全措施。",
+        "access": "所有客户"
+      },
+      "djbh": {
+        "title": "等保三级备案证明",
+        "desc": "中国网络安全等级保护第三级备案证明，适用于在中国大陆运营且对安全要求较高的用户。",
+        "access": "所有客户"
+      },
+      "bcp": {
+        "title": "业务连续性计划 (BCP)",
+        "desc": "Autional 业务连续性计划摘要，包括灾难恢复策略、RTO/RPO 指标、应急响应流程与演练记录。",
+        "access": "用户（需 NDA）"
+      }
+    }
+  },
+  "audit": {
+    "liveStats": "实时审计统计",
+    "totalEvents": "事件总数",
+    "hashChainIntegrity": "哈希链完整性",
+    "logCount": "日志条数",
+    "startHash": "起始哈希",
+    "endHash": "结束哈希",
+    "lastValidated": "最后验证",
+    "operationalSummary": "运营摘要",
+    "totalLogs": "总日志数",
+    "modules": "模块数",
+    "activeSince": "开始时间",
+    "lastActivity": "最近活动"
+  },
+  "incidents": {
+    "title": "事件响应",
+    "subtitle": "我们承诺对所有安全事件保持透明。以下是我们主动披露的安全事件与响应记录。",
+    "stats": {
+      "breaches": "已披露数据泄露事件",
+      "mttd": "平均检测时间 (MTTD)",
+      "mttr": "平均响应时间 (MTTR)"
+    },
+    "breachNotifications": "数据泄露通知",
+    "breachDesc": "来自合规系统的实时数据泄露通知（需登录查看）",
+    "loadingBreaches": "加载数据泄露通知...",
+    "breachesLoadFailed": "数据泄露通知加载失败，请登录后查看完整信息。",
+    "noBreaches": "当前无数据泄露通知记录",
+    "noBreachesDesc": "系统安全状态良好，未发现数据泄露事件。",
+    "historical": "历史安全事件",
+    "responseProcess": "事件响应流程",
+    "subscribe": "订阅安全公告",
+    "subscribeDesc": "获取 Autional 安全更新、漏洞通告与维护通知。",
+    "visitStatus": "访问状态页",
+    "severity": {
+      "low": "低",
+      "medium": "中",
+      "high": "高",
+      "critical": "严重"
+    },
+    "processSteps": [
+      {
+        "step": "01",
+        "title": "检测",
+        "desc": "SIEM、UEBA、威胁情报与人工巡检多渠道检测异常。"
+      },
+      {
+        "step": "02",
+        "title": "遏制",
+        "desc": "30 分钟内启动遏制措施，隔离受影响资源，防止扩散。"
+      },
+      {
+        "step": "03",
+        "title": "根除",
+        "desc": "定位根因，消除威胁，修复漏洞，验证控制有效性。"
+      },
+      {
+        "step": "04",
+        "title": "恢复与复盘",
+        "desc": "恢复服务，向受影响客户通报，生成事后复盘报告。"
+      }
+    ],
+    "events": [
+      {
+        "id": "INC-2025-001",
+        "date": "2025-03-12",
+        "title": "第三方依赖安全更新",
+        "severity": "低",
+        "description": "安全团队监测到某间接依赖库存在已知 CVE（CVSS 4.2）。该依赖未在运行时暴露任何攻击面，但出于谨慎我们在 2 小时内完成了补丁升级。",
+        "impact": "无客户数据受影响，无服务中断。",
+        "resolution": "升级依赖至安全版本，并强化 SCA 扫描规则以防止类似问题。"
+      },
+      {
+        "id": "INC-2024-003",
+        "date": "2024-11-05",
+        "title": "DDoS 攻击缓解",
+        "severity": "中",
+        "description": "Autional 网关遭受峰值约 120 Gbps 的反射型 DDoS 攻击。自动化流量清洗系统在 30 秒内触发，攻击流量被完全过滤。",
+        "impact": "部分区域用户在攻击首分钟观察到轻微延迟（< 200ms），无服务不可用。",
+        "resolution": "云清洗服务自动缓解，事后调整阈值策略并增加边缘节点容量。"
+      },
+      {
+        "id": "INC-2024-002",
+        "date": "2024-08-20",
+        "title": "证书轮换异常",
+        "severity": "低",
+        "description": "自动化证书轮换任务在某边缘节点上失败，导致该节点 TLS 握手出现短暂告警。",
+        "impact": "影响约 0.03% 的请求在 3 分钟内出现 TLS 握手重试。",
+        "resolution": "手动触发轮换并修复自动化任务中的竞态条件，增加证书过期监控告警。"
+      },
+      {
+        "id": "INC-2024-001",
+        "date": "2024-05-14",
+        "title": "误报警报调查",
+        "severity": "低",
+        "description": "SIEM 系统因规则配置过宽，产生大量关于 \"异常登录\" 的误报警报。",
+        "impact": "无实际安全事件，SOC 团队花费约 2 小时完成规则调优。",
+        "resolution": "收紧检测规则，增加白名单机制，优化基线学习周期。"
+      }
+    ]
+  },
+  "privacy": {
+    "title": "隐私政策",
+    "subtitle": "您的隐私对我们至关重要。本政策说明我们如何收集、使用和保护您的个人信息。",
+    "collection": "我们收集哪些数据",
+    "usage": "我们如何使用数据",
+    "sharing": "数据共享与第三方",
+    "crossBorder": "跨境数据传输",
+    "retention": "数据保留与删除",
+    "rights": "您的权利",
+    "cookies": "Cookie 与追踪技术",
+    "contactDpo": "联系我们的数据保护官 (DPO)",
+    "contactDpoDesc": "如果您对隐私政策有任何疑问，或希望行使您的数据主体权利，请通过以下方式联系我们的数据保护官：",
+    "dpoEmail": "邮箱：",
+    "dpoAddress": "地址：",
+    "dpoAddressText": "Autional Data Protection Office, 上海市浦东新区张江高科技园区",
+    "lastUpdated": "最后更新日期",
+    "updatedDate": "2025 年 5 月 9 日",
+    "sections": {
+      "collection": [
+        "账户信息：用户名、邮箱、手机号、密码哈希（不可逆加密存储）。",
+        "使用数据：登录时间、IP 地址、设备指纹、操作日志（用于安全审计与异常检测）。",
+        "租户配置：企业名称、部门结构、应用配置、品牌定制信息。",
+        "支付信息：账单地址、交易记录（支付卡号由 PCI-DSS 合规的支付网关处理，Autional 不存储完整卡号）。"
+      ],
+      "usage": [
+        "提供身份认证与访问管理服务。",
+        "保障账户安全与欺诈检测。",
+        "履行法律与合规义务（如税务、审计）。",
+        "在您明确同意的前提下，发送产品更新与安全通知。"
+      ],
+      "sharing": [
+        "我们从不向第三方出售您的个人数据。",
+        "仅在以下情形共享数据：(a) 获得您的明确授权；(b) 为提供服务所必需的合作方（如云基础设施提供商）；(c) 法律法规要求。",
+        "所有第三方子处理商均受数据处理协议（DPA）约束，并满足同等安全标准。"
+      ],
+      "crossBorder": [
+        "默认情况下，数据存储于您选择的地理区域（见数据驻留页面）。",
+        "当数据需要跨境传输时，我们采用欧盟委员会批准的标准合同条款（SCC）或其他合法机制。",
+        "您可随时了解您的数据存储位置与跨境传输情况。"
+      ],
+      "retention": [
+        "账户数据保留至您删除账户或合同终止后 90 天（法律要求保留的除外）。",
+        "审计日志根据合规要求保留 1-7 年（取决于区域法规）。",
+        "您有权随时请求删除您的个人数据（GDPR \"被遗忘权\" / 中国《个人信息保护法》删除权）。"
+      ],
+      "rights": [
+        "访问权：了解我们持有您哪些数据。",
+        "更正权：更新不准确或不完整的个人数据。",
+        "删除权：请求删除您的个人数据。",
+        "可携带权：获取结构化、通用格式的个人数据副本。",
+        "反对权：反对基于合法利益的数据处理。",
+        "撤回同意权：随时撤回先前给予的同意。"
+      ],
+      "cookies": [
+        "我们使用必要的 Cookie 来维持服务运行（如会话保持、安全令牌）。",
+        "分析型 Cookie 仅用于改进产品体验，不会用于跨站追踪。",
+        "您可通过浏览器设置管理 Cookie 偏好，但禁用必要 Cookie 可能影响服务使用。"
+      ]
+    },
+    "device": {
+      "title": "设备隐私 & COPPA 合规",
+      "subtitle": "了解我们如何保护儿童设备和连接硬件上的数据。",
+      "meta": "Autional 设备隐私政策与 COPPA 合规信息。",
+      "comingSoon": "设备隐私与 COPPA 合规信息即将上线。"
+    }
+  },
+  "compliance": {
+    "title": "合规认证",
+    "subtitle": "Autional 持续接受第三方独立审计，确保我们的安全控制满足国际与行业合规标准。",
+    "latestFindings": "最新审计发现",
+    "findingsDesc": "来自合规系统的实时审计发现（需登录查看）",
+    "loadingFindings": "加载审计发现...",
+    "findingsLoadFailed": "审计发现加载失败，请登录后查看完整信息。",
+    "noFindings": "当前无未关闭的高风险审计发现",
+    "noFindingsDesc": "系统合规状态良好。",
+    "needReport": "需要查看完整审计报告？",
+    "needReportDesc": "用户可在签订 NDA 后获取完整 SOC 2 报告和 ISO 27001 认证文件。",
+    "applyReport": "申请报告",
+    "certifications": {
+      "iso27001": {
+        "name": "ISO 27001",
+        "status": "未认证",
+        "certNo": "—",
+        "validFrom": "—",
+        "validTo": "—",
+        "scope": "Autional 身份认证与访问管理平台的信息安全管理体系，覆盖软件开发、运维、客户支持全生命周期。",
+        "controls": [
+          "信息安全策略与治理",
+          "人力资源安全与背景调查",
+          "访问控制与身份管理",
+          "密码学与密钥管理",
+          "物理与环境安全",
+          "运营安全与变更管理",
+          "通信安全与网络隔离",
+          "系统获取、开发与维护",
+          "供应商关系管理",
+          "信息安全事件管理",
+          "业务连续性管理",
+          "合规性管理"
+        ]
+      },
+      "soc2": {
+        "name": "SOC 2 Type II",
+        "status": "未认证",
+        "certNo": "—",
+        "validFrom": "—",
+        "validTo": "—",
+        "scope": "Autional 云平台服务的安全性、可用性、处理完整性、保密性和隐私性控制。",
+        "controls": [
+          "逻辑与物理访问控制",
+          "系统运维与监控",
+          "变更管理",
+          "数据备份与恢复",
+          "漏洞管理与渗透测试",
+          "事件响应与取证",
+          "第三方风险管理",
+          "隐私数据处理"
+        ]
+      },
+      "gdpr": {
+        "name": "GDPR",
+        "status": "未认证",
+        "certNo": "—",
+        "validFrom": "—",
+        "validTo": "—",
+        "scope": "Autional 作为数据处理者，为欧盟数据主体提供符合 GDPR 要求的数据保护服务。",
+        "controls": [
+          "数据主体权利自动化（DSAR）",
+          "数据可携带性与删除权",
+          "隐私设计（Privacy by Design）",
+          "默认隐私保护（Privacy by Default）",
+          "数据处理协议 (DPA)",
+          "跨境数据传输机制 (SCC)",
+          "数据保护影响评估 (DPIA)",
+          "任命数据保护官 (DPO)"
+        ]
+      },
+      "djbh": {
+        "name": "等保三级",
+        "status": "未认证",
+        "certNo": "—",
+        "validFrom": "—",
+        "validTo": "—",
+        "scope": "Autional 云平台网络安全等级保护第三级备案，满足金融、政务等行业合规要求。",
+        "controls": [
+          "安全物理环境",
+          "安全通信网络",
+          "安全区域边界",
+          "安全计算环境",
+          "安全管理中心",
+          "安全管理制度",
+          "安全管理机构",
+          "安全管理人员",
+          "安全建设管理",
+          "安全运维管理"
+        ]
+      }
+    },
+    "liveScore": "实时合规评分",
+    "liveScoreDesc": "当前系统的安全合规指标综合评分",
+    "liveCertData": "以下数据来自认证管理 API，实时同步"
+  },
+  "subprocessors": {
+    "title": "子处理商清单",
+    "subtitle": "根据 GDPR Art.28 要求，我们在此公示所有可能处理客户数据的第三方子处理商。",
+    "location": "位置",
+    "dataCategories": "数据类别",
+    "certifications": "安全认证",
+    "emptyDesc": "当前暂无已注册的子处理商信息。",
+    "aboutTitle": "关于子处理商清单",
+    "aboutDesc": "根据 GDPR Art.28 要求，我们公示所有可能处理客户数据的第三方子处理商。所有子处理商均签署了数据处理协议（DPA），并接受定期安全评估。若需要最新的 DPA 副本，请联系 。",
+    "categoryLabels": {
+      "infrastructure": "基础设施",
+      "service_provider": "服务提供商",
+      "third_party": "第三方",
+      "infrastructure_service": "基础设施服务",
+      "email_service": "邮件服务",
+      "sms_service": "短信服务"
+    }
+  },
+  "vdp": {
+    "title": "漏洞披露政策",
+    "badge": "漏洞披露政策",
+    "subtitle": "我们重视安全研究社区的贡献，欢迎负责任的安全漏洞披露。本政策定义了安全研究的范围、规则和流程。",
+    "scope": {
+      "title": "测试范围",
+      "desc": "以下系统和资产属于本政策的测试范围。不在范围内的测试需要事先书面授权。",
+      "web": {
+        "label": "Web 与 API",
+        "items": [
+          "Web 应用程序 (*.iam.tianv.com, *.iam.tianv.com)",
+          "REST API (api.iam.tianv.com)",
+          "OAuth / OIDC 授权端点"
+        ]
+      },
+      "mobile": {
+        "label": "移动应用",
+        "items": [
+          "Autional Authenticator App (iOS / Android)",
+          "Autional Admin Console PWA"
+        ]
+      },
+      "infra": {
+        "label": "基础设施",
+        "items": [
+          "云基础设施配置（需明确授权）",
+          "Docker 容器编排与网络策略",
+          "CI/CD 管道安全"
+        ]
+      }
+    },
+    "rules": {
+      "title": "测试规则",
+      "desc": "为保护用户数据和服务的稳定运行，请遵循以下测试规则。",
+      "items": [
+        "禁止拒绝服务攻击 (DoS/DDoS)",
+        "禁止社会工程学攻击",
+        "禁止物理安全测试",
+        "禁止自动扫描产生大量流量",
+        "禁止访问或修改他人用户数据",
+        "禁止利用漏洞进行横向渗透或持久化",
+        "请仅使用您自己的测试账户",
+        "发现漏洞后立即停止并报告",
+        "提供可重现的 PoC 和影响评估",
+        "在漏洞修复前不公开披露"
+      ]
+    },
+    "report": {
+      "title": "如何报告",
+      "desc": "请通过以下渠道报告安全漏洞。我们建议使用 PGP 加密通信以确保信息安全。",
+      "email": "Email",
+      "emailSubject": "安全漏洞报告 — Security Vulnerability Report",
+      "emailDesc": "报告应包括：漏洞描述、受影响端点/组件、复现步骤、影响评估和修复建议。",
+      "pgp": "PGP Key",
+      "pgpBlock": "-----BEGIN PGP PUBLIC KEY BLOCK-----\nComment: Autional Security Team <>\nComment: 此密钥用于接收安全漏洞报告的加密通信\nComment: Key ID: 0xA1B2C3D4E5F67890 (占位)\n\nmQINBGabc1234... (请向  索取完整公钥)\n-----END PGP PUBLIC KEY BLOCK-----",
+      "pgpFingerprint": "指纹: XXXX XXXX XXXX XXXX XXXX  XXXX XXXX XXXX XXXX（请向  确认）"
+    },
+    "sla": {
+      "title": "SLA",
+      "desc": "我们对漏洞报告的处理承诺以下服务等级协议。",
+      "phaseCol": "阶段",
+      "commitmentCol": "承诺时间",
+      "descCol": "说明",
+      "rows": [
+        {
+          "label": "首次确认",
+          "time": "24 小时内",
+          "desc": "确认已收到报告并分配追踪编号"
+        },
+        {
+          "label": "初步分类",
+          "time": "72 小时内",
+          "desc": "评估严重程度并确定修复优先级"
+        },
+        {
+          "label": "严重漏洞修复",
+          "time": "7 天内",
+          "desc": "CVSS 9.0+ 漏洞的修复与部署"
+        },
+        {
+          "label": "高危漏洞修复",
+          "time": "30 天内",
+          "desc": "CVSS 7.0-8.9 漏洞的修复"
+        }
+      ]
+    },
+    "safeHarbor": {
+      "title": "安全港条款",
+      "commitment": "Autional 承诺不对忠实遵守本政策的善意安全研究采取法律行动。我们认可并感谢安全社区为保护我们共同用户所做的努力。",
+      "conditions": "安全港保护的前提是：您在获得明确授权后方可超出本政策定义的测试范围；您未造成实际损害或数据泄露；您在报告后销毁了所有在测试过程中获取的 Autional 数据。"
+    },
+    "hallOfFame": {
+      "title": "漏洞名人堂",
+      "desc": "我们即将上线安全研究者名人堂，表彰做出杰出贡献的安全研究社区成员。感谢每一位为保护用户安全付出努力的研究者！"
+    }
+  },
+  "common": {
+    "learnMore": "了解更多",
+    "download": "下载",
+    "apply": "申请",
+    "contact": "联系",
+    "loading": "加载中...",
+    "loadFailed": "加载失败，请登录后查看完整信息。",
+    "empty": "暂无数据",
+    "applyDownload": "申请下载",
+    "comingSoon": "即将上线",
+    "available": "可下载",
+    "formatPdf": "PDF",
+    "getCondition": "获取条件：",
+    "auditor": "审计机构：",
+    "lastUpdated": "最后更新：",
+    "format": "格式：",
+    "certNo": "证书编号：",
+    "validPeriod": "有效期：",
+    "controlsCovered": "涵盖控制项",
+    "certified": "已认证",
+    "scope": "范围",
+    "viewCertificate": "查看证书",
+    "severityLabel": "严重性",
+    "impactScope": "影响范围",
+    "resolutionMeasure": "解决措施",
+    "affectedUsers": "受影响用户：",
+    "dueDate": "截止日期：",
+    "status": {
+      "certified": "未认证",
+      "compliant": "未认证",
+      "registered": "未认证",
+      "resolved": "已解决",
+      "operational": "运行中",
+      "completed": "已完成"
+    },
+    "realTimeLabel": "全面合规",
+    "controlType": "控制类型：",
+    "controlId": "控制编号："
+  },
+  "storageSecurity": {
+    "title": "存储安全",
+    "subtitle": "您的数据由行业领先的加密技术和密钥管理基础设施保护。我们提供完整的存储安全透明度，包括加密方式、合规报告与审计记录。",
+    "encryptionStatus": "加密状态",
+    "encryptionDesc": "Autional 使用以下加密标准保护您所有存储的数据。",
+    "algorithm": "加密算法",
+    "atRest": "静态加密",
+    "inTransit": "传输加密",
+    "keyManagement": "密钥管理",
+    "enabled": "已启用",
+    "publicReports": "公开安全报告",
+    "publicReportsDesc": "可下载的安全评估报告、认证文件和合规审计结果。",
+    "noReports": "暂无公开报告",
+    "noReportsDesc": "当前没有可下载的存储安全报告，请稍后查看。",
+    "downloadReport": "下载报告",
+    "size": "大小",
+    "format": "格式"
+  },
+  "securityAlerts": {
+    "title": "安全告警订阅",
+    "meta": "安全告警订阅 — Autional Trust Center",
+    "badge": "安全订阅",
+    "subtitle": "订阅 Autional 安全告警，及时获取数据泄露通知、漏洞预警和合规更新。无需注册账户，完全公开。",
+    "emailLabel": "邮箱地址",
+    "companyLabel": "公司名称",
+    "companyOptional": "(可选)",
+    "topicLabel": "订阅主题",
+    "topics": {
+      "breach_notification": {
+        "label": "数据泄露通知",
+        "desc": "发生数据泄露事件时立即通知您"
+      },
+      "vulnerability_alert": {
+        "label": "漏洞预警",
+        "desc": "发现安全漏洞时及时通报"
+      },
+      "security_update": {
+        "label": "安全更新",
+        "desc": "安全策略变更、认证更新、合规变动"
+      },
+      "compliance_update": {
+        "label": "合规更新",
+        "desc": "ISO 27001、SOC 2、GDPR 等认证状态变化"
+      },
+      "incident_report": {
+        "label": "事件报告",
+        "desc": "重大安全事件的处理进展和总结报告"
+      }
+    },
+    "validateEmail": "请输入邮箱地址",
+    "validateEmailInvalid": "请输入有效的邮箱地址",
+    "validateTopics": "请至少选择一个订阅主题",
+    "submitting": "提交中...",
+    "submit": "订阅安全告警",
+    "success": "订阅成功！",
+    "successMessage": "请查看邮箱并点击确认链接。",
+    "subscribeFailed": "订阅失败，请稍后重试。",
+    "networkError": "网络错误，请检查连接后重试。",
+    "subscribeMore": "订阅更多告警",
+    "privacyTitle": "隐私保护",
+    "privacyText": "您的邮箱仅用于发送安全告警，不会用于其他用途。查看我们的",
+    "privacyLink": "隐私政策",
+    "privacyText2": "了解更多信息。",
+    "privacyFooter": "订阅后，您将收到一封确认邮件。点击邮件中的链接即可完成订阅。您可以随时取消订阅。"
+  },
+  "errorBoundary": {
+    "title": "页面出现错误",
+    "description": "很抱歉，该页面遇到了意外错误。您可以尝试刷新页面，或返回首页。",
+    "refresh": "刷新页面",
+    "backHome": "返回首页",
+    "genericTitle": "出了点问题",
+    "genericDescription": "很抱歉，发生了意外错误。请尝试刷新页面。"
+  },
+  "notFound": {
+    "title": "页面未找到",
+    "meta": "页面不存在 — Autional Trust Center",
+    "description": "您访问的页面不存在或已被移动。请检查 URL 是否正确，或返回总览。",
+    "backToOverview": "返回总览",
+    "goBack": "返回上一页"
+  },
+  "nav.overview": "总览",
+  "nav.compliance": "合规认证",
+  "nav.security": "安全架构",
+  "nav.dataResidency": "数据驻留",
+  "nav.auditReports": "审计报告",
+  "nav.incidents": "事件响应",
+  "nav.privacy": "隐私政策",
+  "nav.subprocessors": "子处理商",
+  "nav.vulnerabilityDisclosure": "漏洞披露",
+  "nav.storageSecurity": "存储安全",
+  "nav.securityAlerts": "安全告警",
+  "layout.backToTop": "回到顶部",
+  "layout.trustCenter": "Trust Center",
+  "layout.description": "透明、可信、可验证的安全与合规信息平台。",
+  "layout.security": "安全",
+  "layout.compliance": "合规",
+  "layout.authms": "Autional",
+  "layout.officialSite": "官网",
+  "layout.systemStatus": "系统状态",
+  "layout.developerDocs": "开发者文档",
+  "overview.title": "安全与合规",
+  "overview.subtitle": "安全不是功能，而是 Autional 的基石。我们采用零信任架构，通过多项国际安全认证，确保您的数据安全与合规。",
+  "overview.securityArchitecture": "安全技术架构",
+  "overview.quickLinks": "快速入口",
+  "overview.complianceChecklist": "合规控制项清单",
+  "overview.needReport": "需要合规报告？",
+  "overview.needReportDesc": "用户可获取 SOC 2 报告、渗透测试摘要、数据处理协议 (DPA) 等合规文档。",
+  "overview.requestDoc": "申请合规文档",
+  "overview.loadingStatus": "正在加载实时合规状态...",
+  "overview.loadFailed": "实时合规状态加载失败，显示静态参考信息。",
+  "overview.lastAudit": "上次审计",
+  "overview.lastAuditLine": "上次审计：{{date}} · 待处理问题：{{count}} 项",
+  "overview.openIssues": "待处理问题",
+  "overview.securityScore": "安全评分",
+  "overview.securityScoreDesc": "基于实时合规状态与审计发现的综合安全评分。",
+  "overview.calculatedAt": "计算时间",
+  "overview.trustCenterBadge": "Trust Center",
+  "overview.certifications.iso27001.name": "ISO 27001",
+  "overview.certifications.iso27001.desc": "未认证",
+  "overview.certifications.soc2.name": "SOC 2 Type II",
+  "overview.certifications.soc2.desc": "未认证",
+  "overview.certifications.gdpr.name": "GDPR",
+  "overview.certifications.gdpr.desc": "未认证",
+  "overview.certifications.djbh.name": "等保三级",
+  "overview.certifications.djbh.desc": "未认证",
+  "overview.pillars.endToEndEncryption.title": "端到端加密",
+  "overview.pillars.endToEndEncryption.desc": "传输层 TLS 1.3，静态数据 AES-256 加密，密钥由 HSM 安全模块管理。",
+  "overview.pillars.zeroTrust.title": "零信任架构",
+  "overview.pillars.zeroTrust.desc": "永不信任，始终验证。基于设备指纹、IP 信誉、行为生物特征的风险评分模型。",
+  "overview.pillars.immutableAudit.title": "审计日志不可篡改",
+  "overview.pillars.immutableAudit.desc": "所有关键操作记录到审计日志，并通过哈希链验证确保日志完整性。",
+  "overview.pillars.highAvailability.title": "高可用与灾备",
+  "overview.pillars.highAvailability.desc": "多区域部署、自动故障转移、RPO < 1分钟、RTO < 5分钟。",
+  "overview.pillars.soc247.title": "7x24 安全运营",
+  "overview.pillars.soc247.desc": "专属安全运营中心 (SOC) 持续监控威胁情报，平均检测时间 (MTTD) < 15 分钟。",
+  "overview.pillars.penTest.title": "渗透测试",
+  "overview.pillars.penTest.desc": "每季度第三方渗透测试，年度红蓝对抗演练，漏洞赏金计划持续运行。",
+  "overview.quickLinkItems.complianceDetail.title": "合规认证详情",
+  "overview.quickLinkItems.complianceDetail.desc": "查看所有安全认证的详细信息与有效期。",
+  "overview.quickLinkItems.auditDownload.title": "审计报告下载",
+  "overview.quickLinkItems.auditDownload.desc": "获取 SOC 2、渗透测试摘要及数据处理协议。",
+  "overview.quickLinkItems.dataResidency.title": "数据驻留",
+  "overview.quickLinkItems.dataResidency.desc": "了解数据存储位置、跨境传输与留存策略。",
+  "overview.quickLinkItems.incidents.title": "事件响应",
+  "overview.quickLinkItems.incidents.desc": "查看安全事件时间线与响应流程。",
+  "overview.checklistItems": [
+    "数据分类与分级保护",
+    "访问控制最小权限原则",
+    "定期身份与权限复核",
+    "安全事件响应预案 (IRP)",
+    "业务连续性计划 (BCP)",
+    "供应商安全评估",
+    "员工背景调查与安全意识培训",
+    "代码安全审计与依赖漏洞扫描"
+  ],
+  "security.title": "安全架构",
+  "security.subtitle": "纵深防御、零信任、加密优先 — 我们的安全架构在每个层面保护您的数据。",
+  "security.zeroTrust": "零信任安全架构",
+  "security.zeroTrustDesc": "Autional 采用零信任（Zero Trust）安全模型，核心原则为「永不信任，始终验证」。所有访问请求无论来源内外网，均须经过身份验证、设备信任评估与动态授权。",
+  "security.encryption": "端到端加密",
+  "security.encryptionDesc": "从数据传输到静态存储，全链路采用行业领先的加密标准，确保数据在任一状态下均受到保护。",
+  "security.infrastructure": "基础设施安全",
+  "security.infrastructureDesc": "多区域云基础设施部署，结合纵深防御策略，构建高可用、抗攻击的运行环境。",
+  "security.observability": "审计与可观测性",
+  "security.observabilityDesc": "全量操作可追溯，审计日志不可篡改，为安全事件调查与合规审计提供完整证据链。",
+  "security.securityPrograms": "安全计划",
+  "security.penTest": "第三方渗透测试",
+  "security.penTestDesc": "每季度聘请国际知名安全厂商进行黑盒/灰盒渗透测试，覆盖 Web 应用、API、移动客户端与云基础设施。",
+  "security.bugBounty": "漏洞赏金计划",
+  "security.bugBountyDesc": "通过公开漏洞披露平台接受全球安全研究者的漏洞报告，高危漏洞平均修复时间（MTTR）< 48 小时。",
+  "security.codeAudit": "代码安全审计",
+  "security.codeAuditDesc": "所有代码合并前须通过 SAST（静态分析）、SCA（依赖扫描）与密钥泄露检测三道关卡。",
+  "security.soc247": "7x24 SOC 运营",
+  "security.soc247Desc": "专属安全运营中心持续监控全球威胁情报，平均检测时间（MTTD）< 15 分钟，平均响应时间（MTTR）< 1 小时。",
+  "security.vulnerabilityDisclosure": "发现安全漏洞？",
+  "security.vulnerabilityDisclosureDesc": "我们欢迎负责任的安全披露。请通过  与我们联系，通常在 24 小时内确认收到。",
+  "security.items.zeroTrust": [
+    "最小权限原则（PoLP）—— 默认拒绝所有访问",
+    "微隔离（Micro-segmentation）—— 服务间通信强制 mTLS",
+    "动态风险评估 —— 基于设备指纹、IP 信誉、行为生物特征的实时评分",
+    "持续验证 —— 会话周期内周期性重新评估信任等级"
+  ],
+  "security.items.encryption": [
+    "传输加密：TLS 1.3（强制前向保密 PFS）",
+    "静态加密：AES-256-GCM",
+    "密钥管理：HSM（硬件安全模块）托管，支持自动轮换",
+    "数据库加密：列级加密 + TDE（透明数据加密）"
+  ],
+  "security.items.infrastructure": [
+    "多可用区（Multi-AZ）部署，自动故障转移",
+    "DDoS 防护与 WAF 层过滤",
+    "容器运行时安全扫描与镜像签名验证",
+    "VPC 网络隔离与安全组最小开放"
+  ],
+  "security.items.observability": [
+    "审计日志哈希链验证，防止事后篡改",
+    "SIEM 集成，实时安全事件关联分析",
+    "全链路分布式追踪（OpenTelemetry）",
+    "异常行为检测（UEBA）与自动告警"
+  ],
+  "dataResidency.title": "数据驻留",
+  "dataResidency.subtitle": "您的数据，您的选择。Autional 在全球多个区域部署数据中心，支持数据主权与合规驻留要求。",
+  "dataResidency.regionTitle": "全球数据中心",
+  "dataResidency.regionTable.region": "区域",
+  "dataResidency.regionTable.location": "数据中心位置",
+  "dataResidency.regionTable.status": "状态",
+  "dataResidency.regionTable.features": "关键特性",
+  "dataResidency.commitments": "数据驻留承诺",
+  "dataResidency.transparency": "数据存储位置透明",
+  "dataResidency.transparencyDesc": "在租户创建时明确告知数据将存储的地理区域，支持按应用粒度选择数据中心。",
+  "dataResidency.noCrossBorder": "默认数据不出境",
+  "dataResidency.noCrossBorderDesc": "对于中国大陆租户，默认数据存储于境内数据中心，未经明确授权不跨境传输。",
+  "dataResidency.crossBorderCompliance": "跨境传输合规",
+  "dataResidency.crossBorderComplianceDesc": "当数据需要跨境时，采用标准合同条款（SCC）、约束性公司规则（BCR）或当地法律认可的合法机制。",
+  "dataResidency.retention": "数据保留与删除",
+  "dataResidency.retentionDesc": "支持按租户策略配置数据保留期限，到期自动归档或安全擦除，满足 GDPR 「被遗忘权」。",
+  "dataResidency.checklist": "合规检查清单",
+  "dataResidency.regions": [
+    {
+      "code": "CN-NORTH",
+      "name": "中国大陆",
+      "location": "北京 / 上海 / 广州",
+      "features": [
+        "等保三级备案",
+        "数据不出境",
+        "本地化支持"
+      ]
+    },
+    {
+      "code": "AP-SOUTHEAST",
+      "name": "亚太地区",
+      "location": "新加坡 / 东京 / 悉尼",
+      "features": [
+        "GDPR 兼容",
+        "低延迟覆盖东南亚",
+        "多可用区"
+      ]
+    },
+    {
+      "code": "EU-WEST",
+      "name": "欧洲",
+      "location": "法兰克福 / 阿姆斯特丹 / 都柏林",
+      "features": [
+        "GDPR 完全合规",
+        "数据主权",
+        "SCC 标准合同条款"
+      ]
+    },
+    {
+      "code": "US-EAST",
+      "name": "美国东部",
+      "location": "弗吉尼亚 / 俄亥俄",
+      "features": [
+        "SOC 2 认证区域",
+        "高可用冗余",
+        " FedRAMP Ready"
+      ]
+    },
+    {
+      "code": "US-WEST",
+      "name": "美国西部",
+      "location": "俄勒冈 / 加利福尼亚",
+      "features": [
+        "灾难恢复站点",
+        "跨区域复制",
+        "低延迟美西"
+      ]
+    }
+  ],
+  "dataResidency.checklistItems": [
+    "数据分类与分级存储策略",
+    "跨境数据传输合法性审查",
+    "数据主体访问与删除请求",
+    "数据保留期限自动化执行",
+    "备份数据地理位置隔离",
+    "第三方子处理商数据驻留审查",
+    "数据主权法律变更跟踪",
+    "数据泄露跨境通报机制"
+  ],
+  "auditReports.title": "审计报告",
+  "auditReports.subtitle": "透明即信任。我们定期接受独立审计，并将报告向客户开放，以支持您的内部合规与安全评估。",
+  "auditReports.penTestReports": "渗透测试报告",
+  "auditReports.penTestDesc": "来自合规系统的实时报告列表（需登录查看）",
+  "auditReports.labels.conductedAt": "执行日期：",
+  "auditReports.labels.severity": "严重级别：",
+  "auditReports.labels.nextTest": "下次测试：",
+  "auditReports.loadingPenTest": "加载渗透测试报告...",
+  "auditReports.penTestLoadFailed": "渗透测试报告加载失败，请登录后查看完整信息。",
+  "auditReports.noPenTestReports": "暂无渗透测试报告",
+  "auditReports.noPenTestReportsDesc": "当前系统中没有渗透测试报告记录。",
+  "auditReports.standardDocs": "标准合规文档",
+  "auditReports.notFound": "无法找到需要的报告？",
+  "auditReports.notFoundDesc": "如果您需要特定行业的合规文档（如 HIPAA、PCI-DSS），请联系我们的合规团队。",
+  "auditReports.contactTeam": "联系合规团队",
+  "auditReports.reports.iso27001.title": "ISO 27001 认证证书",
+  "auditReports.reports.iso27001.desc": "信息安全管理体系（ISMS）认证证书，证明 Autional 具备系统化的信息安全管理能力。",
+  "auditReports.reports.iso27001.access": "所有客户",
+  "auditReports.reports.dpa.title": "数据处理协议 (DPA)",
+  "auditReports.reports.dpa.desc": "Autional 数据处理协议，明确数据处理者与控制者的责任边界、数据处理目的、子处理商清单与数据安全措施。",
+  "auditReports.reports.dpa.access": "所有客户",
+  "auditReports.reports.djbh.title": "等保三级备案证明",
+  "auditReports.reports.djbh.desc": "中国网络安全等级保护第三级备案证明，适用于在中国大陆运营且对安全要求较高的用户。",
+  "auditReports.reports.djbh.access": "所有客户",
+  "auditReports.reports.bcp.title": "业务连续性计划 (BCP)",
+  "auditReports.reports.bcp.desc": "Autional 业务连续性计划摘要，包括灾难恢复策略、RTO/RPO 指标、应急响应流程与演练记录。",
+  "auditReports.reports.bcp.access": "用户（需 NDA）",
+  "audit.liveStats": "实时审计统计",
+  "audit.totalEvents": "事件总数",
+  "audit.hashChainIntegrity": "哈希链完整性",
+  "audit.logCount": "日志条数",
+  "audit.startHash": "起始哈希",
+  "audit.endHash": "结束哈希",
+  "audit.lastValidated": "最后验证",
+  "audit.operationalSummary": "运营摘要",
+  "audit.totalLogs": "总日志数",
+  "audit.modules": "模块数",
+  "audit.activeSince": "开始时间",
+  "audit.lastActivity": "最近活动",
+  "incidents.title": "事件响应",
+  "incidents.subtitle": "我们承诺对所有安全事件保持透明。以下是我们主动披露的安全事件与响应记录。",
+  "incidents.stats.breaches": "已披露数据泄露事件",
+  "incidents.stats.mttd": "平均检测时间 (MTTD)",
+  "incidents.stats.mttr": "平均响应时间 (MTTR)",
+  "incidents.breachNotifications": "数据泄露通知",
+  "incidents.breachDesc": "来自合规系统的实时数据泄露通知（需登录查看）",
+  "incidents.loadingBreaches": "加载数据泄露通知...",
+  "incidents.breachesLoadFailed": "数据泄露通知加载失败，请登录后查看完整信息。",
+  "incidents.noBreaches": "当前无数据泄露通知记录",
+  "incidents.noBreachesDesc": "系统安全状态良好，未发现数据泄露事件。",
+  "incidents.historical": "历史安全事件",
+  "incidents.responseProcess": "事件响应流程",
+  "incidents.subscribe": "订阅安全公告",
+  "incidents.subscribeDesc": "获取 Autional 安全更新、漏洞通告与维护通知。",
+  "incidents.visitStatus": "访问状态页",
+  "incidents.severity.low": "低",
+  "incidents.severity.medium": "中",
+  "incidents.severity.high": "高",
+  "incidents.severity.critical": "严重",
+  "incidents.processSteps": [
+    {
+      "step": "01",
+      "title": "检测",
+      "desc": "SIEM、UEBA、威胁情报与人工巡检多渠道检测异常。"
+    },
+    {
+      "step": "02",
+      "title": "遏制",
+      "desc": "30 分钟内启动遏制措施，隔离受影响资源，防止扩散。"
+    },
+    {
+      "step": "03",
+      "title": "根除",
+      "desc": "定位根因，消除威胁，修复漏洞，验证控制有效性。"
+    },
+    {
+      "step": "04",
+      "title": "恢复与复盘",
+      "desc": "恢复服务，向受影响客户通报，生成事后复盘报告。"
+    }
+  ],
+  "incidents.events": [
+    {
+      "id": "INC-2025-001",
+      "date": "2025-03-12",
+      "title": "第三方依赖安全更新",
+      "severity": "低",
+      "description": "安全团队监测到某间接依赖库存在已知 CVE（CVSS 4.2）。该依赖未在运行时暴露任何攻击面，但出于谨慎我们在 2 小时内完成了补丁升级。",
+      "impact": "无客户数据受影响，无服务中断。",
+      "resolution": "升级依赖至安全版本，并强化 SCA 扫描规则以防止类似问题。"
+    },
+    {
+      "id": "INC-2024-003",
+      "date": "2024-11-05",
+      "title": "DDoS 攻击缓解",
+      "severity": "中",
+      "description": "Autional 网关遭受峰值约 120 Gbps 的反射型 DDoS 攻击。自动化流量清洗系统在 30 秒内触发，攻击流量被完全过滤。",
+      "impact": "部分区域用户在攻击首分钟观察到轻微延迟（< 200ms），无服务不可用。",
+      "resolution": "云清洗服务自动缓解，事后调整阈值策略并增加边缘节点容量。"
+    },
+    {
+      "id": "INC-2024-002",
+      "date": "2024-08-20",
+      "title": "证书轮换异常",
+      "severity": "低",
+      "description": "自动化证书轮换任务在某边缘节点上失败，导致该节点 TLS 握手出现短暂告警。",
+      "impact": "影响约 0.03% 的请求在 3 分钟内出现 TLS 握手重试。",
+      "resolution": "手动触发轮换并修复自动化任务中的竞态条件，增加证书过期监控告警。"
+    },
+    {
+      "id": "INC-2024-001",
+      "date": "2024-05-14",
+      "title": "误报警报调查",
+      "severity": "低",
+      "description": "SIEM 系统因规则配置过宽，产生大量关于 \"异常登录\" 的误报警报。",
+      "impact": "无实际安全事件，SOC 团队花费约 2 小时完成规则调优。",
+      "resolution": "收紧检测规则，增加白名单机制，优化基线学习周期。"
+    }
+  ],
+  "privacy.title": "隐私政策",
+  "privacy.subtitle": "您的隐私对我们至关重要。本政策说明我们如何收集、使用和保护您的个人信息。",
+  "privacy.collection": "我们收集哪些数据",
+  "privacy.usage": "我们如何使用数据",
+  "privacy.sharing": "数据共享与第三方",
+  "privacy.crossBorder": "跨境数据传输",
+  "privacy.retention": "数据保留与删除",
+  "privacy.rights": "您的权利",
+  "privacy.cookies": "Cookie 与追踪技术",
+  "privacy.contactDpo": "联系我们的数据保护官 (DPO)",
+  "privacy.contactDpoDesc": "如果您对隐私政策有任何疑问，或希望行使您的数据主体权利，请通过以下方式联系我们的数据保护官：",
+  "privacy.dpoEmail": "邮箱：",
+  "privacy.dpoAddress": "地址：",
+  "privacy.dpoAddressText": "Autional Data Protection Office, 上海市浦东新区张江高科技园区",
+  "privacy.lastUpdated": "最后更新日期",
+  "privacy.updatedDate": "2025 年 5 月 9 日",
+  "privacy.sections.collection": [
+    "账户信息：用户名、邮箱、手机号、密码哈希（不可逆加密存储）。",
+    "使用数据：登录时间、IP 地址、设备指纹、操作日志（用于安全审计与异常检测）。",
+    "租户配置：企业名称、部门结构、应用配置、品牌定制信息。",
+    "支付信息：账单地址、交易记录（支付卡号由 PCI-DSS 合规的支付网关处理，Autional 不存储完整卡号）。"
+  ],
+  "privacy.sections.usage": [
+    "提供身份认证与访问管理服务。",
+    "保障账户安全与欺诈检测。",
+    "履行法律与合规义务（如税务、审计）。",
+    "在您明确同意的前提下，发送产品更新与安全通知。"
+  ],
+  "privacy.sections.sharing": [
+    "我们从不向第三方出售您的个人数据。",
+    "仅在以下情形共享数据：(a) 获得您的明确授权；(b) 为提供服务所必需的合作方（如云基础设施提供商）；(c) 法律法规要求。",
+    "所有第三方子处理商均受数据处理协议（DPA）约束，并满足同等安全标准。"
+  ],
+  "privacy.sections.crossBorder": [
+    "默认情况下，数据存储于您选择的地理区域（见数据驻留页面）。",
+    "当数据需要跨境传输时，我们采用欧盟委员会批准的标准合同条款（SCC）或其他合法机制。",
+    "您可随时了解您的数据存储位置与跨境传输情况。"
+  ],
+  "privacy.sections.retention": [
+    "账户数据保留至您删除账户或合同终止后 90 天（法律要求保留的除外）。",
+    "审计日志根据合规要求保留 1-7 年（取决于区域法规）。",
+    "您有权随时请求删除您的个人数据（GDPR \"被遗忘权\" / 中国《个人信息保护法》删除权）。"
+  ],
+  "privacy.sections.rights": [
+    "访问权：了解我们持有您哪些数据。",
+    "更正权：更新不准确或不完整的个人数据。",
+    "删除权：请求删除您的个人数据。",
+    "可携带权：获取结构化、通用格式的个人数据副本。",
+    "反对权：反对基于合法利益的数据处理。",
+    "撤回同意权：随时撤回先前给予的同意。"
+  ],
+  "privacy.sections.cookies": [
+    "我们使用必要的 Cookie 来维持服务运行（如会话保持、安全令牌）。",
+    "分析型 Cookie 仅用于改进产品体验，不会用于跨站追踪。",
+    "您可通过浏览器设置管理 Cookie 偏好，但禁用必要 Cookie 可能影响服务使用。"
+  ],
+  "privacy.device.title": "设备隐私 & COPPA 合规",
+  "privacy.device.subtitle": "了解我们如何保护儿童设备和连接硬件上的数据。",
+  "privacy.device.meta": "Autional 设备隐私政策与 COPPA 合规信息。",
+  "privacy.device.comingSoon": "设备隐私与 COPPA 合规信息即将上线。",
+  "compliance.title": "合规认证",
+  "compliance.subtitle": "Autional 持续接受第三方独立审计，确保我们的安全控制满足国际与行业合规标准。",
+  "compliance.latestFindings": "最新审计发现",
+  "compliance.findingsDesc": "来自合规系统的实时审计发现（需登录查看）",
+  "compliance.loadingFindings": "加载审计发现...",
+  "compliance.findingsLoadFailed": "审计发现加载失败，请登录后查看完整信息。",
+  "compliance.noFindings": "当前无未关闭的高风险审计发现",
+  "compliance.noFindingsDesc": "系统合规状态良好。",
+  "compliance.needReport": "需要查看完整审计报告？",
+  "compliance.needReportDesc": "用户可在签订 NDA 后获取完整 SOC 2 报告和 ISO 27001 认证文件。",
+  "compliance.applyReport": "申请报告",
+  "compliance.certifications.iso27001.name": "ISO 27001",
+  "compliance.certifications.iso27001.status": "未认证",
+  "compliance.certifications.iso27001.certNo": "—",
+  "compliance.certifications.iso27001.validFrom": "—",
+  "compliance.certifications.iso27001.validTo": "—",
+  "compliance.certifications.iso27001.scope": "Autional 身份认证与访问管理平台的信息安全管理体系，覆盖软件开发、运维、客户支持全生命周期。",
+  "compliance.certifications.iso27001.controls": [
+    "信息安全策略与治理",
+    "人力资源安全与背景调查",
+    "访问控制与身份管理",
+    "密码学与密钥管理",
+    "物理与环境安全",
+    "运营安全与变更管理",
+    "通信安全与网络隔离",
+    "系统获取、开发与维护",
+    "供应商关系管理",
+    "信息安全事件管理",
+    "业务连续性管理",
+    "合规性管理"
+  ],
+  "compliance.certifications.soc2.name": "SOC 2 Type II",
+  "compliance.certifications.soc2.status": "未认证",
+  "compliance.certifications.soc2.certNo": "—",
+  "compliance.certifications.soc2.validFrom": "—",
+  "compliance.certifications.soc2.validTo": "—",
+  "compliance.certifications.soc2.scope": "Autional 云平台服务的安全性、可用性、处理完整性、保密性和隐私性控制。",
+  "compliance.certifications.soc2.controls": [
+    "逻辑与物理访问控制",
+    "系统运维与监控",
+    "变更管理",
+    "数据备份与恢复",
+    "漏洞管理与渗透测试",
+    "事件响应与取证",
+    "第三方风险管理",
+    "隐私数据处理"
+  ],
+  "compliance.certifications.gdpr.name": "GDPR",
+  "compliance.certifications.gdpr.status": "未认证",
+  "compliance.certifications.gdpr.certNo": "—",
+  "compliance.certifications.gdpr.validFrom": "—",
+  "compliance.certifications.gdpr.validTo": "—",
+  "compliance.certifications.gdpr.scope": "Autional 作为数据处理者，为欧盟数据主体提供符合 GDPR 要求的数据保护服务。",
+  "compliance.certifications.gdpr.controls": [
+    "数据主体权利自动化（DSAR）",
+    "数据可携带性与删除权",
+    "隐私设计（Privacy by Design）",
+    "默认隐私保护（Privacy by Default）",
+    "数据处理协议 (DPA)",
+    "跨境数据传输机制 (SCC)",
+    "数据保护影响评估 (DPIA)",
+    "任命数据保护官 (DPO)"
+  ],
+  "compliance.certifications.djbh.name": "等保三级",
+  "compliance.certifications.djbh.status": "未认证",
+  "compliance.certifications.djbh.certNo": "—",
+  "compliance.certifications.djbh.validFrom": "—",
+  "compliance.certifications.djbh.validTo": "—",
+  "compliance.certifications.djbh.scope": "Autional 云平台网络安全等级保护第三级备案，满足金融、政务等行业合规要求。",
+  "compliance.certifications.djbh.controls": [
+    "安全物理环境",
+    "安全通信网络",
+    "安全区域边界",
+    "安全计算环境",
+    "安全管理中心",
+    "安全管理制度",
+    "安全管理机构",
+    "安全管理人员",
+    "安全建设管理",
+    "安全运维管理"
+  ],
+  "subprocessors.title": "子处理商清单",
+  "subprocessors.subtitle": "根据 GDPR Art.28 要求，我们在此公示所有可能处理客户数据的第三方子处理商。",
+  "subprocessors.location": "位置",
+  "subprocessors.dataCategories": "数据类别",
+  "subprocessors.certifications": "安全认证",
+  "subprocessors.emptyDesc": "当前暂无已注册的子处理商信息。",
+  "subprocessors.aboutTitle": "关于子处理商清单",
+  "subprocessors.aboutDesc": "根据 GDPR Art.28 要求，我们公示所有可能处理客户数据的第三方子处理商。所有子处理商均签署了数据处理协议（DPA），并接受定期安全评估。若需要最新的 DPA 副本，请联系 。",
+  "subprocessors.categoryLabels.infrastructure": "基础设施",
+  "subprocessors.categoryLabels.service_provider": "服务提供商",
+  "subprocessors.categoryLabels.third_party": "第三方",
+  "subprocessors.categoryLabels.infrastructure_service": "基础设施服务",
+  "subprocessors.categoryLabels.email_service": "邮件服务",
+  "subprocessors.categoryLabels.sms_service": "短信服务",
+  "vdp.title": "漏洞披露政策",
+  "vdp.badge": "漏洞披露政策",
+  "vdp.subtitle": "我们重视安全研究社区的贡献，欢迎负责任的安全漏洞披露。本政策定义了安全研究的范围、规则和流程。",
+  "vdp.scope.title": "测试范围",
+  "vdp.scope.desc": "以下系统和资产属于本政策的测试范围。不在范围内的测试需要事先书面授权。",
+  "vdp.scope.web.label": "Web 与 API",
+  "vdp.scope.web.items": [
+    "Web 应用程序 (*.iam.tianv.com, *.iam.tianv.com)",
+    "REST API (api.iam.tianv.com)",
+    "OAuth / OIDC 授权端点"
+  ],
+  "vdp.scope.mobile.label": "移动应用",
+  "vdp.scope.mobile.items": [
+    "Autional Authenticator App (iOS / Android)",
+    "Autional Admin Console PWA"
+  ],
+  "vdp.scope.infra.label": "基础设施",
+  "vdp.scope.infra.items": [
+    "云基础设施配置（需明确授权）",
+    "Docker 容器编排与网络策略",
+    "CI/CD 管道安全"
+  ],
+  "vdp.rules.title": "测试规则",
+  "vdp.rules.desc": "为保护用户数据和服务的稳定运行，请遵循以下测试规则。",
+  "vdp.rules.items": [
+    "禁止拒绝服务攻击 (DoS/DDoS)",
+    "禁止社会工程学攻击",
+    "禁止物理安全测试",
+    "禁止自动扫描产生大量流量",
+    "禁止访问或修改他人用户数据",
+    "禁止利用漏洞进行横向渗透或持久化",
+    "请仅使用您自己的测试账户",
+    "发现漏洞后立即停止并报告",
+    "提供可重现的 PoC 和影响评估",
+    "在漏洞修复前不公开披露"
+  ],
+  "vdp.report.title": "如何报告",
+  "vdp.report.desc": "请通过以下渠道报告安全漏洞。我们建议使用 PGP 加密通信以确保信息安全。",
+  "vdp.report.email": "Email",
+  "vdp.report.emailSubject": "安全漏洞报告 — Security Vulnerability Report",
+  "vdp.report.emailDesc": "报告应包括：漏洞描述、受影响端点/组件、复现步骤、影响评估和修复建议。",
+  "vdp.report.pgp": "PGP Key",
+  "vdp.report.pgpBlock": "-----BEGIN PGP PUBLIC KEY BLOCK-----\nComment: Autional Security Team <>\nComment: 此密钥用于接收安全漏洞报告的加密通信\nComment: Key ID: 0xA1B2C3D4E5F67890 (占位)\n\nmQINBGabc1234... (请向  索取完整公钥)\n-----END PGP PUBLIC KEY BLOCK-----",
+  "vdp.report.pgpFingerprint": "指纹: XXXX XXXX XXXX XXXX XXXX  XXXX XXXX XXXX XXXX（请向  确认）",
+  "vdp.sla.title": "SLA",
+  "vdp.sla.desc": "我们对漏洞报告的处理承诺以下服务等级协议。",
+  "vdp.sla.phaseCol": "阶段",
+  "vdp.sla.commitmentCol": "承诺时间",
+  "vdp.sla.descCol": "说明",
+  "vdp.sla.rows": [
+    {
+      "label": "首次确认",
+      "time": "24 小时内",
+      "desc": "确认已收到报告并分配追踪编号"
+    },
+    {
+      "label": "初步分类",
+      "time": "72 小时内",
+      "desc": "评估严重程度并确定修复优先级"
+    },
+    {
+      "label": "严重漏洞修复",
+      "time": "7 天内",
+      "desc": "CVSS 9.0+ 漏洞的修复与部署"
+    },
+    {
+      "label": "高危漏洞修复",
+      "time": "30 天内",
+      "desc": "CVSS 7.0-8.9 漏洞的修复"
+    }
+  ],
+  "vdp.safeHarbor.title": "安全港条款",
+  "vdp.safeHarbor.commitment": "Autional 承诺不对忠实遵守本政策的善意安全研究采取法律行动。我们认可并感谢安全社区为保护我们共同用户所做的努力。",
+  "vdp.safeHarbor.conditions": "安全港保护的前提是：您在获得明确授权后方可超出本政策定义的测试范围；您未造成实际损害或数据泄露；您在报告后销毁了所有在测试过程中获取的 Autional 数据。",
+  "vdp.hallOfFame.title": "漏洞名人堂",
+  "vdp.hallOfFame.desc": "我们即将上线安全研究者名人堂，表彰做出杰出贡献的安全研究社区成员。感谢每一位为保护用户安全付出努力的研究者！",
+  "common.learnMore": "了解更多",
+  "common.download": "下载",
+  "common.apply": "申请",
+  "common.contact": "联系",
+  "common.loading": "加载中...",
+  "common.loadFailed": "加载失败，请登录后查看完整信息。",
+  "common.empty": "暂无数据",
+  "common.applyDownload": "申请下载",
+  "common.comingSoon": "即将上线",
+  "common.available": "可下载",
+  "common.formatPdf": "PDF",
+  "common.getCondition": "获取条件：",
+  "common.auditor": "审计机构：",
+  "common.lastUpdated": "最后更新：",
+  "common.format": "格式：",
+  "common.certNo": "证书编号：",
+  "common.validPeriod": "有效期：",
+  "common.controlsCovered": "涵盖控制项",
+  "common.certified": "已认证",
+  "common.scope": "范围",
+  "common.viewCertificate": "查看证书",
+  "common.severityLabel": "严重性",
+  "common.impactScope": "影响范围",
+  "common.resolutionMeasure": "解决措施",
+  "common.affectedUsers": "受影响用户：",
+  "common.dueDate": "截止日期：",
+  "common.status.certified": "未认证",
+  "common.status.compliant": "未认证",
+  "common.status.registered": "未认证",
+  "common.status.resolved": "已解决",
+  "common.status.operational": "运行中",
+  "common.status.completed": "已完成",
+  "common.realTimeLabel": "全面合规",
+  "common.controlType": "控制类型：",
+  "common.controlId": "控制编号：",
+  "storageSecurity.title": "存储安全",
+  "storageSecurity.subtitle": "您的数据由行业领先的加密技术和密钥管理基础设施保护。我们提供完整的存储安全透明度，包括加密方式、合规报告与审计记录。",
+  "storageSecurity.encryptionStatus": "加密状态",
+  "storageSecurity.encryptionDesc": "Autional 使用以下加密标准保护您所有存储的数据。",
+  "storageSecurity.algorithm": "加密算法",
+  "storageSecurity.atRest": "静态加密",
+  "storageSecurity.inTransit": "传输加密",
+  "storageSecurity.keyManagement": "密钥管理",
+  "storageSecurity.enabled": "已启用",
+  "storageSecurity.publicReports": "公开安全报告",
+  "storageSecurity.publicReportsDesc": "可下载的安全评估报告、认证文件和合规审计结果。",
+  "storageSecurity.noReports": "暂无公开报告",
+  "storageSecurity.noReportsDesc": "当前没有可下载的存储安全报告，请稍后查看。",
+  "storageSecurity.downloadReport": "下载报告",
+  "storageSecurity.size": "大小",
+  "storageSecurity.format": "格式",
+  "securityAlerts.title": "安全告警订阅",
+  "securityAlerts.meta": "安全告警订阅 — Autional Trust Center",
+  "securityAlerts.badge": "安全订阅",
+  "securityAlerts.subtitle": "订阅 Autional 安全告警，及时获取数据泄露通知、漏洞预警和合规更新。无需注册账户，完全公开。",
+  "securityAlerts.emailLabel": "邮箱地址",
+  "securityAlerts.companyLabel": "公司名称",
+  "securityAlerts.companyOptional": "(可选)",
+  "securityAlerts.topicLabel": "订阅主题",
+  "securityAlerts.topics.breach_notification.label": "数据泄露通知",
+  "securityAlerts.topics.breach_notification.desc": "发生数据泄露事件时立即通知您",
+  "securityAlerts.topics.vulnerability_alert.label": "漏洞预警",
+  "securityAlerts.topics.vulnerability_alert.desc": "发现安全漏洞时及时通报",
+  "securityAlerts.topics.security_update.label": "安全更新",
+  "securityAlerts.topics.security_update.desc": "安全策略变更、认证更新、合规变动",
+  "securityAlerts.topics.compliance_update.label": "合规更新",
+  "securityAlerts.topics.compliance_update.desc": "ISO 27001、SOC 2、GDPR 等认证状态变化",
+  "securityAlerts.topics.incident_report.label": "事件报告",
+  "securityAlerts.topics.incident_report.desc": "重大安全事件的处理进展和总结报告",
+  "securityAlerts.validateEmail": "请输入邮箱地址",
+  "securityAlerts.validateEmailInvalid": "请输入有效的邮箱地址",
+  "securityAlerts.validateTopics": "请至少选择一个订阅主题",
+  "securityAlerts.submitting": "提交中...",
+  "securityAlerts.submit": "订阅安全告警",
+  "securityAlerts.success": "订阅成功！",
+  "securityAlerts.successMessage": "请查看邮箱并点击确认链接。",
+  "securityAlerts.subscribeFailed": "订阅失败，请稍后重试。",
+  "securityAlerts.networkError": "网络错误，请检查连接后重试。",
+  "securityAlerts.subscribeMore": "订阅更多告警",
+  "securityAlerts.privacyTitle": "隐私保护",
+  "securityAlerts.privacyText": "您的邮箱仅用于发送安全告警，不会用于其他用途。查看我们的",
+  "securityAlerts.privacyLink": "隐私政策",
+  "securityAlerts.privacyText2": "了解更多信息。",
+  "securityAlerts.privacyFooter": "订阅后，您将收到一封确认邮件。点击邮件中的链接即可完成订阅。您可以随时取消订阅。",
+  "errorBoundary.title": "页面出现错误",
+  "errorBoundary.description": "很抱歉，该页面遇到了意外错误。您可以尝试刷新页面，或返回首页。",
+  "errorBoundary.refresh": "刷新页面",
+  "errorBoundary.backHome": "返回首页",
+  "errorBoundary.genericTitle": "出了点问题",
+  "errorBoundary.genericDescription": "很抱歉，发生了意外错误。请尝试刷新页面。",
+  "notFound.title": "页面未找到",
+  "notFound.meta": "页面不存在 — Autional Trust Center",
+  "notFound.description": "您访问的页面不存在或已被移动。请检查 URL 是否正确，或返回总览。",
+  "notFound.backToOverview": "返回总览",
+  "notFound.goBack": "返回上一页",
+  "compliance.liveScore": "实时合规评分",
+  "compliance.liveScoreDesc": "当前系统的安全合规指标综合评分",
+  "compliance.liveCertData": "以下数据来自认证管理 API，实时同步"
+}
