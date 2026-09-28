@@ -39,9 +39,11 @@ export default function TrustLayout() {
 		<div className="flex min-h-screen flex-col">
 			{/* Header */}
 			<header className="sticky top-0 z-50 border-b border-neutral-200 bg-white/80 backdrop-blur-md dark:border-neutral-800 dark:bg-slate-900/80">
-				<div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
+				<div className="mx-auto flex h-[var(--layout-header-height)] max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
 					<Link to="/" className="flex items-center gap-2">
-						<Shield className="h-6 w-6 text-primary-600" />
+						{/* 这里此前是 <Shield /> —— lucide 的**安全**图标被当成了品牌标。
+						    图标表达概念，品牌标表达身份；两者不能互换。 */}
+						<img src="/logo-mark.svg" alt="" className="h-8 w-8" />
 						<span className="text-lg font-bold text-neutral-900 dark:text-white">Autional</span>
 						<span className="hidden text-sm text-neutral-400 dark:text-neutral-500 sm:inline">
 							{t('layout.trustCenter')}
