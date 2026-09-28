@@ -286,7 +286,7 @@ export default function OverviewPage() {
 						{t('overview.needReportDesc')}
 					</p>
 					<a
-						href="mailto:tianv@tianv.com?subject=Document%20Request"
+						href="mailto:support@autional.net?subject=Document%20Request"
 						className="mt-6 inline-flex items-center gap-2 rounded-md bg-primary-600 px-6 py-3 text-base font-medium text-white shadow-sm transition-colors hover:bg-primary-700"
 					>
 						{t('overview.requestDoc')}

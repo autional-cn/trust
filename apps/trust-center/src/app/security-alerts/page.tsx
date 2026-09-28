@@ -133,7 +133,7 @@ export default function SecurityAlertsPage() {
 										id="email"
 										type="email"
 										{...register('email')}
-										placeholder="tianv@tianv.com"
+										placeholder="your@email.com"
 										className={`w-full rounded-md border py-2.5 pl-10 pr-3 text-sm bg-white dark:bg-slate-800 dark:text-white placeholder:text-neutral-400 focus:outline-none focus:ring-2 focus:ring-primary-500 ${errors.email ? 'border-red-300 focus:ring-red-500' : 'border-neutral-300 dark:border-neutral-700'}`}
 									/>
 								</div>

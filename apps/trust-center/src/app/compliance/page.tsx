@@ -238,7 +238,7 @@ export default function CompliancePage() {
 							</p>
 						</div>
 						<a
-							href={`mailto:tianv@tianv.com?subject=${encodeURIComponent(i18n.language === 'zh-CN' ? '合规报告申请' : 'Compliance Report Request')}`}
+							href={`mailto:support@autional.net?subject=${encodeURIComponent(i18n.language === 'zh-CN' ? '合规报告申请' : 'Compliance Report Request')}`}
 							className="inline-flex shrink-0 items-center gap-2 rounded-md bg-primary-600 px-4 py-2 text-sm font-medium text-white transition-colors hover:bg-primary-700"
 						>
 							{t('compliance.applyReport')}
