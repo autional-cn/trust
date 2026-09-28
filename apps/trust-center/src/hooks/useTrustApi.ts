@@ -8,7 +8,6 @@ import {
 	getAuditPublicHashchain,
 	getAuditPublicLogsSummary,
 	getStorageEncryptionStatus,
-	getPublicReports,
 	getPublicCertifications,
 } from '@/lib/api.generated';
 import {
@@ -95,13 +94,6 @@ export function useStorageEncryptionStatus() {
 		queryKey: ['storage', 'encryption-status'],
 		queryFn: () => getStorageEncryptionStatus(),
 		staleTime: 300_000,
-	});
-}
-
-export function usePublicReports(page = 1, pageSize = 10) {
-	return useQuery({
-		queryKey: ['storage', 'public-reports', page, pageSize],
-		queryFn: () => getPublicReports({ page, page_size: pageSize }),
 	});
 }
 

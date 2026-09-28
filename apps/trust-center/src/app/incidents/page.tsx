@@ -3,19 +3,16 @@ import { STATUS_PAGE_URL } from '@autional-cn/shared';
 import { useTranslation } from 'react-i18next';
 import { useBreachNotifications } from '@/hooks/useTrustApi';
 import { PageHeader, SectionCard, StatusBadge, EmptyState } from '@autional-cn/ui';
-import { Shield, Clock, CheckCircle2, AlertTriangle, ExternalLink, Loader2 } from 'lucide-react';
-
-const severityStyles: Record<string, string> = {
-	low: 'bg-info/10 text-info',
-	medium: 'bg-warning/10 text-warning',
-	high: 'bg-danger/10 text-danger',
-	critical: 'bg-danger/20 text-danger',
-};
+import { Clock, CheckCircle2, AlertTriangle, ExternalLink, Loader2 } from 'lucide-react';
 
 export default function IncidentsPage() {
-	const { t } = useTranslation();
+	const { t, i18n } = useTranslation();
 	usePageTitle(t('incidents.title'));
-	usePageMeta('Autional 安全事件响应 — 历史安全事件时间线、响应流程与透明度承诺。');
+	usePageMeta(
+		i18n.language === 'zh-CN'
+			? 'Autional 安全事件响应 — 数据泄露通知、事件响应流程与透明度承诺。'
+			: 'Autional Security Incident Response — Breach notifications, incident response process and our transparency commitment.',
+	);
 
 	const {
 		data: breachData,
@@ -24,17 +21,6 @@ export default function IncidentsPage() {
 	} = useBreachNotifications(1, 10);
 
 	const dataBreachCount = breachData?.items?.length ?? 0;
-
-	const staticIncidents = t('incidents.events', { returnObjects: true }) as unknown as Array<{
-		id: string;
-		date: string;
-		title: string;
-		severity: string;
-		description: string;
-		impact: string;
-		resolution: string;
-		status: string;
-	}>;
 
 	const processSteps = t('incidents.processSteps', { returnObjects: true }) as unknown as Array<{
 		step: string;
@@ -48,7 +34,7 @@ export default function IncidentsPage() {
 				<PageHeader title={t('incidents.title')} subtitle={t('incidents.subtitle')} />
 
 				{/* Stats */}
-				<div className="mt-10 grid gap-4 sm:grid-cols-3">
+				<div className="mt-10">
 					<SectionCard className="text-center" padding="md">
 						<div className="text-3xl font-bold text-success">{dataBreachCount}</div>
 						<div className="mt-1 text-sm text-neutral-600 dark:text-neutral-400">
@@ -57,18 +43,6 @@ export default function IncidentsPage() {
 						{breachLoading && (
 							<Loader2 className="mx-auto mt-2 h-4 w-4 animate-spin text-neutral-400" />
 						)}
-					</SectionCard>
-					<SectionCard className="text-center" padding="md">
-						<div className="text-3xl font-bold text-primary-600">&lt; 15min</div>
-						<div className="mt-1 text-sm text-neutral-600 dark:text-neutral-400">
-							{t('incidents.stats.mttd')}
-						</div>
-					</SectionCard>
-					<SectionCard className="text-center" padding="md">
-						<div className="text-3xl font-bold text-primary-600">&lt; 1h</div>
-						<div className="mt-1 text-sm text-neutral-600 dark:text-neutral-400">
-							{t('incidents.stats.mttr')}
-						</div>
 					</SectionCard>
 				</div>
 
@@ -153,72 +127,6 @@ export default function IncidentsPage() {
 							/>
 						</div>
 					)}
-				</div>
-
-				{/* Historical Incidents */}
-				<div className="mt-16">
-					<h2 className="text-xl font-bold text-neutral-900 dark:text-white">
-						{t('incidents.historical')}
-					</h2>
-					<div className="mt-6 space-y-6">
-						{staticIncidents.map((inc) => {
-							const severityLabel = t(
-								`incidents.severity.${inc.severity === '低' ? 'low' : inc.severity === '中' ? 'medium' : 'high'}`,
-								'',
-							);
-							return (
-								<SectionCard key={inc.id} padding="lg">
-									<div className="flex flex-col gap-4 sm:flex-row sm:items-start sm:justify-between">
-										<div className="flex-1">
-											<div className="flex flex-wrap items-center gap-3">
-												<span className="font-mono text-xs text-neutral-500 dark:text-neutral-400">
-													{inc.id}
-												</span>
-												<span
-													className={`inline-flex items-center gap-1 rounded-full px-2 py-0.5 text-xs font-medium ${severityStyles[inc.severity === '低' ? 'low' : inc.severity === '中' ? 'medium' : 'high']}`}
-												>
-													<AlertTriangle className="h-3 w-3" />
-													{severityLabel}
-												</span>
-												<span className="inline-flex items-center gap-1 rounded-full bg-success/10 px-2 py-0.5 text-xs font-medium text-success">
-													<CheckCircle2 className="h-3.5 w-3.5" />
-													{inc.status}
-												</span>
-											</div>
-											<h3 className="mt-2 text-lg font-bold text-neutral-900 dark:text-white">
-												{inc.title}
-											</h3>
-											<div className="mt-1 flex items-center gap-1 text-xs text-neutral-500 dark:text-neutral-400">
-												<Clock className="h-3.5 w-3.5" />
-												{inc.date}
-											</div>
-											<p className="mt-4 text-sm leading-relaxed text-neutral-600 dark:text-neutral-300">
-												{inc.description}
-											</p>
-											<div className="mt-4 grid gap-3 sm:grid-cols-2">
-												<div className="rounded-lg border border-neutral-100 bg-neutral-50 p-4 dark:border-neutral-800 dark:bg-slate-800/50">
-													<div className="text-xs font-semibold uppercase tracking-wide text-neutral-500 dark:text-neutral-400">
-														{t('common.impactScope')}
-													</div>
-													<p className="mt-1 text-sm text-neutral-700 dark:text-neutral-300">
-														{inc.impact}
-													</p>
-												</div>
-												<div className="rounded-lg border border-neutral-100 bg-neutral-50 p-4 dark:border-neutral-800 dark:bg-slate-800/50">
-													<div className="text-xs font-semibold uppercase tracking-wide text-neutral-500 dark:text-neutral-400">
-														{t('common.resolutionMeasure')}
-													</div>
-													<p className="mt-1 text-sm text-neutral-700 dark:text-neutral-300">
-														{inc.resolution}
-													</p>
-												</div>
-											</div>
-										</div>
-									</div>
-								</SectionCard>
-							);
-						})}
-					</div>
 				</div>
 
 				{/* Response Process */}

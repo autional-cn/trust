@@ -13,7 +13,6 @@ import {
 	Lock,
 	Globe,
 	CheckCircle2,
-	Calendar,
 	ExternalLink,
 	Loader2,
 	AlertTriangle,
@@ -34,8 +33,8 @@ export default function CompliancePage() {
 	usePageTitle(t('compliance.title'));
 	usePageMeta(
 		i18n.language === 'zh-CN'
-			? 'Autional 合规认证 — ISO 27001、SOC 2 Type II、GDPR、等保三级等权威安全与合规认证详情。'
-			: 'Autional Compliance Certifications — ISO 27001, SOC 2 Type II, GDPR, DJCP Level 3, and other authoritative security and compliance certification details.',
+			? 'Autional 合规建设进展 — 我们对照的合规框架、当前状态与建设情况说明。'
+			: 'Autional Compliance Progress — The compliance frameworks we track, their current status, and our build-out progress.',
 	);
 
 	const { data: findingsData, isLoading, isError } = useAuditFindings(undefined, undefined, 1, 5);
@@ -105,132 +104,52 @@ export default function CompliancePage() {
 										<div className="flex-1">
 											<div className="flex flex-wrap items-center gap-3">
 												<h2 className="text-xl font-bold text-neutral-900 dark:text-white">
-													{cert.framework || cert.auditor}
-												</h2>
-												<StatusBadge variant="success">
-													<CheckCircle2 className="h-3.5 w-3.5" />
-													{t('common.certified')}
-												</StatusBadge>
-											</div>
-											<div className="mt-3 grid gap-2 text-sm text-neutral-600 dark:text-neutral-400 sm:grid-cols-3">
-												{cert.auditor && (
-													<div>
-														<span className="text-neutral-400 dark:text-neutral-500">
-															{t('common.auditor')}:{' '}
-														</span>
-														<span className="text-neutral-700 dark:text-neutral-300">
-															{cert.auditor}
-														</span>
-													</div>
-												)}
-												{cert.criteriaScopes && (
-													<div>
-														<span className="text-neutral-400 dark:text-neutral-500">
-															{t('common.scope')}:{' '}
-														</span>
-														<span className="text-neutral-700 dark:text-neutral-300">
-															{cert.criteriaScopes}
-														</span>
-													</div>
-												)}
-												<div className="flex items-center gap-1">
-													<Calendar className="h-3.5 w-3.5 text-neutral-400" />
-													{cert.lastAuditedDate && <span>{cert.lastAuditedDate}</span>}
-													{cert.nextAuditDate && <span> – {cert.nextAuditDate}</span>}
-												</div>
-											</div>
-											{cert.certificateUrl && (
-												<a
-													href={cert.certificateUrl}
-													target="_blank"
-													rel="noopener noreferrer"
-													className="mt-4 inline-flex items-center gap-1 text-sm text-primary-600 hover:text-primary-700"
-												>
-													{t('common.viewCertificate')} <ExternalLink className="h-3 w-3" />
-												</a>
+												{cert.framework || cert.auditor}
+											</h2>
+											{cert.lastAuditedDate && (
+												<span className="text-xs text-neutral-500 dark:text-neutral-400">
+													{t('common.lastAudited')}
+													{cert.lastAuditedDate}
+												</span>
 											)}
+										</div>
+										{cert.criteriaScopes && (
+											<p className="mt-4 text-sm leading-relaxed text-neutral-600 dark:text-neutral-300">
+												{cert.criteriaScopes}
+											</p>
+										)}
+									</div>
+								</div>
+							</SectionCard>
+						))
+					: certKeys.map((key) => {
+							const cert = {
+								name: t(`compliance.certifications.${key}.name`),
+								status: t(`compliance.certifications.${key}.status`),
+								scope: t(`compliance.certifications.${key}.scope`),
+							};
+							const Icon = certIcons[key];
+							return (
+								<SectionCard key={key} padding="lg">
+									<div className="flex flex-col gap-6 md:flex-row md:items-start">
+										<div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-xl bg-primary-50 dark:bg-primary-900/20">
+											<Icon className="h-7 w-7 text-primary-600" />
+										</div>
+										<div className="flex-1">
+											<div className="flex flex-wrap items-center gap-3">
+												<h2 className="text-xl font-bold text-neutral-900 dark:text-white">
+													{cert.name}
+												</h2>
+												<StatusBadge variant="neutral">{cert.status}</StatusBadge>
+											</div>
+											<p className="mt-4 text-sm leading-relaxed text-neutral-600 dark:text-neutral-300">
+												{cert.scope}
+											</p>
 										</div>
 									</div>
 								</SectionCard>
-							))
-						: certKeys.map((key) => {
-								const cert = {
-									name: t(`compliance.certifications.${key}.name`),
-									status: t(`compliance.certifications.${key}.status`),
-									certNo: t(`compliance.certifications.${key}.certNo`),
-									validFrom: t(`compliance.certifications.${key}.validFrom`),
-									validTo: t(`compliance.certifications.${key}.validTo`),
-									scope: t(`compliance.certifications.${key}.scope`),
-									controls: t(`compliance.certifications.${key}.controls`, {
-										returnObjects: true,
-									}) as string[],
-								};
-								const Icon = certIcons[key];
-								return (
-									<SectionCard key={key} padding="lg">
-										<div className="flex flex-col gap-6 md:flex-row md:items-start">
-											<div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-xl bg-primary-50 dark:bg-primary-900/20">
-												<Icon className="h-7 w-7 text-primary-600" />
-											</div>
-											<div className="flex-1">
-												<div className="flex flex-wrap items-center gap-3">
-													<h2 className="text-xl font-bold text-neutral-900 dark:text-white">
-														{cert.name}
-													</h2>
-													<StatusBadge
-														variant={
-															cert.status === '未认证' || cert.status === 'Not Certified'
-																? 'neutral'
-																: 'success'
-														}
-													>
-														{cert.status !== '未认证' && cert.status !== 'Not Certified' && (
-															<CheckCircle2 className="h-3.5 w-3.5" />
-														)}
-														{cert.status}
-													</StatusBadge>
-												</div>
-												<div className="mt-3 grid gap-2 text-sm text-neutral-600 dark:text-neutral-400 sm:grid-cols-3">
-													<div>
-														<span className="text-neutral-400 dark:text-neutral-500">
-															{t('common.certNo')}
-														</span>
-														<span className="font-mono text-neutral-700 dark:text-neutral-300">
-															{cert.certNo}
-														</span>
-													</div>
-													<div className="flex items-center gap-1">
-														<Calendar className="h-3.5 w-3.5 text-neutral-400" />
-														<span>
-															{t('common.validPeriod')}
-															{cert.validFrom} – {cert.validTo}
-														</span>
-													</div>
-												</div>
-												<p className="mt-4 text-sm leading-relaxed text-neutral-600 dark:text-neutral-300">
-													{cert.scope}
-												</p>
-												<div className="mt-5">
-													<h3 className="text-sm font-semibold text-neutral-900 dark:text-white">
-														{t('common.controlsCovered')}
-													</h3>
-													<div className="mt-3 grid gap-2 sm:grid-cols-2 lg:grid-cols-3">
-														{cert.controls.map((ctrl) => (
-															<div
-																key={ctrl}
-																className="flex items-center gap-2 text-sm text-neutral-600 dark:text-neutral-400"
-															>
-																<CheckCircle2 className="h-4 w-4 shrink-0 text-success" />
-																{ctrl}
-															</div>
-														))}
-													</div>
-												</div>
-											</div>
-										</div>
-									</SectionCard>
-								);
-							})}
+							);
+						})}
 				</div>
 
 				{/* Dynamic Audit Findings */}

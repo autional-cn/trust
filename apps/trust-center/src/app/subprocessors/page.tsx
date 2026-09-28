@@ -10,8 +10,8 @@ export default function SubprocessorsPage() {
 	usePageTitle(t('subprocessors.title'));
 	usePageMeta(
 		i18n.language === 'zh-CN'
-			? 'Autional 子处理商清单 — GDPR Art.28 要求的子处理商公示，包括名称、服务、位置与安全认证。'
-			: 'Autional Subprocessor List — GDPR Art.28 required subprocessor disclosure, including name, service, location, and security certifications.',
+			? 'Autional 子处理商清单 — GDPR Art.28 要求的子处理商公示，包括名称、服务、位置与处理目的。'
+			: 'Autional Subprocessor List — GDPR Art.28 required subprocessor disclosure, including name, service, location, and purpose.',
 	);
 
 	const { data, isLoading, isError } = useQuery({

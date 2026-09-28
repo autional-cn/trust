@@ -26,12 +26,12 @@ const certIcons = {
 };
 
 const pillarIcons: Record<string, React.ComponentType<{ className?: string }>> = {
-	endToEndEncryption: Lock,
+	encryption: Lock,
 	zeroTrust: Fingerprint,
 	immutableAudit: Eye,
 	highAvailability: Server,
 	soc247: Clock,
-	penTest: Shield,
+	securityTesting: Shield,
 };
 
 export default function OverviewPage() {
@@ -40,8 +40,8 @@ export default function OverviewPage() {
 		{
 			title: t('overview.title'),
 			description: i18n.language?.startsWith('zh')
-				? 'Autional Trust Center 总览 — 安全认证、合规状态、隐私保护与数据驻留信息一站式透明展示。'
-				: 'Autional Trust Center Overview — Security certifications, compliance status, privacy protection, and data residency transparency.',
+				? 'Autional Trust Center 总览 — 安全实践、数据保护与合规建设进展的透明展示。'
+				: 'Autional Trust Center Overview — Transparency on our security practices, data protection, and compliance progress.',
 		},
 		{ siteName: 'Autional Trust Center' },
 	);
@@ -50,16 +50,16 @@ export default function OverviewPage() {
 
 	const certKeys = ['iso27001', 'soc2', 'gdpr', 'djbh'] as const;
 	const pillarKeys = [
-		'endToEndEncryption',
+		'encryption',
 		'zeroTrust',
 		'immutableAudit',
 		'highAvailability',
 		'soc247',
-		'penTest',
+		'securityTesting',
 	] as const;
 	const quickLinkKeys = [
 		'complianceDetail',
-		'auditDownload',
+		'auditCompliance',
 		'dataResidency',
 		'incidents',
 	] as const;
@@ -113,7 +113,7 @@ export default function OverviewPage() {
 									<div className="text-sm font-medium text-neutral-900 dark:text-white">
 										{status.overallStatus === 'compliant' || status.overallStatus === '合规'
 											? t('common.realTimeLabel')
-											: status.overallStatus}
+											: t('overview.statusBuilding')}
 									</div>
 									<div className="text-xs text-neutral-500 dark:text-neutral-400">
 										{t('overview.lastAuditLine', {
@@ -127,17 +127,17 @@ export default function OverviewPage() {
 								<span
 									className={`inline-flex items-center gap-1 rounded-full px-2 py-0.5 text-xs font-medium ${status.iso27001Compliant ? 'bg-success/10 text-success' : 'bg-neutral-100 text-neutral-500 dark:bg-slate-800'}`}
 								>
-									<CheckCircle2 className="h-3 w-3" /> ISO 27001
+									{status.iso27001Compliant && <CheckCircle2 className="h-3 w-3" />} ISO 27001
 								</span>
 								<span
 									className={`inline-flex items-center gap-1 rounded-full px-2 py-0.5 text-xs font-medium ${status.soxCompliant ? 'bg-success/10 text-success' : 'bg-neutral-100 text-neutral-500 dark:bg-slate-800'}`}
 								>
-									<CheckCircle2 className="h-3 w-3" /> SOX
+									{status.soxCompliant && <CheckCircle2 className="h-3 w-3" />} SOX
 								</span>
 								<span
 									className={`inline-flex items-center gap-1 rounded-full px-2 py-0.5 text-xs font-medium ${status.gdprCompliant ? 'bg-success/10 text-success' : 'bg-neutral-100 text-neutral-500 dark:bg-slate-800'}`}
 								>
-									<CheckCircle2 className="h-3 w-3" /> GDPR
+									{status.gdprCompliant && <CheckCircle2 className="h-3 w-3" />} GDPR
 								</span>
 							</div>
 						</div>
@@ -156,6 +156,7 @@ export default function OverviewPage() {
 						const cert = {
 							name: t(`overview.certifications.${key}.name`),
 							desc: t(`overview.certifications.${key}.desc`),
+							status: t(`overview.certifications.${key}.status`),
 						};
 						const Icon = certIcons[key];
 						return (
@@ -169,11 +170,11 @@ export default function OverviewPage() {
 								<h3 className="mt-4 text-lg font-semibold text-neutral-900 dark:text-white">
 									{cert.name}
 								</h3>
-								<span className="mt-1 inline-block rounded-full bg-success/10 px-2 py-0.5 text-xs font-medium text-success">
-									{cert.desc}
+								<span className="mt-1 inline-block rounded-full bg-neutral-100 px-2 py-0.5 text-xs font-medium text-neutral-500 dark:bg-slate-800 dark:text-neutral-400">
+									{cert.status}
 								</span>
-								<p className="mt-3 text-sm text-neutral-600 dark:text-neutral-400">
-									{key === 'gdpr' ? t('common.status.compliant') : t('common.status.certified')}
+								<p className="mt-3 text-sm leading-relaxed text-neutral-600 dark:text-neutral-400">
+									{cert.desc}
 								</p>
 							</div>
 						);
@@ -192,7 +193,7 @@ export default function OverviewPage() {
 								desc: t(`overview.pillars.${key}.desc`),
 							};
 							const Icon = pillarIcons[key];
-							const href = ['endToEndEncryption', 'zeroTrust', 'penTest'].includes(key)
+							const href = ['encryption', 'zeroTrust', 'securityTesting'].includes(key)
 								? '/security'
 								: key === 'immutableAudit'
 									? '/compliance'
@@ -238,7 +239,7 @@ export default function OverviewPage() {
 							return (
 								<Link
 									key={key}
-									to={`/${key === 'complianceDetail' ? 'compliance' : key === 'auditDownload' ? 'audit-reports' : key === 'dataResidency' ? 'data-residency' : 'incidents'}`}
+									to={`/${key === 'complianceDetail' ? 'compliance' : key === 'auditCompliance' ? 'audit-reports' : key === 'dataResidency' ? 'data-residency' : 'incidents'}`}
 									className="group flex items-start gap-4 rounded-xl border border-neutral-200 bg-white p-5 transition-all hover:border-primary-200 hover:shadow-sm dark:border-neutral-800 dark:bg-slate-900 dark:hover:border-primary-800"
 								>
 									<div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-primary-50 text-primary-600 dark:bg-primary-900/20">
@@ -269,7 +270,7 @@ export default function OverviewPage() {
 								key={item}
 								className="flex items-center gap-3 rounded-lg border border-neutral-200 bg-white px-4 py-3 dark:border-neutral-800 dark:bg-slate-900"
 							>
-								<CheckCircle2 className="h-5 w-5 shrink-0 text-success" />
+								<span className="h-1.5 w-1.5 shrink-0 rounded-full bg-primary-500" />
 								<span className="text-sm text-neutral-700 dark:text-neutral-300">{item}</span>
 							</div>
 						))}

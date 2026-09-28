@@ -2,13 +2,13 @@ import { useSecurityScore } from '@/hooks/useTrustApi';
 import { useTranslation } from 'react-i18next';
 import { Shield, CheckCircle2, AlertTriangle, Loader2 } from 'lucide-react';
 
-const DIMENSION_LABELS: Record<string, string> = {
-	iso27001_coverage: 'ISO 27001',
-	soc2_coverage: 'SOC 2',
-	gdpr_compliance: 'GDPR',
-	open_issues: 'Issues',
-	penetration_test: 'Pen Test',
-	breach_history: 'Breach',
+const DIMENSION_KEYS: Record<string, string> = {
+	iso27001_coverage: 'iso27001Coverage',
+	soc2_coverage: 'soc2Coverage',
+	gdpr_compliance: 'gdprCoverage',
+	open_issues: 'openIssues',
+	penetration_test: 'penetrationTest',
+	breach_history: 'breachHistory',
 };
 
 const DIMENSION_COLORS: Record<string, string> = {
@@ -116,7 +116,7 @@ export default function SecurityScore() {
 					{dimensions.slice(0, 4).map((dim) => (
 						<RingChart
 							key={dim.name}
-							label={DIMENSION_LABELS[dim.name ?? ''] ?? dim.name ?? ''}
+							label={t(`overview.dimensions.${DIMENSION_KEYS[dim.name ?? ''] ?? 'unknown'}`)}
 							score={dim.score ?? 0}
 							color={DIMENSION_COLORS[dim.name ?? ''] ?? 'text-neutral-400'}
 						/>
@@ -124,18 +124,9 @@ export default function SecurityScore() {
 				</div>
 
 				<div className="text-right">
-					<div className="flex items-center gap-1.5 text-sm text-neutral-600 dark:text-neutral-300">
-						{overallScore >= 90 ? (
-							<>
-								<CheckCircle2 className="h-4 w-4 text-success" />
-								<span>{t('common.realTimeLabel')}</span>
-							</>
-						) : (
-							<>
-								<AlertTriangle className="h-4 w-4 text-warning" />
-								<span>{t('overview.openIssues')}</span>
-							</>
-						)}
+					<div className="flex items-center justify-end gap-1.5 text-sm text-neutral-600 dark:text-neutral-300">
+						<CheckCircle2 className="h-4 w-4 text-neutral-400" />
+						<span>{t('common.realTimeLabel')}</span>
 					</div>
 					{calculatedAt && (
 						<div className="mt-1 text-xs text-neutral-400">

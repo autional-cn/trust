@@ -1,6 +1,6 @@
 import { usePageTitle, usePageMeta } from '@autional-cn/shared';
 import { useTranslation } from 'react-i18next';
-import { Globe, Server, Database, Shield, CheckCircle2 } from 'lucide-react';
+import { Globe, Server, Database, Shield } from 'lucide-react';
 
 const commitments = [
 	{
@@ -30,8 +30,8 @@ export default function DataResidencyPage() {
 	usePageTitle(t('dataResidency.title'));
 	usePageMeta(
 		i18n.language === 'zh-CN'
-			? 'Autional 数据驻留 — 全球数据中心布局、数据主权、跨境传输合规与数据保留策略。'
-			: 'Autional Data Residency — Global data center layout, data sovereignty, cross-border transfer compliance, and data retention policies.',
+			? 'Autional 数据驻留 — 数据存储区域、跨境传输原则与数据保留策略。'
+			: 'Autional Data Residency — Data storage regions, cross-border transfer principles and retention policies.',
 	);
 
 	const regions = t('dataResidency.regions', { returnObjects: true }) as unknown as Array<{
@@ -162,7 +162,7 @@ export default function DataResidencyPage() {
 								key={item}
 								className="flex items-center gap-3 rounded-lg border border-neutral-200 bg-white px-4 py-3 dark:border-neutral-800 dark:bg-slate-900"
 							>
-								<CheckCircle2 className="h-5 w-5 shrink-0 text-success" />
+								<span className="h-1.5 w-1.5 shrink-0 rounded-full bg-primary-500" />
 								<span className="text-sm text-neutral-700 dark:text-neutral-300">{item}</span>
 							</div>
 						))}

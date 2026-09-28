@@ -1,5 +1,6 @@
 import { usePageTitle, usePageMeta } from '@autional-cn/shared';
 import { useTranslation } from 'react-i18next';
+import { Link } from 'react-router';
 import {
 	Lock,
 	Fingerprint,
@@ -21,7 +22,7 @@ const pillars = [
 ];
 
 const programs = [
-	{ icon: Shield, titleKey: 'penTest', descKey: 'penTestDesc' },
+	{ icon: Shield, titleKey: 'securityTesting', descKey: 'securityTestingDesc' },
 	{ icon: AlertTriangle, titleKey: 'bugBounty', descKey: 'bugBountyDesc' },
 	{ icon: FileSearch, titleKey: 'codeAudit', descKey: 'codeAuditDesc' },
 	{ icon: Clock, titleKey: 'soc247', descKey: 'soc247Desc' },
@@ -32,8 +33,8 @@ export default function SecurityPage() {
 	usePageTitle(t('security.title'));
 	usePageMeta(
 		i18n.language === 'zh-CN'
-			? 'Autional 安全架构 — 零信任架构、端到端加密、基础设施安全、渗透测试与漏洞赏金计划。'
-			: 'Autional Security Architecture — Zero trust, end-to-end encryption, infrastructure security, penetration testing, and bug bounty program.',
+			? 'Autional 安全架构 — 零信任架构、加密、基础设施安全与可观测性。'
+			: 'Autional Security Architecture — Zero trust, encryption, infrastructure security and observability.',
 	);
 
 	return (
@@ -119,12 +120,12 @@ export default function SecurityPage() {
 								{t('security.vulnerabilityDisclosureDesc')}
 							</p>
 						</div>
-						<a
-							href="#"
+						<Link
+							to="/vulnerability-disclosure"
 							className="inline-flex shrink-0 items-center gap-2 rounded-md bg-primary-600 px-4 py-2 text-sm font-medium text-white transition-colors hover:bg-primary-700"
 						>
 							{t('common.contact')}
-						</a>
+						</Link>
 					</div>
 				</div>
 			</div>

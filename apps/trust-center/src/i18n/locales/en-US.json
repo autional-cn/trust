@@ -1,787 +1,4 @@
 {
-  "nav": {
-    "overview": "Overview",
-    "compliance": "Compliance",
-    "security": "Security",
-    "dataResidency": "Data Residency",
-    "auditReports": "Audit Reports",
-    "incidents": "Incidents",
-    "privacy": "Privacy",
-    "subprocessors": "Subprocessors",
-    "vulnerabilityDisclosure": "Vulnerability Disclosure",
-    "storageSecurity": "Storage Security",
-    "securityAlerts": "Security Alerts"
-  },
-  "layout": {
-    "backToTop": "Back to top",
-    "trustCenter": "Trust Center",
-    "description": "Transparent, trustworthy, and verifiable security and compliance information platform.",
-    "security": "Security",
-    "compliance": "Compliance",
-    "authms": "Autional",
-    "officialSite": "Official Site",
-    "systemStatus": "System Status",
-    "developerDocs": "Developer Docs"
-  },
-  "overview": {
-    "title": "Security & Compliance",
-    "subtitle": "Security is not a feature, but the foundation of Autional. We adopt a zero-trust architecture and maintain multiple international security certifications to ensure your data is secure and compliant.",
-    "securityArchitecture": "Security Architecture",
-    "quickLinks": "Quick Links",
-    "complianceChecklist": "Compliance Control Checklist",
-    "needReport": "Need a Compliance Report?",
-    "needReportDesc": "Enterprise customers can obtain SOC 2 reports, penetration test summaries, Data Processing Agreements (DPA), and other compliance documents.",
-    "requestDoc": "Request Documents",
-    "loadingStatus": "Loading real-time compliance status...",
-    "loadFailed": "Failed to load real-time compliance status. Showing static reference information.",
-    "lastAudit": "Last Audit",
-    "lastAuditLine": "Last Audit: {{date}} · Open Issues: {{count}} items",
-    "openIssues": "Open Issues",
-    "securityScore": "Security Score",
-    "securityScoreDesc": "Comprehensive security score based on real-time compliance status and audit findings.",
-    "calculatedAt": "Calculated at",
-    "trustCenterBadge": "Trust Center",
-    "certifications": {
-      "iso27001": {
-        "name": "ISO 27001",
-        "desc": "Not Certified"
-      },
-      "soc2": {
-        "name": "SOC 2 Type II",
-        "desc": "Not Certified"
-      },
-      "gdpr": {
-        "name": "GDPR",
-        "desc": "Not Certified"
-      },
-      "djbh": {
-        "name": "DJCP Level 3",
-        "desc": "Not Certified"
-      }
-    },
-    "pillars": {
-      "endToEndEncryption": {
-        "title": "End-to-End Encryption",
-        "desc": "TLS 1.3 transport encryption, AES-256 encryption at rest, keys managed by HSM hardware security modules."
-      },
-      "zeroTrust": {
-        "title": "Zero Trust Architecture",
-        "desc": "Never trust, always verify. Risk scoring based on device fingerprint, IP reputation, and behavioral biometrics."
-      },
-      "immutableAudit": {
-        "title": "Immutable Audit Logs",
-        "desc": "All critical operations are recorded in audit logs with hash chain verification to ensure log integrity."
-      },
-      "highAvailability": {
-        "title": "High Availability & DR",
-        "desc": "Multi-region deployment, automatic failover, RPO < 1 min, RTO < 5 min."
-      },
-      "soc247": {
-        "title": "24/7 Security Operations",
-        "desc": "Dedicated SOC continuously monitors threat intelligence, MTTD < 15 minutes."
-      },
-      "penTest": {
-        "title": "Penetration Testing",
-        "desc": "Quarterly third-party penetration tests, annual red-blue team exercises, and continuous bug bounty program."
-      }
-    },
-    "quickLinkItems": {
-      "complianceDetail": {
-        "title": "Compliance Certifications",
-        "desc": "View detailed information and validity periods for all security certifications."
-      },
-      "auditDownload": {
-        "title": "Audit Report Downloads",
-        "desc": "Access SOC 2 reports, penetration test summaries, and Data Processing Agreements."
-      },
-      "dataResidency": {
-        "title": "Data Residency",
-        "desc": "Learn about data storage locations, cross-border transfers, and retention policies."
-      },
-      "incidents": {
-        "title": "Incident Response",
-        "desc": "View security incident timelines and response procedures."
-      }
-    },
-    "checklistItems": [
-      "Data classification and tiered protection",
-      "Least privilege access control",
-      "Periodic identity and privilege review",
-      "Incident Response Plan (IRP)",
-      "Business Continuity Plan (BCP)",
-      "Vendor security assessment",
-      "Employee background checks and security awareness training",
-      "Code security audit and dependency vulnerability scanning"
-    ]
-  },
-  "security": {
-    "title": "Security Architecture",
-    "subtitle": "Defense in depth, zero trust, encryption first — our security architecture protects your data at every layer.",
-    "zeroTrust": "Zero Trust Security Architecture",
-    "zeroTrustDesc": "Autional adopts a Zero Trust security model with the core principle of 'never trust, always verify.' All access requests, regardless of internal or external origin, must undergo identity verification, device trust assessment, and dynamic authorization.",
-    "encryption": "End-to-End Encryption",
-    "encryptionDesc": "From data transmission to static storage, the entire chain employs industry-leading encryption standards to ensure data is protected in any state.",
-    "infrastructure": "Infrastructure Security",
-    "infrastructureDesc": "Multi-region cloud infrastructure deployment combined with defense-in-depth strategies to build a highly available, attack-resistant operating environment.",
-    "observability": "Audit & Observability",
-    "observabilityDesc": "Full traceability of all operations with tamper-proof audit logs, providing complete evidence chains for security incident investigations and compliance audits.",
-    "securityPrograms": "Security Programs",
-    "penTest": "Third-Party Penetration Testing",
-    "penTestDesc": "Quarterly black-box/gray-box penetration tests by internationally renowned security firms, covering web applications, APIs, mobile clients, and cloud infrastructure.",
-    "bugBounty": "Bug Bounty Program",
-    "bugBountyDesc": "Accepting vulnerability reports from global security researchers through public disclosure platforms, with critical vulnerabilities fixed within 48 hours on average.",
-    "codeAudit": "Code Security Audit",
-    "codeAuditDesc": "All code must pass three gates before merging: SAST (static analysis), SCA (dependency scanning), and secret leak detection.",
-    "soc247": "24/7 SOC Operations",
-    "soc247Desc": "Dedicated Security Operations Center continuously monitors global threat intelligence, with MTTD < 15 minutes and MTTR < 1 hour.",
-    "vulnerabilityDisclosure": "Found a Security Vulnerability?",
-    "vulnerabilityDisclosureDesc": "We welcome responsible disclosure. Please contact us at , usually acknowledged within 24 hours.",
-    "items": {
-      "zeroTrust": [
-        "Least privilege (PoLP) — deny all by default",
-        "Micro-segmentation — end-to-end mTLS for service communication",
-        "Dynamic risk assessment — real-time scoring based on device fingerprint, IP reputation, and behavioral biometrics",
-        "Continuous verification — periodic trust re-evaluation within sessions"
-      ],
-      "encryption": [
-        "Transport encryption: TLS 1.3 (mandatory PFS)",
-        "Encryption at rest: AES-256-GCM",
-        "Key management: HSM hosted with automatic rotation",
-        "Database encryption: column-level + TDE"
-      ],
-      "infrastructure": [
-        "Multi-AZ deployment with automatic failover",
-        "DDoS protection and WAF layer filtering",
-        "Container runtime security scanning and image signature verification",
-        "VPC network isolation with minimal security group exposure"
-      ],
-      "observability": [
-        "Audit log hash chain verification to prevent tampering",
-        "SIEM integration with real-time security event correlation",
-        "Full-chain distributed tracing (OpenTelemetry)",
-        "UEBA anomaly detection and automatic alerting"
-      ]
-    }
-  },
-  "dataResidency": {
-    "title": "Data Residency",
-    "subtitle": "Your data, your choice. Autional deploys data centers across multiple global regions, supporting data sovereignty and compliance residency requirements.",
-    "regionTitle": "Global Data Centers",
-    "regionTable": {
-      "region": "Region",
-      "location": "Data Center Locations",
-      "status": "Status",
-      "features": "Key Features"
-    },
-    "commitments": "Data Residency Commitments",
-    "transparency": "Transparent Data Storage Locations",
-    "transparencyDesc": "Clearly inform data storage geographic regions during tenant creation, with per-application data center selection granularity.",
-    "noCrossBorder": "Default No Cross-Border Transfer",
-    "noCrossBorderDesc": "For mainland China tenants, data is stored in domestic data centers by default and is not transferred across borders without explicit authorization.",
-    "crossBorderCompliance": "Compliant Cross-Border Transfers",
-    "crossBorderComplianceDesc": "When cross-border data transfer is required, we use Standard Contractual Clauses (SCC), Binding Corporate Rules (BCR), or other legally recognized mechanisms.",
-    "retention": "Data Retention & Deletion",
-    "retentionDesc": "Support configurable data retention periods per tenant policy, with automatic archival or secure erasure upon expiration, satisfying GDPR 'right to be forgotten'.",
-    "checklist": "Compliance Checklist",
-    "regions": [
-      {
-        "code": "CN-NORTH",
-        "name": "Mainland China",
-        "location": "Beijing / Shanghai / Guangzhou",
-        "features": [
-          "DJCP Level 3",
-          "Data localization",
-          "Localization support"
-        ]
-      },
-      {
-        "code": "AP-SOUTHEAST",
-        "name": "Asia Pacific",
-        "location": "Singapore / Tokyo / Sydney",
-        "features": [
-          "GDPR compatible",
-          "Low-latency SEA coverage",
-          "Multi-AZ"
-        ]
-      },
-      {
-        "code": "EU-WEST",
-        "name": "Europe",
-        "location": "Frankfurt / Amsterdam / Dublin",
-        "features": [
-          "GDPR fully compliant",
-          "Data sovereignty",
-          "Standard Contractual Clauses"
-        ]
-      },
-      {
-        "code": "US-EAST",
-        "name": "US East",
-        "location": "Virginia / Ohio",
-        "features": [
-          "SOC 2 certified region",
-          "High availability redundancy",
-          "FedRAMP Ready"
-        ]
-      },
-      {
-        "code": "US-WEST",
-        "name": "US West",
-        "location": "Oregon / California",
-        "features": [
-          "Disaster recovery site",
-          "Cross-region replication",
-          "Low-latency US West"
-        ]
-      }
-    ],
-    "checklistItems": [
-      "Data classification and tiered storage policy",
-      "Cross-border data transfer legality review",
-      "Data subject access and deletion requests",
-      "Automated data retention enforcement",
-      "Backup data geographic isolation",
-      "Third-party subprocessor data residency review",
-      "Data sovereignty law change tracking",
-      "Cross-border breach notification mechanism"
-    ]
-  },
-  "auditReports": {
-    "title": "Audit Reports",
-    "subtitle": "Transparency is trust. We undergo regular independent audits and make reports available to customers to support your internal compliance and security assessments.",
-    "penTestReports": "Penetration Test Reports",
-    "penTestDesc": "Real-time reports from the compliance system (login required)",
-    "labels": {
-      "conductedAt": "Conducted Date:",
-      "severity": "Severity Level:",
-      "nextTest": "Next Test:"
-    },
-    "loadingPenTest": "Loading penetration test reports...",
-    "penTestLoadFailed": "Failed to load penetration test reports. Please log in to view full information.",
-    "noPenTestReports": "No Penetration Test Reports",
-    "noPenTestReportsDesc": "No penetration test report records in the system.",
-    "standardDocs": "Standard Compliance Documents",
-    "notFound": "Can't find the report you need?",
-    "notFoundDesc": "If you need industry-specific compliance documents (e.g., HIPAA, PCI-DSS), please contact our compliance team.",
-    "contactTeam": "Contact Compliance Team",
-    "reports": {
-      "iso27001": {
-        "title": "ISO 27001 Certificate",
-        "desc": "Information Security Management System (ISMS) certification, demonstrating Autional's systematic information security management capabilities.",
-        "access": "All customers"
-      },
-      "dpa": {
-        "title": "Data Processing Agreement (DPA)",
-        "desc": "Autional Data Processing Agreement, clarifying the responsibilities, processing purposes, subprocessor list, and security measures.",
-        "access": "All customers"
-      },
-      "djbh": {
-        "title": "DJCP Level 3 Filing Certificate",
-        "desc": "China Cybersecurity Level Protection Level 3 filing certificate, applicable to enterprise customers operating in mainland China with high security requirements.",
-        "access": "All customers"
-      },
-      "bcp": {
-        "title": "Business Continuity Plan (BCP)",
-        "desc": "Autional Business Continuity Plan summary, including disaster recovery strategy, RTO/RPO metrics, emergency response procedures, and drill records.",
-        "access": "Enterprise customers (NDA required)"
-      }
-    }
-  },
-  "audit": {
-    "liveStats": "Live Audit Statistics",
-    "totalEvents": "Total Events",
-    "hashChainIntegrity": "Hash Chain Integrity",
-    "logCount": "Log Count",
-    "startHash": "Start Hash",
-    "endHash": "End Hash",
-    "lastValidated": "Last Validated",
-    "operationalSummary": "Operational Summary",
-    "totalLogs": "Total Logs",
-    "modules": "Modules",
-    "activeSince": "Active Since",
-    "lastActivity": "Last Activity"
-  },
-  "incidents": {
-    "title": "Incident Response",
-    "subtitle": "We are committed to transparency for all security incidents. Below are our proactively disclosed security events and response records.",
-    "stats": {
-      "breaches": "Disclosed Data Breaches",
-      "mttd": "Mean Time to Detect (MTTD)",
-      "mttr": "Mean Time to Respond (MTTR)"
-    },
-    "breachNotifications": "Breach Notifications",
-    "breachDesc": "Real-time breach notifications from the compliance system (login required)",
-    "loadingBreaches": "Loading breach notifications...",
-    "breachesLoadFailed": "Failed to load breach notifications. Please log in to view full information.",
-    "noBreaches": "No Breach Notification Records",
-    "noBreachesDesc": "System security is in good standing. No data breach events have been detected.",
-    "historical": "Historical Security Incidents",
-    "responseProcess": "Incident Response Process",
-    "subscribe": "Subscribe to Security Advisories",
-    "subscribeDesc": "Get Autional security updates, vulnerability announcements, and maintenance notices.",
-    "visitStatus": "Visit Status Page",
-    "severity": {
-      "low": "Low",
-      "medium": "Medium",
-      "high": "High",
-      "critical": "Critical"
-    },
-    "processSteps": [
-      {
-        "step": "01",
-        "title": "Detect",
-        "desc": "Multi-channel detection via SIEM, UEBA, threat intelligence, and manual inspection."
-      },
-      {
-        "step": "02",
-        "title": "Contain",
-        "desc": "Initiate containment measures within 30 minutes, isolate affected resources to prevent spread."
-      },
-      {
-        "step": "03",
-        "title": "Eradicate",
-        "desc": "Identify root cause, eliminate threats, fix vulnerabilities, and verify control effectiveness."
-      },
-      {
-        "step": "04",
-        "title": "Recover & Review",
-        "desc": "Restore services, notify affected customers, and generate post-incident review report."
-      }
-    ],
-    "events": [
-      {
-        "id": "INC-2025-001",
-        "date": "2025-03-12",
-        "title": "Third-Party Dependency Security Update",
-        "severity": "Low",
-        "description": "Security team detected a known CVE (CVSS 4.2) in an indirect dependency. The dependency exposed no attack surface at runtime, but out of caution we completed the patch upgrade within 2 hours.",
-        "impact": "No customer data affected, no service interruption.",
-        "resolution": "Upgraded dependency to secure version and strengthened SCA scanning rules to prevent similar issues."
-      },
-      {
-        "id": "INC-2024-003",
-        "date": "2024-11-05",
-        "title": "DDoS Attack Mitigation",
-        "severity": "Medium",
-        "description": "Autional gateway suffered a reflected DDoS attack peaking at ~120 Gbps. The automated traffic scrubbing system triggered within 30 seconds, completely filtering the attack traffic.",
-        "impact": "Some regional users observed minor latency (< 200ms) in the first minute of the attack. No service unavailability.",
-        "resolution": "Cloud scrubbing service mitigated automatically. Post-incident threshold adjustments and edge node capacity increase."
-      },
-      {
-        "id": "INC-2024-002",
-        "date": "2024-08-20",
-        "title": "Certificate Rotation Exception",
-        "severity": "Low",
-        "description": "Automated certificate rotation task failed on one edge node, causing brief TLS handshake alerts on that node.",
-        "impact": "Approximately 0.03% of requests experienced TLS handshake retries within 3 minutes.",
-        "resolution": "Manually triggered rotation and fixed race condition in automation task. Added certificate expiry monitoring alerts."
-      },
-      {
-        "id": "INC-2024-001",
-        "date": "2024-05-14",
-        "title": "False Positive Alert Investigation",
-        "severity": "Low",
-        "description": "SIEM system produced a large number of false positive alerts about 'abnormal logins' due to overly broad rule configuration.",
-        "impact": "No actual security incident. SOC team spent approximately 2 hours performing rule tuning.",
-        "resolution": "Tightened detection rules, added whitelist mechanism, optimized baseline learning period."
-      }
-    ]
-  },
-  "privacy": {
-    "title": "Privacy Policy",
-    "subtitle": "Your privacy is important to us. This policy explains how we collect, use, and protect your personal information.",
-    "collection": "What Data We Collect",
-    "usage": "How We Use Your Data",
-    "sharing": "Data Sharing & Third Parties",
-    "crossBorder": "Cross-Border Data Transfers",
-    "retention": "Data Retention & Deletion",
-    "rights": "Your Rights",
-    "cookies": "Cookies & Tracking Technologies",
-    "contactDpo": "Contact Our Data Protection Officer (DPO)",
-    "contactDpoDesc": "If you have any questions about our privacy policy or wish to exercise your data subject rights, please contact our DPO:",
-    "dpoEmail": "Email:",
-    "dpoAddress": "Address:",
-    "dpoAddressText": "Autional Data Protection Office, Zhangjiang Hi-Tech Park, Pudong New Area, Shanghai",
-    "lastUpdated": "Last Updated",
-    "updatedDate": "May 9, 2025",
-    "sections": {
-      "collection": [
-        "Account information: username, email, phone number, password hash (irreversibly encrypted storage).",
-        "Usage data: login time, IP address, device fingerprint, operation logs (for security auditing and anomaly detection).",
-        "Tenant configuration: company name, department structure, application configuration, branding customization information.",
-        "Payment information: billing address, transaction records (card numbers are processed by PCI-DSS compliant payment gateways; Autional does not store full card numbers)."
-      ],
-      "usage": [
-        "Providing identity authentication and access management services.",
-        "Ensuring account security and fraud detection.",
-        "Fulfilling legal and compliance obligations (e.g., tax, audit).",
-        "With your explicit consent, sending product updates and security notifications."
-      ],
-      "sharing": [
-        "We never sell your personal data to third parties.",
-        "Data is shared only under the following circumstances: (a) with your explicit authorization; (b) with partners necessary for service delivery (e.g., cloud infrastructure providers); (c) as required by law or regulation.",
-        "All third-party subprocessors are bound by Data Processing Agreements (DPA) and meet equivalent security standards."
-      ],
-      "crossBorder": [
-        "By default, data is stored in the geographic region of your choice (see Data Residency page).",
-        "When cross-border data transfer is required, we use EU Commission-approved Standard Contractual Clauses (SCC) or other legal mechanisms.",
-        "You can always learn about your data storage location and cross-border transfer status."
-      ],
-      "retention": [
-        "Account data is retained until you delete your account or 90 days after contract termination (except where required by law).",
-        "Audit logs are retained for 1-7 years depending on regional regulations, as required for compliance.",
-        "You have the right to request deletion of your personal data at any time (GDPR 'right to be forgotten' / China Personal Information Protection Law deletion right)."
-      ],
-      "rights": [
-        "Right of access: understand what data we hold about you.",
-        "Right of rectification: update inaccurate or incomplete personal data.",
-        "Right of erasure: request deletion of your personal data.",
-        "Right of portability: obtain a copy of your personal data in a structured, commonly used format.",
-        "Right to object: object to processing based on legitimate interests.",
-        "Right to withdraw consent: withdraw previously given consent at any time."
-      ],
-      "cookies": [
-        "We use essential cookies to maintain service operations (e.g., session persistence, security tokens).",
-        "Analytics cookies are used solely to improve product experience and are not used for cross-site tracking.",
-        "You can manage cookie preferences through browser settings, but disabling essential cookies may affect service usage."
-      ]
-    },
-    "device": {
-      "title": "Device Privacy & COPPA Compliance",
-      "subtitle": "How we protect data on children's devices and connected hardware.",
-      "meta": "Autional Device Privacy Policy and COPPA Compliance information.",
-      "comingSoon": "Device Privacy & COPPA Compliance information coming soon."
-    }
-  },
-  "compliance": {
-    "title": "Compliance Certifications",
-    "subtitle": "Autional undergoes continuous third-party independent audits to ensure our security controls meet international and industry compliance standards.",
-    "latestFindings": "Latest Audit Findings",
-    "findingsDesc": "Real-time audit findings from the compliance system (login required)",
-    "loadingFindings": "Loading audit findings...",
-    "findingsLoadFailed": "Failed to load audit findings. Please log in to view full information.",
-    "noFindings": "No outstanding high-risk audit findings",
-    "noFindingsDesc": "System compliance status is healthy.",
-    "needReport": "Need to view full audit reports?",
-    "needReportDesc": "Enterprise customers can obtain full SOC 2 reports and ISO 27001 certification documents after signing an NDA.",
-    "applyReport": "Apply for Report",
-    "certifications": {
-      "iso27001": {
-        "name": "ISO 27001",
-        "status": "Not Certified",
-        "certNo": "—",
-        "validFrom": "—",
-        "validTo": "—",
-        "scope": "Autional identity authentication and access management platform information security management system, covering the full lifecycle of software development, operations, and customer support.",
-        "controls": [
-          "Information security policy and governance",
-          "HR security and background checks",
-          "Access control and identity management",
-          "Cryptography and key management",
-          "Physical and environmental security",
-          "Operations security and change management",
-          "Communications security and network isolation",
-          "System acquisition, development, and maintenance",
-          "Supplier relationship management",
-          "Information security incident management",
-          "Business continuity management",
-          "Compliance management"
-        ]
-      },
-      "soc2": {
-        "name": "SOC 2 Type II",
-        "status": "Not Certified",
-        "certNo": "—",
-        "validFrom": "—",
-        "validTo": "—",
-        "scope": "Autional cloud platform service security, availability, processing integrity, confidentiality, and privacy controls.",
-        "controls": [
-          "Logical and physical access control",
-          "System operations and monitoring",
-          "Change management",
-          "Data backup and recovery",
-          "Vulnerability management and penetration testing",
-          "Incident response and forensics",
-          "Third-party risk management",
-          "Privacy data processing"
-        ]
-      },
-      "gdpr": {
-        "name": "GDPR",
-        "status": "Not Certified",
-        "certNo": "—",
-        "validFrom": "—",
-        "validTo": "—",
-        "scope": "Autional acts as a data processor, providing GDPR-compliant data protection services for EU data subjects.",
-        "controls": [
-          "Automated Data Subject Access Requests (DSAR)",
-          "Data portability and right to erasure",
-          "Privacy by Design",
-          "Privacy by Default",
-          "Data Processing Agreement (DPA)",
-          "Cross-border data transfer mechanisms (SCC)",
-          "Data Protection Impact Assessment (DPIA)",
-          "Appointment of Data Protection Officer (DPO)"
-        ]
-      },
-      "djbh": {
-        "name": "DJCP Level 3",
-        "status": "Not Certified",
-        "certNo": "—",
-        "validFrom": "—",
-        "validTo": "—",
-        "scope": "Autional cloud platform Cybersecurity Level Protection Level 3 filing, meeting compliance requirements for finance, government, and other industries.",
-        "controls": [
-          "Secure physical environment",
-          "Secure communication network",
-          "Secure network perimeter",
-          "Secure computing environment",
-          "Security management center",
-          "Security management policies",
-          "Security management organization",
-          "Security management personnel",
-          "Security construction management",
-          "Security operations management"
-        ]
-      }
-    },
-    "liveScore": "Live Compliance Score",
-    "liveScoreDesc": "Real-time security compliance indicator score",
-    "liveCertData": "Data below comes from the certification management API in real time"
-  },
-  "subprocessors": {
-    "title": "Subprocessor List",
-    "subtitle": "As required by GDPR Art.28, we disclose all third-party subprocessors that may process customer data.",
-    "location": "Location",
-    "dataCategories": "Data Categories",
-    "certifications": "Certifications",
-    "emptyDesc": "No subprocessors registered at this time.",
-    "aboutTitle": "About This Subprocessor List",
-    "aboutDesc": "As required by GDPR Art.28, we disclose all third-party subprocessors that may process customer data. All subprocessors have signed Data Processing Agreements (DPA) and undergo regular security assessments. For the latest DPA copy, contact .",
-    "categoryLabels": {
-      "infrastructure": "Infrastructure",
-      "service_provider": "Service Provider",
-      "third_party": "Third Party",
-      "infrastructure_service": "Infrastructure Service",
-      "email_service": "Email Service",
-      "sms_service": "SMS Service"
-    }
-  },
-  "vdp": {
-    "title": "Vulnerability Disclosure Policy",
-    "badge": "Vulnerability Disclosure Policy",
-    "subtitle": "We value the contributions of the security research community and welcome responsible disclosure of security vulnerabilities. This policy defines the scope, rules, and process.",
-    "scope": {
-      "title": "Scope",
-      "desc": "The following systems and assets are in scope. Testing outside this scope requires prior written authorization.",
-      "web": {
-        "label": "Web & API",
-        "items": [
-          "Web applications (*.iam.tianv.com, *.iam.tianv.com)",
-          "REST API (api.iam.tianv.com)",
-          "OAuth / OIDC authorization endpoints"
-        ]
-      },
-      "mobile": {
-        "label": "Mobile Apps",
-        "items": [
-          "Autional Authenticator App (iOS / Android)",
-          "Autional Admin Console PWA"
-        ]
-      },
-      "infra": {
-        "label": "Infrastructure",
-        "items": [
-          "Cloud infrastructure configuration (explicit authorization required)",
-          "Docker container orchestration and network policies",
-          "CI/CD pipeline security"
-        ]
-      }
-    },
-    "rules": {
-      "title": "Rules of Engagement",
-      "desc": "To protect user data and service stability, please follow these testing rules.",
-      "items": [
-        "No denial of service attacks (DoS/DDoS)",
-        "No social engineering attacks",
-        "No physical security testing",
-        "No automated scanning that generates excessive traffic",
-        "No accessing or modifying other users' data",
-        "No lateral movement or persistence using vulnerabilities",
-        "Please use only your own test accounts",
-        "Stop immediately upon discovering a vulnerability and report it",
-        "Provide reproducible PoC and impact assessment",
-        "Do not publicly disclose before the vulnerability is fixed"
-      ]
-    },
-    "report": {
-      "title": "How to Report",
-      "desc": "Please report security vulnerabilities through the following channels. We recommend using PGP encryption.",
-      "email": "Email",
-      "emailSubject": "Security Vulnerability Report",
-      "emailDesc": "Reports should include: vulnerability description, affected endpoints/components, reproduction steps, impact assessment, and remediation suggestions.",
-      "pgp": "PGP Key",
-      "pgpBlock": "-----BEGIN PGP PUBLIC KEY BLOCK-----\nComment: Autional Security Team <>\nComment: This key is used for encrypted security vulnerability report communication\nComment: Key ID: 0xA1B2C3D4E5F67890 (placeholder)\n\nmQINBGabc1234... (Contact  for the complete public key)\n-----END PGP PUBLIC KEY BLOCK-----",
-      "pgpFingerprint": "Fingerprint: XXXX XXXX XXXX XXXX XXXX  XXXX XXXX XXXX XXXX (verify with )"
-    },
-    "sla": {
-      "title": "SLA",
-      "desc": "We commit to the following service level agreements for vulnerability report handling.",
-      "phaseCol": "Phase",
-      "commitmentCol": "Commitment",
-      "descCol": "Description",
-      "rows": [
-        {
-          "label": "Initial Acknowledgment",
-          "time": "Within 24h",
-          "desc": "Confirm receipt and assign tracking ID"
-        },
-        {
-          "label": "Triage",
-          "time": "Within 72h",
-          "desc": "Assess severity and determine fix priority"
-        },
-        {
-          "label": "Critical Fix",
-          "time": "Within 7 days",
-          "desc": "Fix and deploy CVSS 9.0+ vulnerabilities"
-        },
-        {
-          "label": "High Fix",
-          "time": "Within 30 days",
-          "desc": "Fix CVSS 7.0-8.9 vulnerabilities"
-        }
-      ]
-    },
-    "safeHarbor": {
-      "title": "Safe Harbor",
-      "commitment": "Autional commits to not pursuing legal action against good-faith security research that faithfully follows this policy. We recognize and appreciate the efforts of the security community in protecting our mutual users.",
-      "conditions": "Safe harbor protection is contingent on: obtaining explicit authorization before exceeding the scope defined in this policy; not causing actual damage or data breach; destroying all Autional data obtained during testing after reporting."
-    },
-    "hallOfFame": {
-      "title": "Hall of Fame",
-      "desc": "We will soon launch a Security Researcher Hall of Fame to recognize outstanding contributions from the security research community. Thank you to every researcher working to protect user security!"
-    }
-  },
-  "common": {
-    "learnMore": "Learn more",
-    "download": "Download",
-    "apply": "Apply",
-    "contact": "Contact",
-    "loading": "Loading...",
-    "loadFailed": "Failed to load. Please log in to view full information.",
-    "empty": "No data available",
-    "applyDownload": "Apply to Download",
-    "comingSoon": "Coming Soon",
-    "available": "Available",
-    "formatPdf": "PDF",
-    "getCondition": "Access: ",
-    "auditor": "Auditor: ",
-    "lastUpdated": "Last Updated: ",
-    "format": "Format: ",
-    "certNo": "Certificate No: ",
-    "validPeriod": "Validity: ",
-    "controlsCovered": "Covered Controls",
-    "certified": "Certified",
-    "scope": "Scope",
-    "viewCertificate": "View Certificate",
-    "severityLabel": "severity",
-    "impactScope": "Impact Scope",
-    "resolutionMeasure": "Resolution",
-    "affectedUsers": "Affected Users: ",
-    "dueDate": "Due Date: ",
-    "status": {
-      "certified": "Not Certified",
-      "compliant": "Not Certified",
-      "registered": "Not Certified",
-      "resolved": "Resolved",
-      "operational": "Operational",
-      "completed": "Completed"
-    },
-    "realTimeLabel": "Fully Compliant",
-    "controlType": "Control Type: ",
-    "controlId": "Control ID: "
-  },
-  "storageSecurity": {
-    "title": "Storage Security",
-    "subtitle": "Your data is protected by industry-leading encryption and key management infrastructure. We provide full storage security transparency including encryption methods, compliance reports, and audit records.",
-    "encryptionStatus": "Encryption Status",
-    "encryptionDesc": "Autional uses the following encryption standards to protect all your stored data.",
-    "algorithm": "Encryption Algorithm",
-    "atRest": "Encryption at Rest",
-    "inTransit": "Encryption in Transit",
-    "keyManagement": "Key Management",
-    "enabled": "Enabled",
-    "publicReports": "Public Security Reports",
-    "publicReportsDesc": "Downloadable security assessment reports, certification documents, and compliance audit results.",
-    "noReports": "No Public Reports",
-    "noReportsDesc": "No downloadable storage security reports available at this time. Please check back later.",
-    "downloadReport": "Download Report",
-    "size": "Size",
-    "format": "Format"
-  },
-  "securityAlerts": {
-    "title": "Security Alerts Subscription",
-    "meta": "Security Alerts Subscription — Autional Trust Center",
-    "badge": "Security Subscription",
-    "subtitle": "Subscribe to Autional security alerts and receive timely data breach notifications, vulnerability warnings, and compliance updates. No account required — completely public.",
-    "emailLabel": "Email Address",
-    "companyLabel": "Company Name",
-    "companyOptional": "(optional)",
-    "topicLabel": "Subscription Topics",
-    "topics": {
-      "breach_notification": {
-        "label": "Data Breach Notification",
-        "desc": "Receive immediate notification when a data breach occurs"
-      },
-      "vulnerability_alert": {
-        "label": "Vulnerability Alerts",
-        "desc": "Timely notification when security vulnerabilities are discovered"
-      },
-      "security_update": {
-        "label": "Security Updates",
-        "desc": "Security policy changes, certification updates, and compliance changes"
-      },
-      "compliance_update": {
-        "label": "Compliance Updates",
-        "desc": "ISO 27001, SOC 2, GDPR and other certification status changes"
-      },
-      "incident_report": {
-        "label": "Incident Reports",
-        "desc": "Progress updates and summary reports for major security incidents"
-      }
-    },
-    "validateEmail": "Please enter your email address",
-    "validateEmailInvalid": "Please enter a valid email address",
-    "validateTopics": "Please select at least one topic",
-    "submitting": "Submitting...",
-    "submit": "Subscribe to Security Alerts",
-    "success": "Subscription Successful!",
-    "successMessage": "Please check your email and click the confirmation link.",
-    "subscribeFailed": "Subscription failed. Please try again later.",
-    "networkError": "Network error. Please check your connection and try again.",
-    "subscribeMore": "Subscribe to More Alerts",
-    "privacyTitle": "Privacy Protection",
-    "privacyText": "Your email is used exclusively for sending security alerts and will not be used for any other purpose. Please review our",
-    "privacyLink": "Privacy Policy",
-    "privacyText2": "for more information.",
-    "privacyFooter": "After subscribing, you will receive a confirmation email. Click the link in the email to complete your subscription. You can unsubscribe at any time."
-  },
-  "errorBoundary": {
-    "title": "Page Error",
-    "description": "Sorry, this page encountered an unexpected error. You can try refreshing the page or return to the homepage.",
-    "refresh": "Refresh Page",
-    "backHome": "Back to Home",
-    "genericTitle": "Something went wrong",
-    "genericDescription": "Sorry, an unexpected error occurred. Please try refreshing the page."
-  },
-  "notFound": {
-    "title": "Page Not Found",
-    "meta": "Page not found — Autional Trust Center",
-    "description": "The page you are looking for does not exist or has been moved. Please check the URL or return to the overview.",
-    "backToOverview": "Back to Overview",
-    "goBack": "Go Back"
-  },
   "nav.overview": "Overview",
   "nav.compliance": "Compliance",
   "nav.security": "Security",
@@ -803,46 +20,40 @@
   "layout.systemStatus": "System Status",
   "layout.developerDocs": "Developer Docs",
   "overview.title": "Security & Compliance",
-  "overview.subtitle": "Security is not a feature, but the foundation of Autional. We adopt a zero-trust architecture and maintain multiple international security certifications to ensure your data is secure and compliant.",
+  "overview.subtitle": "Security is not a feature, but the foundation of Autional. We adopt a zero-trust architecture and continuously build and disclose our security controls and compliance practices.",
   "overview.securityArchitecture": "Security Architecture",
   "overview.quickLinks": "Quick Links",
-  "overview.complianceChecklist": "Compliance Control Checklist",
-  "overview.needReport": "Need a Compliance Report?",
-  "overview.needReportDesc": "Enterprise customers can obtain SOC 2 reports, penetration test summaries, Data Processing Agreements (DPA), and other compliance documents.",
-  "overview.requestDoc": "Request Documents",
+  "overview.complianceChecklist": "Security & Compliance Practice Areas",
+  "overview.needReport": "Want to learn about our security practices?",
+  "overview.needReportDesc": "To learn about our security controls, compliance progress, or Data Processing Agreement (DPA), please contact our team.",
+  "overview.requestDoc": "Contact Security Team",
   "overview.loadingStatus": "Loading real-time compliance status...",
   "overview.loadFailed": "Failed to load real-time compliance status. Showing static reference information.",
-  "overview.lastAudit": "Last Audit",
-  "overview.lastAuditLine": "Last Audit: {{date}} · Open Issues: {{count}} items",
+  "overview.lastAudit": "Last assessment",
+  "overview.lastAuditLine": "Last assessment: {{date}} · Open issues: {{count}}",
   "overview.openIssues": "Open Issues",
-  "overview.securityScore": "Security Score",
-  "overview.securityScoreDesc": "Comprehensive security score based on real-time compliance status and audit findings.",
+  "overview.securityScore": "Security Control Self-Assessment",
+  "overview.securityScoreDesc": "A self-assessment of our security controls, based on live compliance status and audit findings.",
   "overview.calculatedAt": "Calculated at",
   "overview.trustCenterBadge": "Trust Center",
   "overview.certifications.iso27001.name": "ISO 27001",
-  "overview.certifications.iso27001.desc": "Not Certified",
+  "overview.certifications.iso27001.desc": "The international standard for an Information Security Management System (ISMS), covering information security policy, access control, cryptography, operations security, supplier relationships and business continuity.",
   "overview.certifications.soc2.name": "SOC 2 Type II",
-  "overview.certifications.soc2.desc": "Not Certified",
+  "overview.certifications.soc2.desc": "Issued by an independent auditor under the AICPA Trust Services Criteria, assessing a service organisation's controls over security, availability, processing integrity, confidentiality and privacy.",
   "overview.certifications.gdpr.name": "GDPR",
-  "overview.certifications.gdpr.desc": "Not Certified",
+  "overview.certifications.gdpr.desc": "The EU General Data Protection Regulation, setting requirements for personal data processing and cross-border transfers, and granting data subjects rights of access, rectification, erasure and objection.",
   "overview.certifications.djbh.name": "DJCP Level 3",
-  "overview.certifications.djbh.desc": "Not Certified",
-  "overview.pillars.endToEndEncryption.title": "End-to-End Encryption",
-  "overview.pillars.endToEndEncryption.desc": "TLS 1.3 transport encryption, AES-256 encryption at rest, keys managed by HSM hardware security modules.",
+  "overview.certifications.djbh.desc": "Level 3 of China's Classified Protection of Cybersecurity requirements, covering secure physical environment, communication networks, area boundaries, computing environment and management centre.",
   "overview.pillars.zeroTrust.title": "Zero Trust Architecture",
-  "overview.pillars.zeroTrust.desc": "Never trust, always verify. Risk scoring based on device fingerprint, IP reputation, and behavioral biometrics.",
+  "overview.pillars.zeroTrust.desc": "Never trust, always verify. Every access request, from inside or outside the network, is subject to authentication and authorisation checks.",
   "overview.pillars.immutableAudit.title": "Immutable Audit Logs",
   "overview.pillars.immutableAudit.desc": "All critical operations are recorded in audit logs with hash chain verification to ensure log integrity.",
   "overview.pillars.highAvailability.title": "High Availability & DR",
-  "overview.pillars.highAvailability.desc": "Multi-region deployment, automatic failover, RPO < 1 min, RTO < 5 min.",
-  "overview.pillars.soc247.title": "24/7 Security Operations",
-  "overview.pillars.soc247.desc": "Dedicated SOC continuously monitors threat intelligence, MTTD < 15 minutes.",
-  "overview.pillars.penTest.title": "Penetration Testing",
-  "overview.pillars.penTest.desc": "Quarterly third-party penetration tests, annual red-blue team exercises, and continuous bug bounty program.",
-  "overview.quickLinkItems.complianceDetail.title": "Compliance Certifications",
-  "overview.quickLinkItems.complianceDetail.desc": "View detailed information and validity periods for all security certifications.",
-  "overview.quickLinkItems.auditDownload.title": "Audit Report Downloads",
-  "overview.quickLinkItems.auditDownload.desc": "Access SOC 2 reports, penetration test summaries, and Data Processing Agreements.",
+  "overview.pillars.highAvailability.desc": "Critical services have health checks, automated deployment and automated rollback, with backup and restore procedures exercised regularly.",
+  "overview.pillars.soc247.title": "Continuous Security Monitoring",
+  "overview.pillars.soc247.desc": "Continuous monitoring of system health and security events through centralised log collection and alerting.",
+  "overview.quickLinkItems.complianceDetail.title": "Compliance Frameworks",
+  "overview.quickLinkItems.complianceDetail.desc": "See the compliance frameworks we track and their current status.",
   "overview.quickLinkItems.dataResidency.title": "Data Residency",
   "overview.quickLinkItems.dataResidency.desc": "Learn about data storage locations, cross-border transfers, and retention policies.",
   "overview.quickLinkItems.incidents.title": "Incident Response",
@@ -852,122 +63,78 @@
     "Least privilege access control",
     "Periodic identity and privilege review",
     "Incident Response Plan (IRP)",
-    "Business Continuity Plan (BCP)",
     "Vendor security assessment",
     "Employee background checks and security awareness training",
     "Code security audit and dependency vulnerability scanning"
   ],
   "security.title": "Security Architecture",
-  "security.subtitle": "Defense in depth, zero trust, encryption first — our security architecture protects your data at every layer.",
+  "security.subtitle": "Defence in depth, zero trust, encryption first — our security architecture protects your data at every layer.",
   "security.zeroTrust": "Zero Trust Security Architecture",
-  "security.zeroTrustDesc": "Autional adopts a Zero Trust security model with the core principle of 'never trust, always verify.' All access requests, regardless of internal or external origin, must undergo identity verification, device trust assessment, and dynamic authorization.",
-  "security.encryption": "End-to-End Encryption",
-  "security.encryptionDesc": "From data transmission to static storage, the entire chain employs industry-leading encryption standards to ensure data is protected in any state.",
+  "security.zeroTrustDesc": "Autional follows a zero-trust security model built on \"never trust, always verify\". Every access request, from inside or outside the network, is subject to authentication and authorisation checks.",
+  "security.encryption": "Encryption in Transit and at Rest",
+  "security.encryptionDesc": "Data is encrypted both in transit and at rest.",
   "security.infrastructure": "Infrastructure Security",
-  "security.infrastructureDesc": "Multi-region cloud infrastructure deployment combined with defense-in-depth strategies to build a highly available, attack-resistant operating environment.",
+  "security.infrastructureDesc": "Containerised cloud infrastructure combined with defence-in-depth, delivering a stable, rollback-capable runtime environment.",
   "security.observability": "Audit & Observability",
   "security.observabilityDesc": "Full traceability of all operations with tamper-proof audit logs, providing complete evidence chains for security incident investigations and compliance audits.",
   "security.securityPrograms": "Security Programs",
-  "security.penTest": "Third-Party Penetration Testing",
-  "security.penTestDesc": "Quarterly black-box/gray-box penetration tests by internationally renowned security firms, covering web applications, APIs, mobile clients, and cloud infrastructure.",
-  "security.bugBounty": "Bug Bounty Program",
-  "security.bugBountyDesc": "Accepting vulnerability reports from global security researchers through public disclosure platforms, with critical vulnerabilities fixed within 48 hours on average.",
+  "security.bugBounty": "Vulnerability Disclosure",
+  "security.bugBountyDesc": "We welcome vulnerability reports from security researchers through public channels, and track and acknowledge valid reports.",
   "security.codeAudit": "Code Security Audit",
-  "security.codeAuditDesc": "All code must pass three gates before merging: SAST (static analysis), SCA (dependency scanning), and secret leak detection.",
-  "security.soc247": "24/7 SOC Operations",
-  "security.soc247Desc": "Dedicated Security Operations Center continuously monitors global threat intelligence, with MTTD < 15 minutes and MTTR < 1 hour.",
+  "security.codeAuditDesc": "Code changes are merged after passing CI pipeline checks, with continuous dependency vulnerability scanning.",
+  "security.soc247": "Continuous Security Monitoring",
+  "security.soc247Desc": "We continuously monitor system health and security events through centralised log collection and alerting.",
   "security.vulnerabilityDisclosure": "Found a Security Vulnerability?",
-  "security.vulnerabilityDisclosureDesc": "We welcome responsible disclosure. Please contact us at , usually acknowledged within 24 hours.",
+  "security.vulnerabilityDisclosureDesc": "We welcome responsible disclosure. Please reach us through the channels listed in our vulnerability disclosure policy.",
   "security.items.zeroTrust": [
-    "Least privilege (PoLP) — deny all by default",
-    "Micro-segmentation — end-to-end mTLS for service communication",
-    "Dynamic risk assessment — real-time scoring based on device fingerprint, IP reputation, and behavioral biometrics",
-    "Continuous verification — periodic trust re-evaluation within sessions"
+    "Principle of least privilege (PoLP) — deny by default",
+    "Multi-tenant isolation — strict separation of tenant data and permissions",
+    "Role-based access control (RBAC) with fine-grained permission checks",
+    "Session management — revocation, timeout and risk controls"
   ],
   "security.items.encryption": [
-    "Transport encryption: TLS 1.3 (mandatory PFS)",
+    "Transport encryption: HTTPS/TLS across all paths",
     "Encryption at rest: AES-256-GCM",
-    "Key management: HSM hosted with automatic rotation",
-    "Database encryption: column-level + TDE"
+    "Key management: centralised key management service with rotation",
+    "Secrets held centrally, never hard-coded in application code"
   ],
   "security.items.infrastructure": [
-    "Multi-AZ deployment with automatic failover",
-    "DDoS protection and WAF layer filtering",
-    "Container runtime security scanning and image signature verification",
-    "VPC network isolation with minimal security group exposure"
+    "Containerised deployment with unified CI builds and versioned artifacts",
+    "Service health checks and automated rollback",
+    "Cloud network isolation with minimal open ports",
+    "Dependency vulnerability scanning"
   ],
   "security.items.observability": [
-    "Audit log hash chain verification to prevent tampering",
-    "SIEM integration with real-time security event correlation",
-    "Full-chain distributed tracing (OpenTelemetry)",
-    "UEBA anomaly detection and automatic alerting"
+    "Audit log hash chain verification, preventing after-the-fact tampering",
+    "Centralised log collection and alerting (Loki / Alertmanager)",
+    "Distributed tracing (OpenTelemetry)",
+    "Audit anomaly detection with automated alerting"
   ],
   "dataResidency.title": "Data Residency",
-  "dataResidency.subtitle": "Your data, your choice. Autional deploys data centers across multiple global regions, supporting data sovereignty and compliance residency requirements.",
-  "dataResidency.regionTitle": "Global Data Centers",
+  "dataResidency.subtitle": "How we store data, our approach to cross-border transfers, and our retention policies.",
+  "dataResidency.regionTitle": "Data Storage Regions",
   "dataResidency.regionTable.region": "Region",
   "dataResidency.regionTable.location": "Data Center Locations",
   "dataResidency.regionTable.status": "Status",
   "dataResidency.regionTable.features": "Key Features",
   "dataResidency.commitments": "Data Residency Commitments",
   "dataResidency.transparency": "Transparent Data Storage Locations",
-  "dataResidency.transparencyDesc": "Clearly inform data storage geographic regions during tenant creation, with per-application data center selection granularity.",
+  "dataResidency.transparencyDesc": "We disclose the region where data is stored, and notify customers before any region change.",
   "dataResidency.noCrossBorder": "Default No Cross-Border Transfer",
-  "dataResidency.noCrossBorderDesc": "For mainland China tenants, data is stored in domestic data centers by default and is not transferred across borders without explicit authorization.",
+  "dataResidency.noCrossBorderDesc": "For tenants in mainland China, data is stored in domestic data centres and is not transferred across borders without explicit authorisation.",
   "dataResidency.crossBorderCompliance": "Compliant Cross-Border Transfers",
-  "dataResidency.crossBorderComplianceDesc": "When cross-border data transfer is required, we use Standard Contractual Clauses (SCC), Binding Corporate Rules (BCR), or other legally recognized mechanisms.",
+  "dataResidency.crossBorderComplianceDesc": "If a cross-border transfer is ever required, we will obtain your explicit authorisation in advance and rely on a lawful mechanism recognised by applicable law.",
   "dataResidency.retention": "Data Retention & Deletion",
-  "dataResidency.retentionDesc": "Support configurable data retention periods per tenant policy, with automatic archival or secure erasure upon expiration, satisfying GDPR 'right to be forgotten'.",
-  "dataResidency.checklist": "Compliance Checklist",
+  "dataResidency.retentionDesc": "Retention periods are configurable per policy, with data archived or deleted on expiry. We also honour erasure requests under the GDPR and China's Personal Information Protection Law.",
+  "dataResidency.checklist": "Data Governance Practice Areas",
   "dataResidency.regions": [
     {
-      "code": "CN-NORTH",
+      "code": "CN",
       "name": "Mainland China",
-      "location": "Beijing / Shanghai / Guangzhou",
+      "location": "Domestic cloud infrastructure",
       "features": [
-        "DJCP Level 3",
-        "Data localization",
-        "Localization support"
-      ]
-    },
-    {
-      "code": "AP-SOUTHEAST",
-      "name": "Asia Pacific",
-      "location": "Singapore / Tokyo / Sydney",
-      "features": [
-        "GDPR compatible",
-        "Low-latency SEA coverage",
-        "Multi-AZ"
-      ]
-    },
-    {
-      "code": "EU-WEST",
-      "name": "Europe",
-      "location": "Frankfurt / Amsterdam / Dublin",
-      "features": [
-        "GDPR fully compliant",
-        "Data sovereignty",
-        "Standard Contractual Clauses"
-      ]
-    },
-    {
-      "code": "US-EAST",
-      "name": "US East",
-      "location": "Virginia / Ohio",
-      "features": [
-        "SOC 2 certified region",
-        "High availability redundancy",
-        "FedRAMP Ready"
-      ]
-    },
-    {
-      "code": "US-WEST",
-      "name": "US West",
-      "location": "Oregon / California",
-      "features": [
-        "Disaster recovery site",
-        "Cross-region replication",
-        "Low-latency US West"
+        "Data stays in-country",
+        "Localised support"
       ]
     }
   ],
@@ -982,32 +149,22 @@
     "Cross-border breach notification mechanism"
   ],
   "auditReports.title": "Audit Reports",
-  "auditReports.subtitle": "Transparency is trust. We undergo regular independent audits and make reports available to customers to support your internal compliance and security assessments.",
-  "auditReports.penTestReports": "Penetration Test Reports",
-  "auditReports.penTestDesc": "Real-time reports from the compliance system (login required)",
+  "auditReports.subtitle": "Transparency builds trust. Here we publish audit log summaries, hash chain integrity proofs, and the status of the compliance frameworks and documents we track.",
   "auditReports.labels.conductedAt": "Conducted Date:",
   "auditReports.labels.severity": "Severity Level:",
   "auditReports.labels.nextTest": "Next Test:",
-  "auditReports.loadingPenTest": "Loading penetration test reports...",
-  "auditReports.penTestLoadFailed": "Failed to load penetration test reports. Please log in to view full information.",
-  "auditReports.noPenTestReports": "No Penetration Test Reports",
-  "auditReports.noPenTestReportsDesc": "No penetration test report records in the system.",
-  "auditReports.standardDocs": "Standard Compliance Documents",
+  "auditReports.standardDocs": "Compliance Frameworks & Documents",
   "auditReports.notFound": "Can't find the report you need?",
-  "auditReports.notFoundDesc": "If you need industry-specific compliance documents (e.g., HIPAA, PCI-DSS), please contact our compliance team.",
+  "auditReports.notFoundDesc": "To learn about our security controls or to request our Data Processing Agreement (DPA), please contact our compliance team.",
   "auditReports.contactTeam": "Contact Compliance Team",
-  "auditReports.reports.iso27001.title": "ISO 27001 Certificate",
-  "auditReports.reports.iso27001.desc": "Information Security Management System (ISMS) certification, demonstrating Autional's systematic information security management capabilities.",
-  "auditReports.reports.iso27001.access": "All customers",
+  "auditReports.reports.iso27001.title": "ISO 27001",
+  "auditReports.reports.iso27001.desc": "The international standard for an Information Security Management System (ISMS), covering information security policy, access control, cryptography, operations security, supplier relationships and business continuity.",
   "auditReports.reports.dpa.title": "Data Processing Agreement (DPA)",
-  "auditReports.reports.dpa.desc": "Autional Data Processing Agreement, clarifying the responsibilities, processing purposes, subprocessor list, and security measures.",
-  "auditReports.reports.dpa.access": "All customers",
-  "auditReports.reports.djbh.title": "DJCP Level 3 Filing Certificate",
-  "auditReports.reports.djbh.desc": "China Cybersecurity Level Protection Level 3 filing certificate, applicable to enterprise customers operating in mainland China with high security requirements.",
-  "auditReports.reports.djbh.access": "All customers",
+  "auditReports.reports.dpa.desc": "The Data Processing Agreement we sign with customers, setting out controller/processor responsibilities, processing purposes, subprocessor list and security measures.",
+  "auditReports.reports.djbh.title": "DJCP Level 3",
+  "auditReports.reports.djbh.desc": "Level 3 of China's Classified Protection of Cybersecurity requirements, covering secure physical environment, communication networks, area boundaries, computing environment and management centre.",
   "auditReports.reports.bcp.title": "Business Continuity Plan (BCP)",
-  "auditReports.reports.bcp.desc": "Autional Business Continuity Plan summary, including disaster recovery strategy, RTO/RPO metrics, emergency response procedures, and drill records.",
-  "auditReports.reports.bcp.access": "Enterprise customers (NDA required)",
+  "auditReports.reports.bcp.desc": "Summary of our business continuity plan, including disaster recovery strategy, RTO/RPO targets, incident response process and exercise records.",
   "audit.liveStats": "Live Audit Statistics",
   "audit.totalEvents": "Total Events",
   "audit.hashChainIntegrity": "Hash Chain Integrity",
@@ -1021,83 +178,38 @@
   "audit.activeSince": "Active Since",
   "audit.lastActivity": "Last Activity",
   "incidents.title": "Incident Response",
-  "incidents.subtitle": "We are committed to transparency for all security incidents. Below are our proactively disclosed security events and response records.",
+  "incidents.subtitle": "We are committed to transparency about security incidents. Below are the breach notifications we disclose and our incident response process.",
   "incidents.stats.breaches": "Disclosed Data Breaches",
-  "incidents.stats.mttd": "Mean Time to Detect (MTTD)",
-  "incidents.stats.mttr": "Mean Time to Respond (MTTR)",
   "incidents.breachNotifications": "Breach Notifications",
   "incidents.breachDesc": "Real-time breach notifications from the compliance system (login required)",
   "incidents.loadingBreaches": "Loading breach notifications...",
   "incidents.breachesLoadFailed": "Failed to load breach notifications. Please log in to view full information.",
   "incidents.noBreaches": "No Breach Notification Records",
-  "incidents.noBreachesDesc": "System security is in good standing. No data breach events have been detected.",
-  "incidents.historical": "Historical Security Incidents",
+  "incidents.noBreachesDesc": "To date, we have no customer data breaches requiring disclosure.",
   "incidents.responseProcess": "Incident Response Process",
   "incidents.subscribe": "Subscribe to Security Advisories",
   "incidents.subscribeDesc": "Get Autional security updates, vulnerability announcements, and maintenance notices.",
   "incidents.visitStatus": "Visit Status Page",
-  "incidents.severity.low": "Low",
-  "incidents.severity.medium": "Medium",
-  "incidents.severity.high": "High",
-  "incidents.severity.critical": "Critical",
   "incidents.processSteps": [
     {
       "step": "01",
       "title": "Detect",
-      "desc": "Multi-channel detection via SIEM, UEBA, threat intelligence, and manual inspection."
+      "desc": "Monitor for anomalies through centralised log collection and alerting."
     },
     {
       "step": "02",
       "title": "Contain",
-      "desc": "Initiate containment measures within 30 minutes, isolate affected resources to prevent spread."
+      "desc": "Initiate containment, isolate affected resources and prevent spread."
     },
     {
       "step": "03",
       "title": "Eradicate",
-      "desc": "Identify root cause, eliminate threats, fix vulnerabilities, and verify control effectiveness."
+      "desc": "Determine root cause, remove the threat, fix the vulnerability and verify control effectiveness."
     },
     {
       "step": "04",
       "title": "Recover & Review",
-      "desc": "Restore services, notify affected customers, and generate post-incident review report."
-    }
-  ],
-  "incidents.events": [
-    {
-      "id": "INC-2025-001",
-      "date": "2025-03-12",
-      "title": "Third-Party Dependency Security Update",
-      "severity": "Low",
-      "description": "Security team detected a known CVE (CVSS 4.2) in an indirect dependency. The dependency exposed no attack surface at runtime, but out of caution we completed the patch upgrade within 2 hours.",
-      "impact": "No customer data affected, no service interruption.",
-      "resolution": "Upgraded dependency to secure version and strengthened SCA scanning rules to prevent similar issues."
-    },
-    {
-      "id": "INC-2024-003",
-      "date": "2024-11-05",
-      "title": "DDoS Attack Mitigation",
-      "severity": "Medium",
-      "description": "Autional gateway suffered a reflected DDoS attack peaking at ~120 Gbps. The automated traffic scrubbing system triggered within 30 seconds, completely filtering the attack traffic.",
-      "impact": "Some regional users observed minor latency (< 200ms) in the first minute of the attack. No service unavailability.",
-      "resolution": "Cloud scrubbing service mitigated automatically. Post-incident threshold adjustments and edge node capacity increase."
-    },
-    {
-      "id": "INC-2024-002",
-      "date": "2024-08-20",
-      "title": "Certificate Rotation Exception",
-      "severity": "Low",
-      "description": "Automated certificate rotation task failed on one edge node, causing brief TLS handshake alerts on that node.",
-      "impact": "Approximately 0.03% of requests experienced TLS handshake retries within 3 minutes.",
-      "resolution": "Manually triggered rotation and fixed race condition in automation task. Added certificate expiry monitoring alerts."
-    },
-    {
-      "id": "INC-2024-001",
-      "date": "2024-05-14",
-      "title": "False Positive Alert Investigation",
-      "severity": "Low",
-      "description": "SIEM system produced a large number of false positive alerts about 'abnormal logins' due to overly broad rule configuration.",
-      "impact": "No actual security incident. SOC team spent approximately 2 hours performing rule tuning.",
-      "resolution": "Tightened detection rules, added whitelist mechanism, optimized baseline learning period."
+      "desc": "Restore service, notify affected customers and produce a post-incident review."
     }
   ],
   "privacy.title": "Privacy Policy",
@@ -1113,14 +225,14 @@
   "privacy.contactDpoDesc": "If you have any questions about our privacy policy or wish to exercise your data subject rights, please contact our DPO:",
   "privacy.dpoEmail": "Email:",
   "privacy.dpoAddress": "Address:",
-  "privacy.dpoAddressText": "Autional Data Protection Office, Zhangjiang Hi-Tech Park, Pudong New Area, Shanghai",
+  "privacy.dpoAddressText": "Autional Data Protection Office, Shenzhen, China",
   "privacy.lastUpdated": "Last Updated",
   "privacy.updatedDate": "May 9, 2025",
   "privacy.sections.collection": [
     "Account information: username, email, phone number, password hash (irreversibly encrypted storage).",
     "Usage data: login time, IP address, device fingerprint, operation logs (for security auditing and anomaly detection).",
     "Tenant configuration: company name, department structure, application configuration, branding customization information.",
-    "Payment information: billing address, transaction records (card numbers are processed by PCI-DSS compliant payment gateways; Autional does not store full card numbers)."
+    "Payment information: billing address, transaction records (card numbers are processed by third-party payment gateways; Autional does not store full card numbers)."
   ],
   "privacy.sections.usage": [
     "Providing identity authentication and access management services.",
@@ -1139,9 +251,9 @@
     "You can always learn about your data storage location and cross-border transfer status."
   ],
   "privacy.sections.retention": [
-    "Account data is retained until you delete your account or 90 days after contract termination (except where required by law).",
-    "Audit logs are retained for 1-7 years depending on regional regulations, as required for compliance.",
-    "You have the right to request deletion of your personal data at any time (GDPR 'right to be forgotten' / China Personal Information Protection Law deletion right)."
+    "Account data is retained until you delete your account or 90 days after contract termination, unless a longer period is required by law.",
+    "Audit logs are retained as required by applicable regulations.",
+    "You may request deletion of your personal data at any time (GDPR right to erasure / China Personal Information Protection Law)."
   ],
   "privacy.sections.rights": [
     "Right of access: understand what data we hold about you.",
@@ -1160,95 +272,37 @@
   "privacy.device.subtitle": "How we protect data on children's devices and connected hardware.",
   "privacy.device.meta": "Autional Device Privacy Policy and COPPA Compliance information.",
   "privacy.device.comingSoon": "Device Privacy & COPPA Compliance information coming soon.",
-  "compliance.title": "Compliance Certifications",
-  "compliance.subtitle": "Autional undergoes continuous third-party independent audits to ensure our security controls meet international and industry compliance standards.",
+  "compliance.title": "Compliance",
+  "compliance.subtitle": "Here we disclose the main compliance frameworks we track, their current status, and our progress.",
   "compliance.latestFindings": "Latest Audit Findings",
   "compliance.findingsDesc": "Real-time audit findings from the compliance system (login required)",
   "compliance.loadingFindings": "Loading audit findings...",
   "compliance.findingsLoadFailed": "Failed to load audit findings. Please log in to view full information.",
-  "compliance.noFindings": "No outstanding high-risk audit findings",
-  "compliance.noFindingsDesc": "System compliance status is healthy.",
-  "compliance.needReport": "Need to view full audit reports?",
-  "compliance.needReportDesc": "Enterprise customers can obtain full SOC 2 reports and ISO 27001 certification documents after signing an NDA.",
-  "compliance.applyReport": "Apply for Report",
+  "compliance.noFindings": "No Audit Findings Published",
+  "compliance.noFindingsDesc": "There are currently no published audit findings.",
+  "compliance.needReport": "Want to learn about our compliance progress?",
+  "compliance.needReportDesc": "We do not yet hold third-party certifications. To learn about the current state of our security controls or to discuss compliance requirements, please contact our compliance team.",
+  "compliance.applyReport": "Contact Compliance Team",
   "compliance.certifications.iso27001.name": "ISO 27001",
   "compliance.certifications.iso27001.status": "Not Certified",
-  "compliance.certifications.iso27001.certNo": "—",
-  "compliance.certifications.iso27001.validFrom": "—",
-  "compliance.certifications.iso27001.validTo": "—",
-  "compliance.certifications.iso27001.scope": "Autional identity authentication and access management platform information security management system, covering the full lifecycle of software development, operations, and customer support.",
-  "compliance.certifications.iso27001.controls": [
-    "Information security policy and governance",
-    "HR security and background checks",
-    "Access control and identity management",
-    "Cryptography and key management",
-    "Physical and environmental security",
-    "Operations security and change management",
-    "Communications security and network isolation",
-    "System acquisition, development, and maintenance",
-    "Supplier relationship management",
-    "Information security incident management",
-    "Business continuity management",
-    "Compliance management"
-  ],
+  "compliance.certifications.iso27001.scope": "The international standard for an Information Security Management System (ISMS), covering information security policy, access control, cryptography, operations security, supplier relationships and business continuity.",
   "compliance.certifications.soc2.name": "SOC 2 Type II",
   "compliance.certifications.soc2.status": "Not Certified",
-  "compliance.certifications.soc2.certNo": "—",
-  "compliance.certifications.soc2.validFrom": "—",
-  "compliance.certifications.soc2.validTo": "—",
-  "compliance.certifications.soc2.scope": "Autional cloud platform service security, availability, processing integrity, confidentiality, and privacy controls.",
-  "compliance.certifications.soc2.controls": [
-    "Logical and physical access control",
-    "System operations and monitoring",
-    "Change management",
-    "Data backup and recovery",
-    "Vulnerability management and penetration testing",
-    "Incident response and forensics",
-    "Third-party risk management",
-    "Privacy data processing"
-  ],
+  "compliance.certifications.soc2.scope": "Issued by an independent auditor under the AICPA Trust Services Criteria, assessing a service organisation's controls over security, availability, processing integrity, confidentiality and privacy.",
   "compliance.certifications.gdpr.name": "GDPR",
   "compliance.certifications.gdpr.status": "Not Certified",
-  "compliance.certifications.gdpr.certNo": "—",
-  "compliance.certifications.gdpr.validFrom": "—",
-  "compliance.certifications.gdpr.validTo": "—",
-  "compliance.certifications.gdpr.scope": "Autional acts as a data processor, providing GDPR-compliant data protection services for EU data subjects.",
-  "compliance.certifications.gdpr.controls": [
-    "Automated Data Subject Access Requests (DSAR)",
-    "Data portability and right to erasure",
-    "Privacy by Design",
-    "Privacy by Default",
-    "Data Processing Agreement (DPA)",
-    "Cross-border data transfer mechanisms (SCC)",
-    "Data Protection Impact Assessment (DPIA)",
-    "Appointment of Data Protection Officer (DPO)"
-  ],
+  "compliance.certifications.gdpr.scope": "The EU General Data Protection Regulation, setting requirements for personal data processing and cross-border transfers, and granting data subjects rights of access, rectification, erasure and objection.",
   "compliance.certifications.djbh.name": "DJCP Level 3",
   "compliance.certifications.djbh.status": "Not Certified",
-  "compliance.certifications.djbh.certNo": "—",
-  "compliance.certifications.djbh.validFrom": "—",
-  "compliance.certifications.djbh.validTo": "—",
-  "compliance.certifications.djbh.scope": "Autional cloud platform Cybersecurity Level Protection Level 3 filing, meeting compliance requirements for finance, government, and other industries.",
-  "compliance.certifications.djbh.controls": [
-    "Secure physical environment",
-    "Secure communication network",
-    "Secure network perimeter",
-    "Secure computing environment",
-    "Security management center",
-    "Security management policies",
-    "Security management organization",
-    "Security management personnel",
-    "Security construction management",
-    "Security operations management"
-  ],
+  "compliance.certifications.djbh.scope": "Level 3 of China's Classified Protection of Cybersecurity requirements, covering secure physical environment, communication networks, area boundaries, computing environment and management centre.",
   "subprocessors.title": "Subprocessor List",
   "subprocessors.subtitle": "As required by GDPR Art.28, we disclose all third-party subprocessors that may process customer data.",
   "subprocessors.location": "Location",
   "subprocessors.dataCategories": "Data Categories",
-  "subprocessors.certifications": "Certifications",
+  "subprocessors.certifications": "Purpose",
   "subprocessors.emptyDesc": "No subprocessors registered at this time.",
   "subprocessors.aboutTitle": "About This Subprocessor List",
-  "subprocessors.aboutDesc": "As required by GDPR Art.28, we disclose all third-party subprocessors that may process customer data. All subprocessors have signed Data Processing Agreements (DPA) and undergo regular security assessments. For the latest DPA copy, contact .",
+  "subprocessors.aboutDesc": "As required by GDPR Art.28, we disclose all third-party subprocessors that may process customer data. Subprocessors are required to sign a Data Processing Agreement (DPA) and meet equivalent security standards. For the latest DPA copy, contact tianv@tianv.com.",
   "subprocessors.categoryLabels.infrastructure": "Infrastructure",
   "subprocessors.categoryLabels.service_provider": "Service Provider",
   "subprocessors.categoryLabels.third_party": "Third Party",
@@ -1262,14 +316,14 @@
   "vdp.scope.desc": "The following systems and assets are in scope. Testing outside this scope requires prior written authorization.",
   "vdp.scope.web.label": "Web & API",
   "vdp.scope.web.items": [
-    "Web applications (*.iam.tianv.com, *.iam.tianv.com)",
-    "REST API (api.iam.tianv.com)",
+    "Web applications (*.autional.cn)",
+    "REST API (api.autional.cn)",
     "OAuth / OIDC authorization endpoints"
   ],
   "vdp.scope.mobile.label": "Mobile Apps",
   "vdp.scope.mobile.items": [
-    "Autional Authenticator App (iOS / Android)",
-    "Autional Admin Console PWA"
+    "Autional Authenticator (PWA, installable on iOS / Android)",
+    "Autional Admin Console (PWA)"
   ],
   "vdp.scope.infra.label": "Infrastructure",
   "vdp.scope.infra.items": [
@@ -1332,42 +386,27 @@
   "vdp.hallOfFame.title": "Hall of Fame",
   "vdp.hallOfFame.desc": "We will soon launch a Security Researcher Hall of Fame to recognize outstanding contributions from the security research community. Thank you to every researcher working to protect user security!",
   "common.learnMore": "Learn more",
-  "common.download": "Download",
   "common.apply": "Apply",
   "common.contact": "Contact",
   "common.loading": "Loading...",
   "common.loadFailed": "Failed to load. Please log in to view full information.",
   "common.empty": "No data available",
-  "common.applyDownload": "Apply to Download",
   "common.comingSoon": "Coming Soon",
-  "common.available": "Available",
-  "common.formatPdf": "PDF",
-  "common.getCondition": "Access: ",
-  "common.auditor": "Auditor: ",
-  "common.lastUpdated": "Last Updated: ",
-  "common.format": "Format: ",
-  "common.certNo": "Certificate No: ",
-  "common.validPeriod": "Validity: ",
-  "common.controlsCovered": "Covered Controls",
-  "common.certified": "Certified",
-  "common.scope": "Scope",
-  "common.viewCertificate": "View Certificate",
   "common.severityLabel": "severity",
   "common.impactScope": "Impact Scope",
   "common.resolutionMeasure": "Resolution",
   "common.affectedUsers": "Affected Users: ",
   "common.dueDate": "Due Date: ",
-  "common.status.certified": "Not Certified",
-  "common.status.compliant": "Not Certified",
-  "common.status.registered": "Not Certified",
+  "common.status.compliant": "Compliant",
+  "common.status.registered": "Registered",
   "common.status.resolved": "Resolved",
   "common.status.operational": "Operational",
   "common.status.completed": "Completed",
-  "common.realTimeLabel": "Fully Compliant",
+  "common.realTimeLabel": "Security Control Self-Assessment",
   "common.controlType": "Control Type: ",
   "common.controlId": "Control ID: ",
   "storageSecurity.title": "Storage Security",
-  "storageSecurity.subtitle": "Your data is protected by industry-leading encryption and key management infrastructure. We provide full storage security transparency including encryption methods, compliance reports, and audit records.",
+  "storageSecurity.subtitle": "Your data is protected by encryption and key management infrastructure. We disclose our current encryption and key management details.",
   "storageSecurity.encryptionStatus": "Encryption Status",
   "storageSecurity.encryptionDesc": "Autional uses the following encryption standards to protect all your stored data.",
   "storageSecurity.algorithm": "Encryption Algorithm",
@@ -1375,13 +414,6 @@
   "storageSecurity.inTransit": "Encryption in Transit",
   "storageSecurity.keyManagement": "Key Management",
   "storageSecurity.enabled": "Enabled",
-  "storageSecurity.publicReports": "Public Security Reports",
-  "storageSecurity.publicReportsDesc": "Downloadable security assessment reports, certification documents, and compliance audit results.",
-  "storageSecurity.noReports": "No Public Reports",
-  "storageSecurity.noReportsDesc": "No downloadable storage security reports available at this time. Please check back later.",
-  "storageSecurity.downloadReport": "Download Report",
-  "storageSecurity.size": "Size",
-  "storageSecurity.format": "Format",
   "securityAlerts.title": "Security Alerts Subscription",
   "securityAlerts.meta": "Security Alerts Subscription — Autional Trust Center",
   "securityAlerts.badge": "Security Subscription",
@@ -1395,9 +427,9 @@
   "securityAlerts.topics.vulnerability_alert.label": "Vulnerability Alerts",
   "securityAlerts.topics.vulnerability_alert.desc": "Timely notification when security vulnerabilities are discovered",
   "securityAlerts.topics.security_update.label": "Security Updates",
-  "securityAlerts.topics.security_update.desc": "Security policy changes, certification updates, and compliance changes",
+  "securityAlerts.topics.security_update.desc": "Changes to security policies and compliance build-out",
   "securityAlerts.topics.compliance_update.label": "Compliance Updates",
-  "securityAlerts.topics.compliance_update.desc": "ISO 27001, SOC 2, GDPR and other certification status changes",
+  "securityAlerts.topics.compliance_update.desc": "Updates on compliance progress and security commitments",
   "securityAlerts.topics.incident_report.label": "Incident Reports",
   "securityAlerts.topics.incident_report.desc": "Progress updates and summary reports for major security incidents",
   "securityAlerts.validateEmail": "Please enter your email address",
@@ -1426,7 +458,40 @@
   "notFound.description": "The page you are looking for does not exist or has been moved. Please check the URL or return to the overview.",
   "notFound.backToOverview": "Back to Overview",
   "notFound.goBack": "Go Back",
-  "compliance.liveScore": "Live Compliance Score",
-  "compliance.liveScoreDesc": "Real-time security compliance indicator score",
-  "compliance.liveCertData": "Data below comes from the certification management API in real time"
+  "compliance.liveScore": "Security Control Self-Assessment",
+  "compliance.liveScoreDesc": "Our internal self-assessment score for security control build-out (out of 100). Not a third-party certification conclusion.",
+  "compliance.liveCertData": "The following data is synced live from the compliance system",
+  "overview.statusBuilding": "Security control build-out in progress",
+  "overview.certifications.iso27001.status": "Not Certified",
+  "overview.certifications.soc2.status": "Not Certified",
+  "overview.certifications.gdpr.status": "Not Certified",
+  "overview.certifications.djbh.status": "Not Certified",
+  "common.status.notCertified": "Not Certified",
+  "common.status.planned": "Planned",
+  "auditReports.reports.iso27001.status": "Not Certified",
+  "auditReports.reports.dpa.status": "Available on request",
+  "auditReports.reports.djbh.status": "Not Certified",
+  "auditReports.reports.bcp.status": "Planned",
+  "overview.dimensions.iso27001Coverage": "ISO 27001 coverage",
+  "overview.dimensions.soc2Coverage": "SOC 2 coverage",
+  "overview.dimensions.gdprCoverage": "GDPR coverage",
+  "overview.dimensions.openIssues": "Open issues",
+  "overview.dimensions.penetrationTest": "Security testing",
+  "overview.dimensions.breachHistory": "Breach history",
+  "overview.dimensions.unknown": "—",
+  "common.lastAudited": "Last audited: ",
+  "auditReports.securityTestReports": "Security Testing Records",
+  "auditReports.securityTestDesc": "Security testing records from the compliance system.",
+  "auditReports.noSecurityTests": "No Security Testing Records",
+  "auditReports.noSecurityTestsDesc": "No security testing records in the system.",
+  "auditReports.loadingSecurityTests": "Loading security testing records...",
+  "auditReports.securityTestLoadFailed": "Failed to load security testing records. Please log in to view full information.",
+  "overview.pillars.encryption.title": "Encryption in Transit and at Rest",
+  "overview.pillars.encryption.desc": "HTTPS across all transport paths, AES-256-GCM encryption at rest, with keys held in a centralised key management service.",
+  "overview.pillars.securityTesting.title": "Security Testing",
+  "overview.pillars.securityTesting.desc": "We continuously find and fix security issues through internal security testing, dependency vulnerability scanning and external vulnerability disclosure.",
+  "security.securityTesting": "Security Testing",
+  "security.securityTestingDesc": "We find and fix security issues through internal security testing and external vulnerability disclosure.",
+  "overview.quickLinkItems.auditCompliance.title": "Audit & Compliance Info",
+  "overview.quickLinkItems.auditCompliance.desc": "Review audit log summaries, hash chain integrity and compliance progress."
 }

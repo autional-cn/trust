@@ -12,7 +12,6 @@ import { useTranslation } from 'react-i18next';
 import { PageHeader, SectionCard, EmptyState, LoadingScreen, ErrorState } from '@autional-cn/ui';
 import {
 	FileText,
-	Download,
 	Shield,
 	Lock,
 	FileCheck,
@@ -39,8 +38,8 @@ export default function AuditReportsPage() {
 	usePageTitle(t('auditReports.title'));
 	usePageMeta(
 		i18n.language === 'zh-CN'
-			? 'Autional 审计报告 — SOC 2、ISO 27001、渗透测试摘要、数据处理协议等合规文档下载。'
-			: 'Autional Audit Reports — SOC 2, ISO 27001, penetration test summaries, DPA and other compliance document downloads.',
+			? 'Autional 审计报告 — 审计日志摘要、哈希链完整性证明与合规建设进展。'
+			: 'Autional Audit Reports — Audit log summaries, hash chain integrity proofs and compliance progress.',
 	);
 
 	const { data: penTestData, isLoading, isError } = usePenTestReports(1, 20);
@@ -195,23 +194,23 @@ export default function AuditReportsPage() {
 				{/* Dynamic Penetration Test Reports */}
 				<div className="mt-12">
 					<h2 className="text-xl font-bold text-neutral-900 dark:text-white">
-						{t('auditReports.penTestReports')}
+						{t('auditReports.securityTestReports')}
 					</h2>
 					<p className="mt-1 text-sm text-neutral-500 dark:text-neutral-400">
-						{t('auditReports.penTestDesc')}
+						{t('auditReports.securityTestDesc')}
 					</p>
 
 					{isLoading && (
 						<div className="mt-4 flex items-center gap-2 text-sm text-neutral-500 dark:text-neutral-400">
 							<Loader2 className="h-4 w-4 animate-spin" />
-							{t('auditReports.loadingPenTest')}
+							{t('auditReports.loadingSecurityTests')}
 						</div>
 					)}
 
 					{isError && (
 						<div className="mt-4 rounded-lg border border-neutral-200 bg-neutral-50 p-4 text-sm text-neutral-500 dark:border-neutral-800 dark:bg-slate-900/50">
 							<AlertTriangle className="mb-1 inline h-4 w-4" />
-							{t('auditReports.penTestLoadFailed')}
+							{t('auditReports.securityTestLoadFailed')}
 						</div>
 					)}
 
@@ -266,8 +265,8 @@ export default function AuditReportsPage() {
 					{penTestData && penTestData.items.length === 0 && (
 						<div className="mt-4">
 							<EmptyState
-								title={t('auditReports.noPenTestReports')}
-								description={t('auditReports.noPenTestReportsDesc')}
+								title={t('auditReports.noSecurityTests')}
+								description={t('auditReports.noSecurityTestsDesc')}
 							/>
 						</div>
 					)}
@@ -300,60 +299,17 @@ export default function AuditReportsPage() {
 														<h3 className="text-lg font-bold text-neutral-900 dark:text-white">
 															{cert.framework}
 														</h3>
-														<span className="inline-flex items-center gap-1 rounded-full bg-success/10 px-2 py-0.5 text-xs font-medium text-success">
-															<CheckCircle2 className="h-3.5 w-3.5" />
-															{t('common.available')}
-														</span>
+														{cert.last_audited_date && (
+															<span className="text-xs text-neutral-500 dark:text-neutral-400">
+																{t('common.lastAudited')}
+																{cert.last_audited_date}
+															</span>
+														)}
 													</div>
 													{cert.criteria_scopes && (
 														<p className="mt-2 text-sm leading-relaxed text-neutral-600 dark:text-neutral-300">
 															{cert.criteria_scopes}
 														</p>
-													)}
-													<div className="mt-4 flex flex-wrap items-center gap-x-6 gap-y-2 text-sm text-neutral-500 dark:text-neutral-400">
-														{cert.auditor && (
-															<div>
-																<span className="text-neutral-400 dark:text-neutral-500">
-																	{t('common.auditor')}:{' '}
-																</span>
-																{cert.auditor}
-															</div>
-														)}
-														{cert.last_audited_date && (
-															<div>
-																<span className="text-neutral-400 dark:text-neutral-500">
-																	{t('common.lastUpdated')}:{' '}
-																</span>
-																{cert.last_audited_date}
-															</div>
-														)}
-														<div>
-															<span className="text-neutral-400 dark:text-neutral-500">
-																{t('common.format')}:{' '}
-															</span>
-															<span className="font-mono text-xs">{t('common.formatPdf')}</span>
-														</div>
-													</div>
-												</div>
-												<div className="shrink-0">
-													{cert.certificate_url ? (
-														<a
-															href={cert.certificate_url}
-															target="_blank"
-															rel="noreferrer"
-															className="inline-flex items-center gap-2 rounded-md bg-primary-600 px-4 py-2 text-sm font-medium text-white transition-colors hover:bg-primary-700"
-														>
-															<Download className="h-4 w-4" />
-															{t('common.download')}
-														</a>
-													) : (
-														<a
-															href={`mailto:tianv@tianv.com?subject=${encodeURIComponent(i18n.language === 'zh-CN' ? '审计报告下载申请' : 'Audit Report Download Request')}`}
-															className="inline-flex items-center gap-2 rounded-md bg-primary-600 px-4 py-2 text-sm font-medium text-white transition-colors hover:bg-primary-700"
-														>
-															<Download className="h-4 w-4" />
-															{t('common.applyDownload')}
-														</a>
 													)}
 												</div>
 											</div>
@@ -363,7 +319,7 @@ export default function AuditReportsPage() {
 										const report = {
 											title: t(`auditReports.reports.${key}.title`),
 											desc: t(`auditReports.reports.${key}.desc`),
-											access: t(`auditReports.reports.${key}.access`),
+											status: t(`auditReports.reports.${key}.status`),
 										};
 										return (
 											<SectionCard key={key} padding="lg">
@@ -376,54 +332,13 @@ export default function AuditReportsPage() {
 															<h3 className="text-lg font-bold text-neutral-900 dark:text-white">
 																{report.title}
 															</h3>
-															{key !== 'bcp' ? (
-																<span className="inline-flex items-center gap-1 rounded-full bg-success/10 px-2 py-0.5 text-xs font-medium text-success">
-																	<CheckCircle2 className="h-3.5 w-3.5" />
-																	{t('common.available')}
-																</span>
-															) : (
-																<span className="inline-flex items-center gap-1 rounded-full bg-neutral-100 px-2 py-0.5 text-xs font-medium text-neutral-500 dark:bg-slate-800 dark:text-neutral-400">
-																	<Clock className="h-3.5 w-3.5" />
-																	{t('common.comingSoon')}
-																</span>
-															)}
+															<span className="inline-flex items-center gap-1 rounded-full bg-neutral-100 px-2 py-0.5 text-xs font-medium text-neutral-500 dark:bg-slate-800 dark:text-neutral-400">
+																{report.status}
+															</span>
 														</div>
 														<p className="mt-2 text-sm leading-relaxed text-neutral-600 dark:text-neutral-300">
 															{report.desc}
 														</p>
-														<div className="mt-4 flex flex-wrap items-center gap-x-6 gap-y-2 text-sm text-neutral-500 dark:text-neutral-400">
-															<div>
-																<span className="text-neutral-400 dark:text-neutral-500">
-																	{t('common.getCondition')}
-																</span>
-																{report.access}
-															</div>
-															<div>
-																<span className="text-neutral-400 dark:text-neutral-500">
-																	{t('common.format')}
-																</span>
-																<span className="font-mono text-xs">{t('common.formatPdf')}</span>
-															</div>
-														</div>
-													</div>
-													<div className="shrink-0">
-														{key !== 'bcp' ? (
-															<a
-																href={`mailto:tianv@tianv.com?subject=${encodeURIComponent(i18n.language === 'zh-CN' ? '审计报告下载申请' : 'Audit Report Download Request')}`}
-																className="inline-flex items-center gap-2 rounded-md bg-primary-600 px-4 py-2 text-sm font-medium text-white transition-colors hover:bg-primary-700"
-															>
-																<Download className="h-4 w-4" />
-																{t('common.applyDownload')}
-															</a>
-														) : (
-															<button
-																disabled
-																className="inline-flex cursor-not-allowed items-center gap-2 rounded-md bg-neutral-100 px-4 py-2 text-sm font-medium text-neutral-400 dark:bg-slate-800 dark:text-neutral-500"
-															>
-																<Clock className="h-4 w-4" />
-																{t('common.comingSoon')}
-															</button>
-														)}
 													</div>
 												</div>
 											</SectionCard>
