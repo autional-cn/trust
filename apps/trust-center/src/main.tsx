@@ -4,6 +4,7 @@ import { BrowserRouter } from 'react-router';
 import { ROUTER_BASENAME } from '@autional-cn/shared';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import App from './App';
+import './non-tenant-segments';
 import { ThemeProvider, ToastProvider } from '@autional-cn/ui';
 import '@fontsource/inter/400.css';
 import '@fontsource/inter/500.css';
