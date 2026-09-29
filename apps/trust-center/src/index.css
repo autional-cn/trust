@@ -6,32 +6,13 @@
 
 @layer base {
   html {
-    font-family: var(--font-sans);
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
     scroll-behavior: smooth;
-  }
-  body {
-    background-color: var(--color-bg-primary);
-    color: var(--color-text-primary);
   }
 }
 
 html.dark {
   color-scheme: dark;
-}
-
-html.dark,
-[data-theme="dark"] {
-  --color-bg-primary: var(--color-neutral-900);
-  --color-bg-surface: var(--color-neutral-800);
-  --color-bg-elevated: var(--color-neutral-800);
-  --color-text-primary: var(--color-neutral-0);
-  --color-text-secondary: var(--color-neutral-400);
-  --color-border: var(--color-neutral-700);
-}
-
-@layer utilities {
+}@layer utilities {
   .text-balance {
     text-wrap: balance;
   }
