@@ -51,8 +51,8 @@ importers:
         specifier: 0.1.0-rc
         version: 0.1.0-rc
       '@autional-cn/ui':
-        specifier: workspace:*
-        version: link:../../packages/ui
+        specifier: 0.1.0-rc
+        version: 0.1.0-rc(antd@6.6.5(react-dom@19.2.5(react@19.2.5))(react@19.2.5))(i18next@26.0.10(typescript@5.8.3))(lucide-react@0.509.0(react@19.2.5))(react-dom@19.2.5(react@19.2.5))(react-i18next@17.0.7(i18next@26.0.10(typescript@5.8.3))(react-dom@19.2.5(react@19.2.5))(react@19.2.5)(typescript@5.8.3))(react@19.2.5)
       '@hookform/resolvers':
         specifier: 3.10.0
         version: 3.10.0(react-hook-form@7.78.0(react@19.2.5))
@@ -169,49 +169,6 @@ importers:
 
   packages/tsconfig: {}
 
-  packages/ui:
-    dependencies:
-      '@autional-cn/tailwind-preset':
-        specifier: 0.1.0-rc
-        version: 0.1.0-rc(tailwindcss@3.4.19)
-      antd:
-        specifier: '>=6.0.0'
-        version: 6.6.5(react-dom@19.2.5(react@19.2.5))(react@19.2.5)
-    devDependencies:
-      '@autional-cn/tsconfig':
-        specifier: workspace:*
-        version: link:../tsconfig
-      '@types/react':
-        specifier: 19.2.14
-        version: 19.2.14
-      '@types/react-dom':
-        specifier: 19.2.3
-        version: 19.2.3(@types/react@19.2.14)
-      i18next:
-        specifier: 26.0.10
-        version: 26.0.10(typescript@5.8.3)
-      lucide-react:
-        specifier: 0.509.0
-        version: 0.509.0(react@19.2.5)
-      react:
-        specifier: 19.2.5
-        version: 19.2.5
-      react-dom:
-        specifier: 19.2.5
-        version: 19.2.5(react@19.2.5)
-      react-i18next:
-        specifier: 17.0.7
-        version: 17.0.7(i18next@26.0.10(typescript@5.8.3))(react-dom@19.2.5(react@19.2.5))(react@19.2.5)(typescript@5.8.3)
-      tailwindcss:
-        specifier: 3.4.19
-        version: 3.4.19
-      tsup:
-        specifier: 8.5.1
-        version: 8.5.1(jiti@1.21.7)(postcss@8.5.28)(typescript@5.8.3)
-      typescript:
-        specifier: 5.8.3
-        version: 5.8.3
-
 packages:
 
   '@adobe/css-tools@4.5.0':
@@ -280,12 +237,22 @@ packages:
         optional: true
 
   '@autional-cn/tailwind-preset@0.1.0-rc':
-    resolution: {integrity: sha512-EAtWBIyML8SrzVKs7batJ/gwFM/A86ir2HlGxlzDWoZpzxq94KK4QwXzt0XVBHgJsScrdnqWDIECuRjayYesRA==, tarball: https://registry.npmjs.org/@autional-cn/tailwind-preset/-/tailwind-preset-0.1.0-rc.tgz}
+    resolution: {integrity: sha512-EAtWBIyML8SrzVKs7batJ/gwFM/A86ir2HlGxlzDWoZpzxq94KK4QwXzt0XVBHgJsScrdnqWDIECuRjayYesRA==}
     peerDependencies:
       tailwindcss: '>=3.0.0'
 
   '@autional-cn/tokens@0.1.0-rc':
     resolution: {integrity: sha512-L0G4zxni+1jkpgNVdJ7cF6rAsEZeHoGXVGBM0YVlnw7pcB1NfoXyFNmm7yss0Jmu2eG9joIdbQh1EqVMipbSMg==}
+
+  '@autional-cn/ui@0.1.0-rc':
+    resolution: {integrity: sha512-5M5SslaVnV3ilchTo+d18Vf2EBgtvgTQRtd1aGddAIUvra/S6Brnc+hiuuXiK/faoF4DqIKx9Pw79cva+uFq8A==}
+    peerDependencies:
+      antd: '>=6.0.0'
+      i18next: '>=26.0.0'
+      lucide-react: '>=0.500.0'
+      react: '>=18.0.0'
+      react-dom: '>=18.0.0'
+      react-i18next: '>=17.0.0'
 
   '@babel/code-frame@7.29.7':
     resolution: {integrity: sha512-Aup7aUOfpbAUg2ROOJN6Iw5f9DMBlzu0mIkm/malLQFN/YQgO48wCj0Kxa3sEHJvPVFg7siR+qRInwXd2qhQKw==}
@@ -2543,6 +2510,15 @@ snapshots:
 
   '@autional-cn/tokens@0.1.0-rc': {}
 
+  '@autional-cn/ui@0.1.0-rc(antd@6.6.5(react-dom@19.2.5(react@19.2.5))(react@19.2.5))(i18next@26.0.10(typescript@5.8.3))(lucide-react@0.509.0(react@19.2.5))(react-dom@19.2.5(react@19.2.5))(react-i18next@17.0.7(i18next@26.0.10(typescript@5.8.3))(react-dom@19.2.5(react@19.2.5))(react@19.2.5)(typescript@5.8.3))(react@19.2.5)':
+    dependencies:
+      antd: 6.6.5(react-dom@19.2.5(react@19.2.5))(react@19.2.5)
+      i18next: 26.0.10(typescript@5.8.3)
+      lucide-react: 0.509.0(react@19.2.5)
+      react: 19.2.5
+      react-dom: 19.2.5(react@19.2.5)
+      react-i18next: 17.0.7(i18next@26.0.10(typescript@5.8.3))(react-dom@19.2.5(react@19.2.5))(react@19.2.5)(typescript@5.8.3)
+
   '@babel/code-frame@7.29.7':
     dependencies:
       '@babel/helper-validator-identifier': 7.29.7
@@ -4441,34 +4417,6 @@ snapshots:
       tree-kill: 1.2.2
     optionalDependencies:
       postcss: 8.5.14
-      typescript: 5.8.3
-    transitivePeerDependencies:
-      - jiti
-      - supports-color
-      - tsx
-      - yaml
-
-  tsup@8.5.1(jiti@1.21.7)(postcss@8.5.28)(typescript@5.8.3):
-    dependencies:
-      bundle-require: 5.1.0(esbuild@0.27.7)
-      cac: 6.7.14
-      chokidar: 4.0.3
-      consola: 3.4.2
-      debug: 4.4.3
-      esbuild: 0.27.7
-      fix-dts-default-cjs-exports: 1.0.1
-      joycon: 3.1.1
-      picocolors: 1.1.1
-      postcss-load-config: 6.0.1(jiti@1.21.7)(postcss@8.5.28)
-      resolve-from: 5.0.0
-      rollup: 4.63.5
-      source-map: 0.7.6
-      sucrase: 3.35.1
-      tinyexec: 0.3.2
-      tinyglobby: 0.2.17
-      tree-kill: 1.2.2
-    optionalDependencies:
-      postcss: 8.5.28
       typescript: 5.8.3
     transitivePeerDependencies:
       - jiti
