@@ -302,7 +302,7 @@
   "subprocessors.certifications": "处理目的",
   "subprocessors.emptyDesc": "当前暂无已注册的子处理商信息。",
   "subprocessors.aboutTitle": "关于子处理商清单",
-  "subprocessors.aboutDesc": "根据 GDPR Art.28 要求，我们公示所有可能处理客户数据的第三方子处理商。我们要求子处理商签署数据处理协议（DPA）并遵守同等的安全标准。若需要最新的 DPA 副本，请联系 support@autional.net。",
+  "subprocessors.aboutDesc": "根据 GDPR Art.28 要求，我们公示所有可能处理客户数据的第三方子处理商。我们要求子处理商签署数据处理协议（DPA）并遵守同等的安全标准。若需要最新的 DPA 副本，请联系 privacy@autional.net。",
   "subprocessors.categoryLabels.infrastructure": "基础设施",
   "subprocessors.categoryLabels.service_provider": "服务提供商",
   "subprocessors.categoryLabels.third_party": "第三方",

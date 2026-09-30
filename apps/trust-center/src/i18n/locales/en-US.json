@@ -302,7 +302,7 @@
   "subprocessors.certifications": "Purpose",
   "subprocessors.emptyDesc": "No subprocessors registered at this time.",
   "subprocessors.aboutTitle": "About This Subprocessor List",
-  "subprocessors.aboutDesc": "As required by GDPR Art.28, we disclose all third-party subprocessors that may process customer data. Subprocessors are required to sign a Data Processing Agreement (DPA) and meet equivalent security standards. For the latest DPA copy, contact support@autional.net.",
+  "subprocessors.aboutDesc": "As required by GDPR Art.28, we disclose all third-party subprocessors that may process customer data. Subprocessors are required to sign a Data Processing Agreement (DPA) and meet equivalent security standards. For the latest DPA copy, contact privacy@autional.net.",
   "subprocessors.categoryLabels.infrastructure": "Infrastructure",
   "subprocessors.categoryLabels.service_provider": "Service Provider",
   "subprocessors.categoryLabels.third_party": "Third Party",

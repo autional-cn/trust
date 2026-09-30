@@ -94,7 +94,7 @@ export default function PrivacyPage() {
 								{t('privacy.dpoEmail')}
 							</span>
 							<a href="#" className="text-primary-600 hover:underline dark:text-primary-400">
-								support@autional.net
+								privacy@autional.net
 							</a>
 						</div>
 						<div>
