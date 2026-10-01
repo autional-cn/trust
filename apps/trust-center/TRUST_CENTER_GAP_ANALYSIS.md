@@ -1,6 +1,7 @@
 # Trust Center 行业 Gap Analysis 与补全计划
 
 > 版本: v1.0 | 日期: 2026-05-09 | 方法论: `service-flow-test-writer` 角色旅程 + 行业对标
+> **注记（2026-10-01）**：本文为实施前差距分析稿；文中 `tianv@tianv.com`（功能矩阵第 15 项 · SecurityResearcher 旅程 · 任务 6）为早期规划联系地址、**已废弃**——对外统一联系地址 = `support@autional.net`。原文保留不改。
 
 ---
 
