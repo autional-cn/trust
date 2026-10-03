@@ -1,5 +1,5 @@
 import { useSEO } from '@autional-cn/shared';
-import { useComplianceStatus } from '@/hooks/useTrustApi';
+import { useComplianceStatus } from '@/hooks/use-trust-api';
 import { useTranslation } from 'react-i18next';
 import SecurityScore from '@/components/SecurityScore';
 import {

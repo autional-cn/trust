@@ -53,7 +53,7 @@ vi.mock('@autional-cn/shared', () => ({
 	usePageMeta: vi.fn(),
 }));
 
-vi.mock('@/hooks/useTrustApi', () => ({
+vi.mock('@/hooks/use-trust-api', () => ({
 	useAuditFindings: vi.fn(),
 	useComplianceStatus: () => ({
 		data: null,
@@ -89,7 +89,7 @@ vi.mock('@autional-cn/ui', () => ({
 	),
 }));
 
-import { useAuditFindings } from '@/hooks/useTrustApi';
+import { useAuditFindings } from '@/hooks/use-trust-api';
 
 function renderCompliance() {
 	return render(

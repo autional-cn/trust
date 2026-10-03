@@ -4,7 +4,7 @@ import {
 	useComplianceStatus,
 	useSecurityScore,
 	usePublicCertifications,
-} from '@/hooks/useTrustApi';
+} from '@/hooks/use-trust-api';
 import { PageHeader, SectionCard, StatusBadge, EmptyState } from '@autional-cn/ui';
 import { useTranslation } from 'react-i18next';
 import {

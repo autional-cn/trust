@@ -1,7 +1,7 @@
 'use client';
 
 import { usePageTitle, usePageMeta } from '@autional-cn/shared';
-import { useStorageEncryptionStatus } from '@/hooks/useTrustApi';
+import { useStorageEncryptionStatus } from '@/hooks/use-trust-api';
 import { useTranslation } from 'react-i18next';
 import { PageHeader, SectionCard, LoadingScreen, ErrorState } from '@autional-cn/ui';
 import type { PublicEncryptionStatus } from '@autional-cn/shared/generated/types';

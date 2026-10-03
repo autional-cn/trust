@@ -1,4 +1,4 @@
-import { useSecurityScore } from '@/hooks/useTrustApi';
+import { useSecurityScore } from '@/hooks/use-trust-api';
 import { useTranslation } from 'react-i18next';
 import { Shield, CheckCircle2, AlertTriangle, Loader2 } from 'lucide-react';
 

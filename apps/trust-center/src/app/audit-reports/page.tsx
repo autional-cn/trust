@@ -7,7 +7,7 @@ import {
 	usePublicHashChain,
 	usePublicLogsSummary,
 	usePublicCertifications,
-} from '@/hooks/useTrustApi';
+} from '@/hooks/use-trust-api';
 import { useTranslation } from 'react-i18next';
 import { PageHeader, SectionCard, EmptyState, LoadingScreen, ErrorState } from '@autional-cn/ui';
 import {
