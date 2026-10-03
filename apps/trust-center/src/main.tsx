@@ -27,7 +27,7 @@ if (root) {
 	createRoot(root).render(
 		<StrictMode>
 			<QueryClientProvider client={queryClient}>
-				<ThemeProvider storageKey="authms-trust-theme">
+				<ThemeProvider storageKey="autional-trust-theme">
 					<ToastProvider>
 						<BrowserRouter basename={ROUTER_BASENAME}>
 							<App />

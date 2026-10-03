@@ -22,7 +22,7 @@ i18n
 		detection: {
 			order: ['localStorage', 'navigator'],
 			caches: ['localStorage'],
-			lookupLocalStorage: 'authms-trust-i18n',
+			lookupLocalStorage: 'autional-trust-i18n',
 		},
 	});
 

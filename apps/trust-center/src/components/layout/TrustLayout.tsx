@@ -227,7 +227,7 @@ export default function TrustLayout() {
 						</div>
 						<div>
 							<h3 className="text-sm font-semibold text-neutral-900 dark:text-neutral-200">
-								{t('layout.authms')}
+								{t('layout.brand')}
 							</h3>
 							<ul className="mt-3 space-y-2">
 								<li>
