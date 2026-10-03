@@ -19,6 +19,8 @@ const SubprocessorsPage = lazy(() => import('@/app/subprocessors/page'));
 const VulnerabilityDisclosurePage = lazy(() => import('@/app/vulnerability-disclosure/page'));
 const StorageSecurityPage = lazy(() => import('@/app/storage-security/page'));
 const SecurityAlertsPage = lazy(() => import('@/app/security-alerts/page'));
+const SecurityAlertsConfirmPage = lazy(() => import('@/app/security-alerts/confirm/page'));
+const SecurityAlertsUnsubscribePage = lazy(() => import('@/app/security-alerts/unsubscribe/page'));
 const NotFoundPage = lazy(() => import('@/app/not-found/page'));
 
 function PageLoader() {
@@ -120,6 +122,22 @@ export default function App() {
 						element={
 							<Suspense fallback={<PageLoader />}>
 								<SecurityAlertsPage />
+							</Suspense>
+						}
+					/>
+					<Route
+						path="/security-alerts/confirm"
+						element={
+							<Suspense fallback={<PageLoader />}>
+								<SecurityAlertsConfirmPage />
+							</Suspense>
+						}
+					/>
+					<Route
+						path="/security-alerts/unsubscribe"
+						element={
+							<Suspense fallback={<PageLoader />}>
+								<SecurityAlertsUnsubscribePage />
 							</Suspense>
 						}
 					/>
