@@ -1,6 +1,7 @@
 import { useTrustSEO } from '@/lib/seo';
 import { useTranslation } from 'react-i18next';
-import { Lock, Eye, Shield, FileText, Globe, Trash2, UserCheck, Cookie } from 'lucide-react';
+import { Link } from 'react-router';
+import { Lock, Eye, Shield, FileText, Globe, Trash2, UserCheck, Cookie, Smartphone, ArrowRight } from 'lucide-react';
 
 const sectionIcons: Record<string, React.FC<{ className?: string }>> = {
 	collection: FileText,
@@ -78,6 +79,24 @@ export default function PrivacyPage() {
 						);
 					})}
 				</div>
+
+				<Link
+					to="/privacy/device"
+					className="group mt-8 flex items-start gap-4 rounded-xl border border-neutral-200 bg-white p-5 transition-all hover:border-primary-200 hover:shadow-sm dark:border-neutral-800 dark:bg-slate-900 dark:hover:border-primary-800"
+				>
+					<div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-primary-50 text-primary-600 dark:bg-white/10 dark:text-sky-300">
+						<Smartphone className="h-5 w-5" />
+					</div>
+					<div className="flex-1">
+						<h3 className="text-base font-semibold text-[var(--color-text-primary)]">
+							{t('privacy.deviceLink.title')}
+						</h3>
+						<p className="mt-1 text-sm text-[var(--color-text-muted)]">
+							{t('privacy.deviceLink.desc')}
+						</p>
+					</div>
+					<ArrowRight className="mt-2.5 h-5 w-5 shrink-0 text-[var(--color-text-muted)] transition-transform group-hover:translate-x-0.5" />
+				</Link>
 
 				<div className="mt-12 rounded-2xl border border-neutral-200 bg-neutral-50 p-6 dark:border-neutral-800 dark:bg-slate-900/50 sm:p-8">
 					<div className="flex items-center gap-3">

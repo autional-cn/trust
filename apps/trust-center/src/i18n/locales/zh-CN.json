@@ -273,10 +273,46 @@
     "分析型 Cookie 仅用于改进产品体验，不会用于跨站追踪。",
     "您可通过浏览器设置管理 Cookie 偏好，但禁用必要 Cookie 可能影响服务使用。"
   ],
-  "privacy.device.title": "设备隐私 & COPPA 合规",
-  "privacy.device.subtitle": "了解我们如何保护儿童设备和连接硬件上的数据。",
-  "privacy.device.meta": "Autional 设备隐私政策与 COPPA 合规信息。",
-  "privacy.device.comingSoon": "设备隐私与 COPPA 合规信息即将上线。",
+  "privacy.device.title": "设备数据隐私",
+  "privacy.device.subtitle": "了解 Autional 身份验证器在您的设备上处理哪些数据，以及我们如何保护这些数据。",
+  "privacy.device.meta": "Autional 身份验证器设备数据隐私说明——我们处理哪些设备数据、用途、加密方式与您的控制。",
+  "privacy.device.updated": "最后更新日期：2026 年 10 月 5 日",
+  "privacy.device.collection": "我们处理的设备数据",
+  "privacy.device.usage": "数据用途",
+  "privacy.device.storage": "存储与加密",
+  "privacy.device.controls": "您的控制",
+  "privacy.device.retention": "保存期限",
+  "privacy.device.sections.collection": [
+    "推送订阅（用于登录审批推送）：推送服务端点地址、由您的浏览器生成的推送加密密钥、设备名称与类型，以及浏览器标识（User-Agent）。",
+    "设备同步（用于多设备 TOTP 同步）：由浏览器标识推断的通用设备名（如 iPhone、Android、Windows PC）、设备指纹（对浏览器标识、语言、屏幕参数等拼接后经 SHA-256 单向哈希生成，原始参数不上传），以及同步的 TOTP 账户数据（账户名称、用户名、TOTP 密钥与算法参数）。",
+    "云备份（用于备份与恢复）：仅在您的设备端加密后的备份密文、校验和及基本元数据（账户数量、版本、设备名称）。",
+    "登录审批记录（用于安全自查）：推送审批挑战的状态与时间等上下文信息。"
+  ],
+  "privacy.device.sections.usage": [
+    "向您的设备发送登录审批请求（推送 MFA），保护账号安全；",
+    "在您的多台设备之间同步 TOTP 账户，支持更换设备；",
+    "备份与恢复您的 TOTP 账户；",
+    "向您展示登录审批活动记录。",
+    "上列数据不用于广告，也不用于跨站追踪。"
+  ],
+  "privacy.device.sections.storage": [
+    "所有传输均经 HTTPS/TLS 加密；",
+    "设备同步数据在服务端加密存储；为完成多设备同步，服务端需能解密以下发至您的设备；",
+    "云备份在您的设备上完成加密（AES-GCM，密钥保存在您的设备本地，可选用 PIN 保护）后才上传——服务端仅保存密文，无法解密其内容；",
+    "设备指纹为单向哈希值，无法还原为原始设备参数。"
+  ],
+  "privacy.device.sections.controls": [
+    "推送订阅：在「设备」页随时撤销；撤销后立即删除订阅、停止推送；",
+    "设备同步：在「设备同步」页解绑设备；解绑即删除该设备的同步数据（同步设备数量存在上限）；",
+    "云备份：上传新备份时最多保留 3 个历史版本，超出的最旧版本自动淘汰（如需删除云端备份数据，请联系 privacy@autional.net）；",
+    "登录审批记录仅您本人可见。"
+  ],
+  "privacy.device.sections.retention": [
+    "上述数据保存至您主动删除（撤销 / 解绑 / 删除备份），或按《隐私政策》的保留与删除条款在账户注销时处理。"
+  ],
+  "privacy.device.contactDesc": "如对设备数据的处理有任何疑问，请联系我们：",
+  "privacy.deviceLink.title": "设备数据隐私",
+  "privacy.deviceLink.desc": "了解身份验证器在您设备上处理的数据（推送订阅 / 设备同步 / 加密云备份）。",
   "compliance.title": "合规建设",
   "compliance.subtitle": "这里公开我们对照的主要合规框架、当前状态与建设进展。",
   "compliance.latestFindings": "最新审计发现",
