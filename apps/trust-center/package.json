@@ -31,6 +31,7 @@
     "zustand": "5.0.13"
   },
   "devDependencies": {
+    "@autional-cn/eslint-config": "0.1.0-rc.1",
     "@autional-cn/tsconfig": "0.1.0-rc",
     "@types/react": "19.2.14",
     "@types/react-dom": "19.2.3",
