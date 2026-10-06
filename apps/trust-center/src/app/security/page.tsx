@@ -57,7 +57,7 @@ export default function SecurityPage() {
 						return (
 							<div
 								key={p.titleKey}
-								className="rounded-md border border-neutral-200 bg-white p-6 shadow-sm dark:border-neutral-800 dark:bg-slate-900 sm:p-8"
+								className="rounded-md border border-neutral-200 bg-white p-6 shadow-card dark:border-neutral-800 dark:bg-slate-900 sm:p-8"
 							>
 								<div className="flex items-center gap-4">
 									<div className="flex h-12 w-12 items-center justify-center rounded-xl bg-primary-50 dark:bg-white/10">
@@ -94,7 +94,7 @@ export default function SecurityPage() {
 						{programs.map((prog) => (
 							<div
 								key={prog.titleKey}
-								className="rounded-xl border border-neutral-200 bg-white p-6 shadow-sm dark:border-neutral-800 dark:bg-slate-900"
+								className="rounded-xl border border-neutral-200 bg-white p-6 shadow-card dark:border-neutral-800 dark:bg-slate-900"
 							>
 								<div className="flex h-10 w-10 items-center justify-center rounded-lg bg-primary-50 dark:bg-white/10">
 									<prog.icon className="h-5 w-5 text-primary-600 dark:text-sky-300" />

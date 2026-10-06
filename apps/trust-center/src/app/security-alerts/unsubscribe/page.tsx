@@ -62,7 +62,7 @@ export default function SecurityAlertsUnsubscribePage() {
 						<button
 							type="button"
 							onClick={handleUnsubscribe}
-							className="mt-8 inline-flex items-center justify-center gap-2 rounded-md bg-primary-600 px-5 py-2.5 text-sm font-medium text-white shadow-sm transition-colors hover:bg-primary-700"
+							className="mt-8 inline-flex items-center justify-center gap-2 rounded-md bg-primary-600 px-5 py-2.5 text-sm font-medium text-white shadow-card transition-colors hover:bg-primary-700"
 						>
 							<XCircle className="h-4 w-4" />
 							{t('securityAlerts.unsubscribe.confirmButton')}

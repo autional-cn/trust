@@ -59,7 +59,7 @@ export default function DataResidencyPage() {
 				</div>
 
 				{/* Region Map / Table */}
-				<div className="mt-12 overflow-hidden rounded-md border border-neutral-200 bg-white shadow-sm dark:border-neutral-800 dark:bg-slate-900">
+				<div className="mt-12 overflow-hidden rounded-md border border-neutral-200 bg-white shadow-card dark:border-neutral-800 dark:bg-slate-900">
 					<div className="overflow-x-auto">
 						<table className="w-full text-left text-sm">
 							<thead className="bg-neutral-50 text-[var(--color-text-muted)] dark:bg-slate-800">
@@ -136,7 +136,7 @@ export default function DataResidencyPage() {
 						{commitments.map((c) => (
 							<div
 								key={c.titleKey}
-								className="rounded-xl border border-neutral-200 bg-white p-6 shadow-sm dark:border-neutral-800 dark:bg-slate-900"
+								className="rounded-xl border border-neutral-200 bg-white p-6 shadow-card dark:border-neutral-800 dark:bg-slate-900"
 							>
 								<div className="flex h-10 w-10 items-center justify-center rounded-lg bg-primary-50 dark:bg-white/10">
 									<c.icon className="h-5 w-5 text-primary-600 dark:text-sky-300" />

@@ -26,7 +26,7 @@ export default function NotFoundPage() {
 				<div className="mt-8 flex items-center justify-center gap-3">
 					<Link
 						to="/"
-						className="inline-flex items-center gap-2 rounded-md bg-primary-600 px-5 py-2.5 text-sm font-medium text-white shadow-sm transition-colors hover:bg-primary-700"
+						className="inline-flex items-center gap-2 rounded-md bg-primary-600 px-5 py-2.5 text-sm font-medium text-white shadow-card transition-colors hover:bg-primary-700"
 					>
 						<Shield className="h-4 w-4" />
 						{t('notFound.backToOverview')}

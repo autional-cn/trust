@@ -124,7 +124,7 @@ export default function OverviewPage() {
 					</div>
 				)}
 				{status && !isError && (
-					<div className="mt-8 rounded-xl border border-neutral-200 bg-white p-4 shadow-sm dark:border-neutral-800 dark:bg-slate-900">
+					<div className="mt-8 rounded-xl border border-neutral-200 bg-white p-4 shadow-card dark:border-neutral-800 dark:bg-slate-900">
 						<div className="flex flex-wrap items-center justify-between gap-4">
 							<div className="flex items-center gap-3">
 								<div
@@ -181,7 +181,7 @@ export default function OverviewPage() {
 						return (
 							<div
 								key={cert.name}
-								className="rounded-xl border border-neutral-200 bg-white p-6 text-center shadow-sm transition-all hover:shadow-md dark:border-neutral-800 dark:bg-slate-900"
+								className="rounded-xl border border-neutral-200 bg-white p-6 text-center shadow-card transition-all hover:shadow-md dark:border-neutral-800 dark:bg-slate-900"
 							>
 								<div className="mx-auto flex h-12 w-12 items-center justify-center rounded-full bg-primary-50 dark:bg-white/10">
 									<Icon className="h-6 w-6 text-primary-600 dark:text-sky-300" />
@@ -223,7 +223,7 @@ export default function OverviewPage() {
 								<Link
 									key={key}
 									to={href}
-									className="group rounded-xl border border-neutral-200 bg-white p-6 shadow-sm transition-all hover:border-primary-200 hover:shadow-md dark:border-neutral-800 dark:bg-slate-900 dark:hover:border-primary-800"
+									className="group rounded-xl border border-neutral-200 bg-white p-6 shadow-card transition-all hover:border-primary-200 hover:shadow-md dark:border-neutral-800 dark:bg-slate-900 dark:hover:border-primary-800"
 								>
 									<div className="inline-flex h-10 w-10 items-center justify-center rounded-lg bg-primary-50 text-primary-600 transition-colors group-hover:bg-primary-100 dark:bg-white/10 dark:text-sky-300 dark:group-hover:bg-white/20">
 										<Icon className="h-5 w-5" />
@@ -306,7 +306,7 @@ export default function OverviewPage() {
 					</p>
 					<a
 						href="mailto:support@autional.net?subject=Document%20Request"
-						className="mt-6 inline-flex items-center gap-2 rounded-md bg-primary-600 px-6 py-3 text-base font-medium text-white shadow-sm transition-colors hover:bg-primary-700"
+						className="mt-6 inline-flex items-center gap-2 rounded-md bg-primary-600 px-6 py-3 text-base font-medium text-white shadow-card transition-colors hover:bg-primary-700"
 					>
 						{t('overview.requestDoc')}
 					</a>

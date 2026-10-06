@@ -114,7 +114,7 @@ export default function SecurityAlertsPage() {
 				) : (
 					<form
 						onSubmit={handleSubmit(onSubmit)}
-						className="mt-10 rounded-md border border-neutral-200 bg-white p-6 shadow-sm dark:border-neutral-800 dark:bg-slate-900 sm:p-8"
+						className="mt-10 rounded-md border border-neutral-200 bg-white p-6 shadow-card dark:border-neutral-800 dark:bg-slate-900 sm:p-8"
 					>
 						<div className="space-y-5">
 							<div>
@@ -226,7 +226,7 @@ export default function SecurityAlertsPage() {
 							<button
 								type="submit"
 								disabled={isSubmitting}
-								className="flex w-full items-center justify-center gap-2 rounded-md bg-primary-600 px-4 py-3 text-sm font-semibold text-white shadow-sm transition-colors hover:bg-primary-700 disabled:opacity-50 disabled:cursor-not-allowed"
+								className="flex w-full items-center justify-center gap-2 rounded-md bg-primary-600 px-4 py-3 text-sm font-semibold text-white shadow-card transition-colors hover:bg-primary-700 disabled:opacity-50 disabled:cursor-not-allowed"
 							>
 								{isSubmitting ? (
 									<>

@@ -283,7 +283,7 @@ export default function TrustLayout() {
 			{showScrollTop && (
 				<button
 					onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-					className="fixed bottom-6 right-6 z-40 flex h-11 w-11 items-center justify-center rounded-full bg-primary-600 text-white shadow-lg transition-transform hover:scale-105 dark:bg-primary-700"
+					className="fixed bottom-6 right-6 z-40 flex h-11 w-11 items-center justify-center rounded-full bg-primary-600 text-white shadow-brand transition-transform hover:scale-105 dark:bg-primary-700"
 					aria-label={t('layout.backToTop')}
 				>
 					<ChevronUp className="h-5 w-5" />

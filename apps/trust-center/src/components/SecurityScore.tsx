@@ -90,7 +90,7 @@ export default function SecurityScore() {
 		overallScore >= 90 ? 'bg-[var(--color-success-soft)]' : overallScore >= 70 ? 'bg-[var(--color-warning-soft)]' : 'bg-[var(--color-danger-soft)]';
 
 	return (
-		<div className="rounded-xl border border-neutral-200 bg-white p-6 shadow-sm dark:border-neutral-800 dark:bg-slate-900">
+		<div className="rounded-xl border border-neutral-200 bg-white p-6 shadow-card dark:border-neutral-800 dark:bg-slate-900">
 			<div className="flex flex-col items-center gap-4 sm:flex-row sm:justify-between">
 				<div className="flex items-center gap-4">
 					<div className={`flex h-14 w-14 items-center justify-center rounded-full ${scoreBg}`}>

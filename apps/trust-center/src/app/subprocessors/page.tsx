@@ -77,7 +77,7 @@ export default function SubprocessorsPage() {
 						{subprocessors.map((sp) => (
 							<div
 								key={sp.entityName}
-								className="rounded-xl border border-neutral-200 bg-white p-6 shadow-sm dark:border-neutral-800 dark:bg-slate-900"
+								className="rounded-xl border border-neutral-200 bg-white p-6 shadow-card dark:border-neutral-800 dark:bg-slate-900"
 							>
 								<div className="flex flex-col gap-4 sm:flex-row sm:items-start sm:justify-between">
 									<div className="flex items-start gap-4">
