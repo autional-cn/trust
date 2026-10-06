@@ -5,7 +5,7 @@ import {
 	useSecurityScore,
 	usePublicCertifications,
 } from '@/hooks/use-trust-api';
-import { PageHeader, SectionCard, StatusBadge, EmptyState } from '@autional-cn/ui';
+import { PageHeader, SectionCard, StatusBadge, EmptyState } from '@autional/ui';
 import { useTranslation } from 'react-i18next';
 import {
 	Shield,

@@ -1,4 +1,4 @@
-import { ErrorBoundary as SharedErrorBoundary } from '@autional-cn/ui';
+import { ErrorBoundary as SharedErrorBoundary } from '@autional/ui';
 import { useTranslation } from 'react-i18next';
 import { type ReactNode } from 'react';
 

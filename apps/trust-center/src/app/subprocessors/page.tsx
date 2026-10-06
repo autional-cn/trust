@@ -2,8 +2,8 @@ import { useTrustSEO } from '@/lib/seo';
 import { useTranslation } from 'react-i18next';
 import { useQuery } from '@tanstack/react-query';
 import { getSubprocessors } from '@/lib/api.generated';
-import type { PublicSubProcessorListResponse } from '@autional-cn/shared/generated/types';
-import { PageHeader, StatusBadge, EmptyState } from '@autional-cn/ui';
+import type { PublicSubProcessorListResponse } from '@autional/shared/generated/types';
+import { PageHeader, StatusBadge, EmptyState } from '@autional/ui';
 import { Server, Globe, Shield, Database, Loader2, AlertTriangle, Building2 } from 'lucide-react';
 
 function formatLocations(locations?: string): string {

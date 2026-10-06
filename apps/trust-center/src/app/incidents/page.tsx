@@ -1,8 +1,8 @@
 import { useTrustSEO } from '@/lib/seo';
-import { STATUS_PAGE_URL } from '@autional-cn/shared';
+import { STATUS_PAGE_URL } from '@autional/shared';
 import { useTranslation } from 'react-i18next';
 import { useBreachNotifications } from '@/hooks/use-trust-api';
-import { PageHeader, SectionCard, StatusBadge, EmptyState } from '@autional-cn/ui';
+import { PageHeader, SectionCard, StatusBadge, EmptyState } from '@autional/ui';
 import { Clock, CheckCircle2, AlertTriangle, ExternalLink, Loader2 } from 'lucide-react';
 
 export default function IncidentsPage() {

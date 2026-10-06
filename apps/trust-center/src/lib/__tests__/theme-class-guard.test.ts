@@ -5,7 +5,7 @@ import postcss from 'postcss';
 import tailwindcss from 'tailwindcss';
 // 不用本站 tailwind.config.ts：它属 tsconfig.node.json 项目（composite），从 src 测试
 // 跨项目引入报 TS6305；其包装层只加 darkMode/content/动画，对本探针候选无影响。
-import preset from '@autional-cn/tailwind-preset';
+import preset from '@autional/tailwind-preset';
 
 // 回归锁：禁止源码使用 `text-neutral-*` 文本色工具类。
 // 背景（trust 站内容审计 TR-01/TR-05，2026-10-05）：tokens.css 的 `.dark` 块把 neutral
@@ -24,7 +24,7 @@ const BANNED = /text-neutral-\d/;
 // （`dark:bg-primary-900/20` 根本不生成，深色下回退浅色底 ⇒ 浅底浅字失明）。
 // ui 根修后色值走 `rgb(var(--color-*-rgb))` 通道三元组（伴生 `--color-*-rgb: R G B`
 // 变量），前提失效。锁从「禁写」换向「能力断言」：用本站**真实安装**的 tailwindcss
-// + @autional-cn/tailwind-preset 编译探针候选。
+// + @autional/tailwind-preset 编译探针候选。
 // 若跟版回退到无通道旧预设，本测试 FAIL——这类回归构建期零警告、页面静默失样式。
 
 // vitest 以本包目录为 cwd 运行

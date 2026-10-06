@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
 import { useLocation } from 'react-router';
-import { useSEO } from '@autional-cn/shared';
+import { useSEO } from '@autional/shared';
 
 const TRUST_SITE_URL = 'https://trust.autional.cn';
 const TRUST_SITE_NAME = 'Autional Trust Center';

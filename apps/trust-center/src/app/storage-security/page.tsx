@@ -1,7 +1,7 @@
 import { useTrustSEO } from '@/lib/seo';
 import { useStorageEncryptionStatus } from '@/hooks/use-trust-api';
 import { useTranslation } from 'react-i18next';
-import { PageHeader, SectionCard, LoadingScreen, ErrorState } from '@autional-cn/ui';
+import { PageHeader, SectionCard, LoadingScreen, ErrorState } from '@autional/ui';
 import { Shield, Key, Globe, Database } from 'lucide-react';
 
 export default function StorageSecurityPage() {

@@ -3,8 +3,8 @@ import { useForm, Controller } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { z } from 'zod';
 import { useTrustSEO } from '@/lib/seo';
-import { notificationsPublicSecuritySubscribePost } from '@autional-cn/shared/generated/api';
-import type { SecuritySubscribeDetailResponse } from '@autional-cn/shared/generated/types';
+import { notificationsPublicSecuritySubscribePost } from '@autional/shared/generated/api';
+import type { SecuritySubscribeDetailResponse } from '@autional/shared/generated/types';
 import { useTranslation } from 'react-i18next';
 import { Bell, Mail, CheckCircle2, AlertTriangle, ArrowRight, Shield, Loader2 } from 'lucide-react';
 

@@ -48,7 +48,7 @@ vi.mock('react-i18next', () => {
 	};
 });
 
-vi.mock('@autional-cn/shared', () => ({
+vi.mock('@autional/shared', () => ({
 	useSEO: vi.fn(),
 }));
 
@@ -71,7 +71,7 @@ vi.mock('@/hooks/use-trust-api', () => ({
 	}),
 }));
 
-vi.mock('@autional-cn/ui', () => ({
+vi.mock('@autional/ui', () => ({
 	PageHeader: ({ title, subtitle }: any) => (
 		<div>
 			<h1>{title}</h1>

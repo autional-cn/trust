@@ -7,7 +7,7 @@ import {
 	usePublicCertifications,
 } from '@/hooks/use-trust-api';
 import { useTranslation } from 'react-i18next';
-import { PageHeader, SectionCard, EmptyState, LoadingScreen, ErrorState } from '@autional-cn/ui';
+import { PageHeader, SectionCard, EmptyState, LoadingScreen, ErrorState } from '@autional/ui';
 import {
 	FileText,
 	Shield,
