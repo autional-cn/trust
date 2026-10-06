@@ -59,7 +59,7 @@ export default function DataResidencyPage() {
 				</div>
 
 				{/* Region Map / Table */}
-				<div className="mt-12 overflow-hidden rounded-2xl border border-neutral-200 bg-white shadow-sm dark:border-neutral-800 dark:bg-slate-900">
+				<div className="mt-12 overflow-hidden rounded-md border border-neutral-200 bg-white shadow-sm dark:border-neutral-800 dark:bg-slate-900">
 					<div className="overflow-x-auto">
 						<table className="w-full text-left text-sm">
 							<thead className="bg-neutral-50 text-[var(--color-text-muted)] dark:bg-slate-800">
@@ -153,7 +153,7 @@ export default function DataResidencyPage() {
 				</div>
 
 				{/* Checklist */}
-				<div className="mt-16 rounded-2xl border border-neutral-200 bg-neutral-50 p-8 dark:border-neutral-800 dark:bg-slate-900/50">
+				<div className="mt-16 rounded-md border border-neutral-200 bg-neutral-50 p-8 dark:border-neutral-800 dark:bg-slate-900/50">
 					<h2 className="text-center text-2xl font-bold text-[var(--color-text-primary)]">
 						{t('dataResidency.checklist')}
 					</h2>

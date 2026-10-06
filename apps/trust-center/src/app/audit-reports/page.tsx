@@ -105,18 +105,18 @@ export default function AuditReportsPage() {
 						<div className="space-y-4">
 							<div className="flex items-center justify-center gap-3 text-sm font-mono">
 								<span
-									className="rounded bg-gray-100 dark:bg-gray-800 px-3 py-1.5 text-gray-600 dark:text-gray-300"
+									className="rounded-xs bg-gray-100 dark:bg-gray-800 px-3 py-1.5 text-gray-600 dark:text-gray-300"
 									title={hashChainData.startHash}
 								>
 									{hashChainData.startHash}
 								</span>
 								<ArrowRight className="h-4 w-4 text-[var(--color-text-muted)]" />
-								<span className="rounded bg-gray-100 dark:bg-gray-800 px-3 py-1.5 text-gray-600 dark:text-gray-300">
+								<span className="rounded-xs bg-gray-100 dark:bg-gray-800 px-3 py-1.5 text-gray-600 dark:text-gray-300">
 									...
 								</span>
 								<ArrowRight className="h-4 w-4 text-[var(--color-text-muted)]" />
 								<span
-									className="rounded bg-gray-100 dark:bg-gray-800 px-3 py-1.5 text-gray-600 dark:text-gray-300"
+									className="rounded-xs bg-gray-100 dark:bg-gray-800 px-3 py-1.5 text-gray-600 dark:text-gray-300"
 									title={hashChainData.endHash}
 								>
 									{hashChainData.endHash}

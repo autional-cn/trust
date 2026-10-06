@@ -245,7 +245,7 @@ export default function OverviewPage() {
 				</div>
 
 				{/* Quick Links */}
-				<div className="mt-20 rounded-2xl border border-neutral-200 bg-neutral-50 p-8 dark:border-neutral-800 dark:bg-slate-900/50">
+				<div className="mt-20 rounded-md border border-neutral-200 bg-neutral-50 p-8 dark:border-neutral-800 dark:bg-slate-900/50">
 					<h2 className="text-center text-2xl font-bold text-[var(--color-text-primary)]">
 						{t('overview.quickLinks')}
 					</h2>

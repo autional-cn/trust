@@ -104,7 +104,7 @@ export default function SecurityScore() {
 							<span className={`text-3xl font-bold ${scoreColor}`}>{overallScore}</span>
 							<span className="text-sm text-[var(--color-text-muted)]">/ {score.maxScore ?? 100}</span>
 							{grade && (
-								<span className="ml-1 rounded bg-primary-50 px-1.5 py-0.5 text-xs font-semibold text-primary-700 dark:bg-white/10 dark:text-sky-300">
+								<span className="ml-1 rounded-xs bg-primary-50 px-1.5 py-0.5 text-xs font-semibold text-primary-700 dark:bg-white/10 dark:text-sky-300">
 									{grade}
 								</span>
 							)}

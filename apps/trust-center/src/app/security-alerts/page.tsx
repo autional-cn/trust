@@ -95,7 +95,7 @@ export default function SecurityAlertsPage() {
 				</div>
 
 				{submitState === 'success' ? (
-					<div className="mt-10 rounded-2xl border border-emerald-200 bg-emerald-50 p-8 text-center dark:border-emerald-800 dark:bg-emerald-900/20">
+					<div className="mt-10 rounded-md border border-emerald-200 bg-emerald-50 p-8 text-center dark:border-emerald-800 dark:bg-emerald-900/20">
 						<div className="mx-auto flex h-14 w-14 items-center justify-center rounded-full bg-emerald-100 dark:bg-emerald-900/30">
 							<CheckCircle2 className="h-7 w-7 text-emerald-600" />
 						</div>
@@ -114,7 +114,7 @@ export default function SecurityAlertsPage() {
 				) : (
 					<form
 						onSubmit={handleSubmit(onSubmit)}
-						className="mt-10 rounded-2xl border border-neutral-200 bg-white p-6 shadow-sm dark:border-neutral-800 dark:bg-slate-900 sm:p-8"
+						className="mt-10 rounded-md border border-neutral-200 bg-white p-6 shadow-sm dark:border-neutral-800 dark:bg-slate-900 sm:p-8"
 					>
 						<div className="space-y-5">
 							<div>
@@ -193,7 +193,7 @@ export default function SecurityAlertsPage() {
 																	: [...field.value, key];
 																field.onChange(next);
 															}}
-															className="mt-0.5 h-4 w-4 rounded border-neutral-300 text-primary-600 focus:ring-primary-500"
+															className="mt-0.5 h-4 w-4 rounded-xs border-neutral-300 text-primary-600 focus:ring-primary-500"
 														/>
 														<div>
 															<span className="text-sm font-medium text-[var(--color-text-primary)]">
@@ -248,7 +248,7 @@ export default function SecurityAlertsPage() {
 					</form>
 				)}
 
-				<div className="mt-16 rounded-2xl border border-neutral-200 bg-neutral-50 p-8 dark:border-neutral-800 dark:bg-slate-900/50">
+				<div className="mt-16 rounded-md border border-neutral-200 bg-neutral-50 p-8 dark:border-neutral-800 dark:bg-slate-900/50">
 					<div className="flex items-center gap-3">
 						<div className="flex h-10 w-10 items-center justify-center rounded-lg bg-primary-50 text-primary-600 dark:bg-white/10 dark:text-sky-300">
 							<Shield className="h-5 w-5" />

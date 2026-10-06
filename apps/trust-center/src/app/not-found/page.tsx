@@ -14,7 +14,7 @@ export default function NotFoundPage() {
 	return (
 		<div className="flex min-h-[70vh] items-center justify-center px-4">
 			<div className="text-center">
-				<div className="mx-auto flex h-20 w-20 items-center justify-center rounded-2xl bg-neutral-100 dark:bg-slate-800">
+				<div className="mx-auto flex h-20 w-20 items-center justify-center rounded-md bg-neutral-100 dark:bg-slate-800">
 					<Search className="h-10 w-10 text-[var(--color-text-muted)]" />
 				</div>
 				<h1 className="mt-6 text-3xl font-extrabold text-[var(--color-text-primary)]">
