@@ -12,12 +12,16 @@ const DIMENSION_KEYS: Record<string, string> = {
 };
 
 const DIMENSION_COLORS: Record<string, string> = {
-	iso27001_coverage: 'text-[var(--color-success-text)]',
-	soc2_coverage: 'text-primary-500 dark:text-sky-300',
-	gdpr_compliance: 'text-[var(--color-info-text)]',
-	open_issues: 'text-[var(--color-warning-text)]',
+	// 六维是**并列的维度**（分类），不是同一个状态的六档 —— 按 DESIGN.md §3 的分类色板规则
+	// 全走 chart-N：六个环的色相互相区分，且这一份色板本身做过非文本对比度与色盲可区分性验证。
+	// 原来混了三种语言（语义令牌 success/info/warning/danger + 品牌色阶 primary/sky + chart-7）。
+	// 风险信号由环的**数值**承载，不由色相。
+	iso27001_coverage: 'text-chart-6',
+	soc2_coverage: 'text-chart-3',
+	gdpr_compliance: 'text-chart-2',
+	open_issues: 'text-chart-4',
 	penetration_test: 'text-chart-7',
-	breach_history: 'text-danger-text',
+	breach_history: 'text-chart-8',
 };
 
 interface RingChartProps {
