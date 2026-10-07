@@ -82,7 +82,7 @@ export default function PrivacyPage() {
 
 				<Link
 					to="/privacy/device"
-					className="group mt-8 flex items-start gap-4 rounded-xl border border-neutral-200 bg-white p-5 transition-all hover:border-primary-200 hover:shadow-sm dark:border-neutral-800 dark:bg-slate-900 dark:hover:border-primary-800"
+					className="group mt-8 flex items-start gap-4 rounded-xl border border-neutral-200 bg-white p-5 transition-all hover:border-primary-200 dark:border-neutral-800 dark:bg-slate-900 dark:hover:border-primary-800"
 				>
 					<div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-primary-50 text-primary-600 dark:bg-white/10 dark:text-sky-300">
 						<Smartphone className="h-5 w-5" />

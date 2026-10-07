@@ -181,7 +181,7 @@ export default function OverviewPage() {
 						return (
 							<div
 								key={cert.name}
-								className="rounded-xl border border-neutral-200 bg-white p-6 text-center shadow-card transition-all hover:shadow-md dark:border-neutral-800 dark:bg-slate-900"
+								className="rounded-xl border border-neutral-200 bg-white p-6 text-center shadow-card transition-all dark:border-neutral-800 dark:bg-slate-900 hover:border-neutral-300"
 							>
 								<div className="mx-auto flex h-12 w-12 items-center justify-center rounded-full bg-primary-50 dark:bg-white/10">
 									<Icon className="h-6 w-6 text-primary-600 dark:text-sky-300" />
@@ -223,7 +223,7 @@ export default function OverviewPage() {
 								<Link
 									key={key}
 									to={href}
-									className="group rounded-xl border border-neutral-200 bg-white p-6 shadow-card transition-all hover:border-primary-200 hover:shadow-md dark:border-neutral-800 dark:bg-slate-900 dark:hover:border-primary-800"
+									className="group rounded-xl border border-neutral-200 bg-white p-6 shadow-card transition-all hover:border-primary-200 dark:border-neutral-800 dark:bg-slate-900 dark:hover:border-primary-800"
 								>
 									<div className="inline-flex h-10 w-10 items-center justify-center rounded-lg bg-primary-50 text-primary-600 transition-colors group-hover:bg-primary-100 dark:bg-white/10 dark:text-sky-300 dark:group-hover:bg-white/20">
 										<Icon className="h-5 w-5" />
@@ -259,7 +259,7 @@ export default function OverviewPage() {
 								<Link
 									key={key}
 									to={`/${key === 'complianceDetail' ? 'compliance' : key === 'auditCompliance' ? 'audit-reports' : key === 'dataResidency' ? 'data-residency' : 'incidents'}`}
-									className="group flex items-start gap-4 rounded-xl border border-neutral-200 bg-white p-5 transition-all hover:border-primary-200 hover:shadow-sm dark:border-neutral-800 dark:bg-slate-900 dark:hover:border-primary-800"
+									className="group flex items-start gap-4 rounded-xl border border-neutral-200 bg-white p-5 transition-all hover:border-primary-200 dark:border-neutral-800 dark:bg-slate-900 dark:hover:border-primary-800"
 								>
 									<div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-primary-50 text-primary-600 dark:bg-white/10 dark:text-sky-300">
 										<ArrowRight className="h-5 w-5 transition-transform group-hover:translate-x-0.5" />
