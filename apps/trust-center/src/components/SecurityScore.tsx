@@ -16,7 +16,7 @@ const DIMENSION_COLORS: Record<string, string> = {
 	soc2_coverage: 'text-primary-500 dark:text-sky-300',
 	gdpr_compliance: 'text-[var(--color-info-text)]',
 	open_issues: 'text-[var(--color-warning-text)]',
-	penetration_test: 'text-violet-500',
+	penetration_test: 'text-chart-7',
 	breach_history: 'text-rose-500',
 };
 
