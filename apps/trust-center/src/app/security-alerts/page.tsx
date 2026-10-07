@@ -95,9 +95,9 @@ export default function SecurityAlertsPage() {
 				</div>
 
 				{submitState === 'success' ? (
-					<div className="mt-10 rounded-md border border-emerald-200 bg-emerald-50 p-8 text-center dark:border-emerald-800 dark:bg-emerald-900/20">
-						<div className="mx-auto flex h-14 w-14 items-center justify-center rounded-full bg-emerald-100 dark:bg-emerald-900/30">
-							<CheckCircle2 className="h-7 w-7 text-emerald-600" />
+					<div className="mt-10 rounded-md border border-success-soft bg-success-soft p-8 text-center dark:border-success-soft dark:bg-success-soft/20">
+						<div className="mx-auto flex h-14 w-14 items-center justify-center rounded-full bg-success-soft dark:bg-success-soft/30">
+							<CheckCircle2 className="h-7 w-7 text-success-text" />
 						</div>
 						<h2 className="mt-4 text-xl font-semibold text-[var(--color-text-primary)]">
 							{t('securityAlerts.success')}
@@ -105,7 +105,7 @@ export default function SecurityAlertsPage() {
 						<p className="mt-2 text-[var(--color-text-muted)]">{message}</p>
 						<button
 							onClick={resetForm}
-							className="mt-6 inline-flex items-center gap-2 rounded-md border border-neutral-300 bg-white px-4 py-2 text-sm font-medium text-[var(--color-text-muted)] hover:bg-neutral-50 dark:border-neutral-700 dark:bg-slate-800 dark:hover:bg-slate-700"
+							className="mt-6 inline-flex items-center gap-2 rounded-md border border-neutral-300 bg-white px-4 py-2 text-sm font-medium text-[var(--color-text-muted)] hover:bg-neutral-50 dark:border-neutral-700 dark:bg-surface dark:hover:bg-elevated"
 						>
 							{t('securityAlerts.subscribeMore')}
 							<ArrowRight className="h-4 w-4" />
@@ -114,7 +114,7 @@ export default function SecurityAlertsPage() {
 				) : (
 					<form
 						onSubmit={handleSubmit(onSubmit)}
-						className="mt-10 rounded-md border border-neutral-200 bg-white p-6 shadow-card dark:border-neutral-800 dark:bg-slate-900 sm:p-8"
+						className="mt-10 rounded-md border border-neutral-200 bg-white p-6 shadow-card dark:border-neutral-800 dark:bg-surface sm:p-8"
 					>
 						<div className="space-y-5">
 							<div>
@@ -131,11 +131,11 @@ export default function SecurityAlertsPage() {
 										type="email"
 										{...register('email')}
 										placeholder="your@email.com"
-										className={`w-full rounded-md border py-2.5 pl-10 pr-3 text-sm bg-white dark:bg-slate-800 dark:text-white placeholder:text-[var(--color-text-muted)] focus:outline-none focus:ring-2 focus:ring-primary-500 ${errors.email ? 'border-red-300 focus:ring-red-500' : 'border-neutral-300 dark:border-neutral-700'}`}
+										className={`w-full rounded-md border py-2.5 pl-10 pr-3 text-sm bg-white dark:bg-surface dark:text-white placeholder:text-[var(--color-text-muted)] focus:outline-none focus:ring-2 focus:ring-primary-500 ${errors.email ? 'border-danger-soft focus:ring-danger' : 'border-neutral-300 dark:border-neutral-700'}`}
 									/>
 								</div>
 								{errors.email && (
-									<p className="mt-1 text-xs text-red-500">
+									<p className="mt-1 text-xs text-danger-text">
 										{t(errors.email.message || 'securityAlerts.validateEmail')}
 									</p>
 								)}
@@ -156,7 +156,7 @@ export default function SecurityAlertsPage() {
 									type="text"
 									{...register('company')}
 									placeholder={t('securityAlerts.companyPlaceholder')}
-									className="mt-1.5 w-full rounded-md border border-neutral-300 py-2.5 px-3 text-sm bg-white dark:bg-slate-800 dark:text-white dark:border-neutral-700 placeholder:text-[var(--color-text-muted)] focus:outline-none focus:ring-2 focus:ring-primary-500"
+									className="mt-1.5 w-full rounded-md border border-neutral-300 py-2.5 px-3 text-sm bg-white dark:bg-surface dark:text-white dark:border-neutral-700 placeholder:text-[var(--color-text-muted)] focus:outline-none focus:ring-2 focus:ring-primary-500"
 								/>
 							</div>
 
@@ -181,7 +181,7 @@ export default function SecurityAlertsPage() {
 														className={`flex cursor-pointer items-start gap-3 rounded-lg border p-4 transition-all ${
 															checked
 																? 'border-primary-400 bg-primary-50 dark:border-primary-600 dark:bg-white/10'
-																: 'border-neutral-200 bg-white hover:border-neutral-300 dark:border-neutral-800 dark:bg-slate-800 dark:hover:border-neutral-700'
+																: 'border-neutral-200 bg-white hover:border-neutral-300 dark:border-neutral-800 dark:bg-surface dark:hover:border-neutral-700'
 														}`}
 													>
 														<input
@@ -210,14 +210,14 @@ export default function SecurityAlertsPage() {
 									)}
 								/>
 								{errors.topics && (
-									<p className="mt-1 text-xs text-red-500">
+									<p className="mt-1 text-xs text-danger-text">
 										{t(errors.topics.message || 'securityAlerts.validateTopics')}
 									</p>
 								)}
 							</div>
 
 							{submitState === 'error' && (
-								<div className="flex items-start gap-2 rounded-lg border border-red-200 bg-red-50 p-3 text-sm text-red-700 dark:border-red-800 dark:bg-red-900/20 dark:text-red-400">
+								<div className="flex items-start gap-2 rounded-lg border border-danger-soft bg-danger-soft p-3 text-sm text-danger-text dark:border-danger-soft dark:bg-danger-soft/20 dark:text-danger-text">
 									<AlertTriangle className="mt-0.5 h-4 w-4 shrink-0" />
 									<span>{message}</span>
 								</div>
@@ -248,7 +248,7 @@ export default function SecurityAlertsPage() {
 					</form>
 				)}
 
-				<div className="mt-16 rounded-md border border-neutral-200 bg-neutral-50 p-8 dark:border-neutral-800 dark:bg-slate-900/50">
+				<div className="mt-16 rounded-md border border-neutral-200 bg-neutral-50 p-8 dark:border-neutral-800 dark:bg-surface/50">
 					<div className="flex items-center gap-3">
 						<div className="flex h-10 w-10 items-center justify-center rounded-lg bg-primary-50 text-primary-600 dark:bg-white/10 dark:text-sky-300">
 							<Shield className="h-5 w-5" />

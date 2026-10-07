@@ -83,11 +83,11 @@ function EncryptionCard({
 	enabled: boolean;
 }) {
 	return (
-		<div className="rounded-xl border border-neutral-200 bg-white p-5 dark:border-neutral-700 dark:bg-slate-800">
+		<div className="rounded-xl border border-neutral-200 bg-white p-5 dark:border-neutral-700 dark:bg-surface">
 			<div className="flex items-center gap-3">
 				<div
 					className={`flex h-10 w-10 shrink-0 items-center justify-center rounded-lg ${
-						enabled ? 'bg-primary-50 dark:bg-white/10' : 'bg-neutral-100 dark:bg-slate-700'
+						enabled ? 'bg-primary-50 dark:bg-white/10' : 'bg-neutral-100 dark:bg-elevated'
 					}`}
 				>
 					<Icon

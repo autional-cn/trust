@@ -14,7 +14,7 @@ export default function NotFoundPage() {
 	return (
 		<div className="flex min-h-[70vh] items-center justify-center px-4">
 			<div className="text-center">
-				<div className="mx-auto flex h-20 w-20 items-center justify-center rounded-md bg-neutral-100 dark:bg-slate-800">
+				<div className="mx-auto flex h-20 w-20 items-center justify-center rounded-md bg-neutral-100 dark:bg-surface">
 					<Search className="h-10 w-10 text-[var(--color-text-muted)]" />
 				</div>
 				<h1 className="mt-6 text-3xl font-extrabold text-[var(--color-text-primary)]">
@@ -33,7 +33,7 @@ export default function NotFoundPage() {
 					</Link>
 					<button
 						onClick={() => window.history.back()}
-						className="inline-flex items-center gap-2 rounded-md border border-neutral-200 bg-white px-5 py-2.5 text-sm font-medium text-[var(--color-text-muted)] transition-colors hover:bg-neutral-50 dark:border-neutral-700 dark:bg-slate-900 dark:hover:bg-slate-800"
+						className="inline-flex items-center gap-2 rounded-md border border-neutral-200 bg-white px-5 py-2.5 text-sm font-medium text-[var(--color-text-muted)] transition-colors hover:bg-neutral-50 dark:border-neutral-700 dark:bg-surface dark:hover:bg-elevated"
 					>
 						<ArrowLeft className="h-4 w-4" />
 						{t('notFound.goBack')}

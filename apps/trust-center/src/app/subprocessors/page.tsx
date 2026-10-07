@@ -56,7 +56,7 @@ export default function SubprocessorsPage() {
 				)}
 
 				{isError && (
-					<div className="mt-8 rounded-xl border border-neutral-200 bg-neutral-50 p-6 text-sm text-[var(--color-text-muted)] dark:border-neutral-800 dark:bg-slate-900/50">
+					<div className="mt-8 rounded-xl border border-neutral-200 bg-neutral-50 p-6 text-sm text-[var(--color-text-muted)] dark:border-neutral-800 dark:bg-surface/50">
 						<AlertTriangle className="mb-2 inline h-5 w-5 text-[var(--color-warning-text)]" />
 						<p>{t('common.loadFailed')}</p>
 					</div>
@@ -77,7 +77,7 @@ export default function SubprocessorsPage() {
 						{subprocessors.map((sp) => (
 							<div
 								key={sp.entityName}
-								className="rounded-xl border border-neutral-200 bg-white p-6 shadow-card dark:border-neutral-800 dark:bg-slate-900"
+								className="rounded-xl border border-neutral-200 bg-white p-6 shadow-card dark:border-neutral-800 dark:bg-surface"
 							>
 								<div className="flex flex-col gap-4 sm:flex-row sm:items-start sm:justify-between">
 									<div className="flex items-start gap-4">

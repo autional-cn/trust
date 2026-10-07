@@ -17,7 +17,7 @@ const DIMENSION_COLORS: Record<string, string> = {
 	gdpr_compliance: 'text-[var(--color-info-text)]',
 	open_issues: 'text-[var(--color-warning-text)]',
 	penetration_test: 'text-chart-7',
-	breach_history: 'text-rose-500',
+	breach_history: 'text-danger-text',
 };
 
 interface RingChartProps {
@@ -32,7 +32,7 @@ function RingChart({ label, score, color }: RingChartProps) {
 			<div className="relative flex h-14 w-14 items-center justify-center">
 				<svg className="h-14 w-14 -rotate-90" viewBox="0 0 36 36">
 					<path
-						className="text-slate-200 dark:text-slate-700"
+						className="text-[var(--color-border-subtle)]"
 						d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"
 						fill="none"
 						stroke="currentColor"
@@ -61,7 +61,7 @@ export default function SecurityScore() {
 
 	if (isLoading) {
 		return (
-			<div className="flex items-center justify-center gap-2 rounded-xl border border-neutral-200 bg-white p-6 dark:border-neutral-800 dark:bg-slate-900">
+			<div className="flex items-center justify-center gap-2 rounded-xl border border-neutral-200 bg-white p-6 dark:border-neutral-800 dark:bg-surface">
 				<Loader2 className="h-5 w-5 animate-spin text-[var(--color-text-muted)]" />
 				<span className="text-sm text-[var(--color-text-muted)]">{t('overview.loadingStatus')}</span>
 			</div>
@@ -70,7 +70,7 @@ export default function SecurityScore() {
 
 	if (isError || !score) {
 		return (
-			<div className="flex items-center gap-3 rounded-xl border border-neutral-200 bg-neutral-50 p-6 dark:border-neutral-800 dark:bg-slate-900/50">
+			<div className="flex items-center gap-3 rounded-xl border border-neutral-200 bg-neutral-50 p-6 dark:border-neutral-800 dark:bg-surface/50">
 				<AlertTriangle className="h-5 w-5 text-[var(--color-warning-text)]" />
 				<span className="text-sm text-[var(--color-text-muted)]">
 					{t('overview.loadFailed')}
@@ -90,7 +90,7 @@ export default function SecurityScore() {
 		overallScore >= 90 ? 'bg-[var(--color-success-soft)]' : overallScore >= 70 ? 'bg-[var(--color-warning-soft)]' : 'bg-[var(--color-danger-soft)]';
 
 	return (
-		<div className="rounded-xl border border-neutral-200 bg-white p-6 shadow-card dark:border-neutral-800 dark:bg-slate-900">
+		<div className="rounded-xl border border-neutral-200 bg-white p-6 shadow-card dark:border-neutral-800 dark:bg-surface">
 			<div className="flex flex-col items-center gap-4 sm:flex-row sm:justify-between">
 				<div className="flex items-center gap-4">
 					<div className={`flex h-14 w-14 items-center justify-center rounded-full ${scoreBg}`}>

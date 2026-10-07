@@ -75,7 +75,7 @@ export default function AuditReportsPage() {
 						<ErrorState onRetry={() => refetchStats()} />
 					) : statsData ? (
 						<div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-							<div className="text-center p-4 bg-gray-50 dark:bg-gray-800 rounded-lg">
+							<div className="text-center p-4 bg-neutral-50 dark:bg-surface rounded-lg">
 								<div className="text-3xl font-bold text-primary-600 dark:text-sky-300">
 									{Number(statsData.totalLogs).toLocaleString()}
 								</div>
@@ -84,7 +84,7 @@ export default function AuditReportsPage() {
 							{Object.entries(statsData.byModule || {})
 								.slice(0, 3)
 								.map(([k, v]) => (
-									<div key={k} className="text-center p-4 bg-gray-50 dark:bg-gray-800 rounded-lg">
+									<div key={k} className="text-center p-4 bg-neutral-50 dark:bg-surface rounded-lg">
 										<div className="text-3xl font-bold text-primary-600 dark:text-sky-300">
 											{Number(v).toLocaleString()}
 										</div>
@@ -105,18 +105,18 @@ export default function AuditReportsPage() {
 						<div className="space-y-4">
 							<div className="flex items-center justify-center gap-3 text-sm font-mono">
 								<span
-									className="rounded-xs bg-gray-100 dark:bg-gray-800 px-3 py-1.5 text-gray-600 dark:text-gray-300"
+									className="rounded-xs bg-neutral-100 dark:bg-surface px-3 py-1.5 text-[var(--color-text-secondary)] dark:text-[var(--color-text-secondary)]"
 									title={hashChainData.startHash}
 								>
 									{hashChainData.startHash}
 								</span>
 								<ArrowRight className="h-4 w-4 text-[var(--color-text-muted)]" />
-								<span className="rounded-xs bg-gray-100 dark:bg-gray-800 px-3 py-1.5 text-gray-600 dark:text-gray-300">
+								<span className="rounded-xs bg-neutral-100 dark:bg-surface px-3 py-1.5 text-[var(--color-text-secondary)] dark:text-[var(--color-text-secondary)]">
 									...
 								</span>
 								<ArrowRight className="h-4 w-4 text-[var(--color-text-muted)]" />
 								<span
-									className="rounded-xs bg-gray-100 dark:bg-gray-800 px-3 py-1.5 text-gray-600 dark:text-gray-300"
+									className="rounded-xs bg-neutral-100 dark:bg-surface px-3 py-1.5 text-[var(--color-text-secondary)] dark:text-[var(--color-text-secondary)]"
 									title={hashChainData.endHash}
 								>
 									{hashChainData.endHash}
@@ -124,21 +124,21 @@ export default function AuditReportsPage() {
 								<CheckCircle2 className="h-5 w-5 text-[var(--color-success-text)]" />
 							</div>
 							<div className="grid grid-cols-2 md:grid-cols-3 gap-4 text-sm">
-								<div className="text-center p-3 bg-gray-50 dark:bg-gray-800 rounded-lg">
-									<div className="text-lg font-semibold text-gray-700 dark:text-gray-200">
+								<div className="text-center p-3 bg-neutral-50 dark:bg-surface rounded-lg">
+									<div className="text-lg font-semibold text-[var(--color-text-secondary)] dark:text-[var(--color-text-primary)]">
 										{Number(hashChainData.logCount).toLocaleString()}
 									</div>
 									<div className="text-xs text-[var(--color-text-muted)]">{t('audit.logCount')}</div>
 								</div>
-								<div className="text-center p-3 bg-gray-50 dark:bg-gray-800 rounded-lg">
+								<div className="text-center p-3 bg-neutral-50 dark:bg-surface rounded-lg">
 									<div className="text-xs text-[var(--color-text-muted)]">{t('audit.startHash')}</div>
-									<div className="text-xs font-mono text-gray-700 dark:text-gray-300 mt-1 break-all">
+									<div className="text-xs font-mono text-[var(--color-text-secondary)] dark:text-[var(--color-text-secondary)] mt-1 break-all">
 										{hashChainData.startHash}
 									</div>
 								</div>
-								<div className="text-center p-3 bg-gray-50 dark:bg-gray-800 rounded-lg">
+								<div className="text-center p-3 bg-neutral-50 dark:bg-surface rounded-lg">
 									<div className="text-xs text-[var(--color-text-muted)]">{t('audit.endHash')}</div>
-									<div className="text-xs font-mono text-gray-700 dark:text-gray-300 mt-1 break-all">
+									<div className="text-xs font-mono text-[var(--color-text-secondary)] dark:text-[var(--color-text-secondary)] mt-1 break-all">
 										{hashChainData.endHash}
 									</div>
 								</div>
@@ -160,29 +160,29 @@ export default function AuditReportsPage() {
 						<ErrorState />
 					) : logsSummaryData ? (
 						<div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-							<div className="text-center p-4 bg-gray-50 dark:bg-gray-800 rounded-lg">
+							<div className="text-center p-4 bg-neutral-50 dark:bg-surface rounded-lg">
 								<Activity className="h-5 w-5 text-primary-600 dark:text-sky-300 mx-auto mb-1" />
 								<div className="text-2xl font-bold text-primary-600 dark:text-sky-300">
 									{Number(logsSummaryData.totalLogs).toLocaleString()}
 								</div>
 								<div className="text-xs text-[var(--color-text-muted)] mt-1">{t('audit.totalLogs')}</div>
 							</div>
-							<div className="text-center p-4 bg-gray-50 dark:bg-gray-800 rounded-lg">
+							<div className="text-center p-4 bg-neutral-50 dark:bg-surface rounded-lg">
 								<Hash className="h-5 w-5 text-primary-600 dark:text-sky-300 mx-auto mb-1" />
 								<div className="text-2xl font-bold text-primary-600 dark:text-sky-300">
 									{Number(logsSummaryData.moduleCount).toLocaleString()}
 								</div>
 								<div className="text-xs text-[var(--color-text-muted)] mt-1">{t('audit.modules')}</div>
 							</div>
-							<div className="text-center p-4 bg-gray-50 dark:bg-gray-800 rounded-lg">
+							<div className="text-center p-4 bg-neutral-50 dark:bg-surface rounded-lg">
 								<div className="text-xs text-[var(--color-text-muted)]">{t('audit.activeSince')}</div>
-								<div className="text-sm font-medium text-gray-700 dark:text-gray-300 mt-1">
+								<div className="text-sm font-medium text-[var(--color-text-secondary)] dark:text-[var(--color-text-secondary)] mt-1">
 									{logsSummaryData.activeSince || '—'}
 								</div>
 							</div>
-							<div className="text-center p-4 bg-gray-50 dark:bg-gray-800 rounded-lg">
+							<div className="text-center p-4 bg-neutral-50 dark:bg-surface rounded-lg">
 								<div className="text-xs text-[var(--color-text-muted)]">{t('audit.lastActivity')}</div>
-								<div className="text-sm font-medium text-gray-700 dark:text-gray-300 mt-1">
+								<div className="text-sm font-medium text-[var(--color-text-secondary)] dark:text-[var(--color-text-secondary)] mt-1">
 									{logsSummaryData.lastActivity || '—'}
 								</div>
 							</div>
@@ -207,7 +207,7 @@ export default function AuditReportsPage() {
 					)}
 
 					{isError && (
-						<div className="mt-4 rounded-lg border border-neutral-200 bg-neutral-50 p-4 text-sm text-[var(--color-text-muted)] dark:border-neutral-800 dark:bg-slate-900/50">
+						<div className="mt-4 rounded-lg border border-neutral-200 bg-neutral-50 p-4 text-sm text-[var(--color-text-muted)] dark:border-neutral-800 dark:bg-surface/50">
 							<AlertTriangle className="mb-1 inline h-4 w-4" />
 							{t('auditReports.securityTestLoadFailed')}
 						</div>
@@ -331,7 +331,7 @@ export default function AuditReportsPage() {
 															<h3 className="text-lg font-bold text-[var(--color-text-primary)]">
 																{report.title}
 															</h3>
-															<span className="inline-flex items-center gap-1 rounded-full bg-neutral-100 px-2 py-0.5 text-xs font-medium text-[var(--color-text-muted)] dark:bg-slate-800">
+															<span className="inline-flex items-center gap-1 rounded-full bg-neutral-100 px-2 py-0.5 text-xs font-medium text-[var(--color-text-muted)] dark:bg-surface">
 																{report.status}
 															</span>
 														</div>

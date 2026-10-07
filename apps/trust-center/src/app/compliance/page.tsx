@@ -53,7 +53,7 @@ export default function CompliancePage() {
 
 				{/* Dynamic Compliance Score */}
 				{publicScore != null && (
-					<div className="mt-8 rounded-xl border border-primary-200 bg-gradient-to-br from-primary-50 to-white p-6 dark:border-primary-800 dark:from-primary-800 dark:to-slate-900">
+					<div className="mt-8 rounded-xl border border-primary-200 bg-gradient-to-br from-primary-50 to-white p-6 dark:border-primary-800 dark:from-primary-800 dark:to-surface00">
 						<div className="flex flex-col items-start gap-4 sm:flex-row sm:items-center sm:justify-between">
 							<div className="flex items-center gap-4">
 								<div className="flex h-14 w-14 items-center justify-center rounded-xl bg-primary-100 dark:bg-white/10">
@@ -170,7 +170,7 @@ export default function CompliancePage() {
 					)}
 
 					{isError && (
-						<div className="mt-4 rounded-lg border border-neutral-200 bg-neutral-50 p-4 text-sm text-[var(--color-text-muted)] dark:border-neutral-800 dark:bg-slate-900/50">
+						<div className="mt-4 rounded-lg border border-neutral-200 bg-neutral-50 p-4 text-sm text-[var(--color-text-muted)] dark:border-neutral-800 dark:bg-surface/50">
 							<AlertTriangle className="mb-1 inline h-4 w-4" />
 							{t('compliance.findingsLoadFailed')}
 						</div>
@@ -191,7 +191,7 @@ export default function CompliancePage() {
 								return (
 									<div
 										key={finding.id}
-										className="flex flex-col gap-2 rounded-xl border border-neutral-200 bg-white p-4 dark:border-neutral-800 dark:bg-slate-900 sm:flex-row sm:items-center sm:justify-between"
+										className="flex flex-col gap-2 rounded-xl border border-neutral-200 bg-white p-4 dark:border-neutral-800 dark:bg-surface sm:flex-row sm:items-center sm:justify-between"
 									>
 										<div className="flex-1">
 											<div className="flex flex-wrap items-center gap-2">

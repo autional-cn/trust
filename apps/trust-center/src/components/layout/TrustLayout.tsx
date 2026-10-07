@@ -44,7 +44,7 @@ export default function TrustLayout() {
 				{t('a11y.skipToContent')}
 			</a>
 			{/* Header */}
-			<header className="sticky top-0 z-50 border-b border-neutral-200 bg-white/80 backdrop-blur-md dark:border-neutral-800 dark:bg-slate-900/80">
+			<header className="sticky top-0 z-50 border-b border-neutral-200 bg-white/80 backdrop-blur-md dark:border-neutral-800 dark:bg-surface/80">
 				<div className="mx-auto flex h-[var(--layout-header-height)] max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
 					<Link to="/" className="flex items-center gap-2">
 						{/* 这里此前是 <Shield /> —— lucide 的**安全**图标被当成了品牌标。
@@ -67,7 +67,7 @@ export default function TrustLayout() {
 									`rounded-md px-3 py-2 text-sm font-medium transition-colors ${
 										isActive
 											? 'bg-primary-50 text-primary-700 dark:bg-white/10 dark:text-sky-300'
-											: 'text-[var(--color-text-muted)] hover:bg-neutral-50 hover:text-[var(--color-text-primary)] dark:hover:bg-slate-800'
+											: 'text-[var(--color-text-muted)] hover:bg-neutral-50 hover:text-[var(--color-text-primary)] dark:hover:bg-elevated'
 									}`
 								}
 							>
@@ -79,7 +79,7 @@ export default function TrustLayout() {
 					{/* Desktop Controls */}
 					<div className="hidden items-center gap-2 md:flex">
 						<LanguageSwitcher
-							className="inline-flex h-11 items-center gap-1.5 rounded-md border border-neutral-200 bg-neutral-50 px-3 text-xs font-medium text-[var(--color-text-muted)] transition-colors hover:bg-neutral-100 dark:border-neutral-700 dark:bg-slate-800 dark:hover:bg-slate-700"
+							className="inline-flex h-11 items-center gap-1.5 rounded-md border border-neutral-200 bg-neutral-50 px-3 text-xs font-medium text-[var(--color-text-muted)] transition-colors hover:bg-neutral-100 dark:border-neutral-700 dark:bg-surface dark:hover:bg-elevated"
 							showIcon
 						/>
 						<ThemeToggle
@@ -92,7 +92,7 @@ export default function TrustLayout() {
 					{/* Mobile menu button */}
 					<div className="flex items-center gap-2 md:hidden">
 						<LanguageSwitcher
-							className="inline-flex h-11 items-center gap-1.5 rounded-md border border-neutral-200 bg-neutral-50 px-3 text-xs font-medium text-[var(--color-text-muted)] transition-colors hover:bg-neutral-100 dark:border-neutral-700 dark:bg-slate-800 dark:hover:bg-slate-700"
+							className="inline-flex h-11 items-center gap-1.5 rounded-md border border-neutral-200 bg-neutral-50 px-3 text-xs font-medium text-[var(--color-text-muted)] transition-colors hover:bg-neutral-100 dark:border-neutral-700 dark:bg-surface dark:hover:bg-elevated"
 							showIcon
 						/>
 						<ThemeToggle
@@ -112,7 +112,7 @@ export default function TrustLayout() {
 
 				{/* Mobile Nav */}
 				{mobileOpen && (
-					<div className="border-t border-neutral-200 bg-white dark:border-neutral-800 dark:bg-slate-900 md:hidden">
+					<div className="border-t border-neutral-200 bg-white dark:border-neutral-800 dark:bg-surface md:hidden">
 						<div className="space-y-1 px-4 py-3">
 							{navLinks.map((link) => (
 								<NavLink
@@ -123,7 +123,7 @@ export default function TrustLayout() {
 										`block rounded-md px-3 py-2 text-base font-medium ${
 											isActive
 												? 'bg-primary-50 text-primary-700 dark:bg-white/10 dark:text-sky-300'
-												: 'text-[var(--color-text-muted)] hover:bg-neutral-50 dark:hover:bg-slate-800'
+												: 'text-[var(--color-text-muted)] hover:bg-neutral-50 dark:hover:bg-elevated'
 										}`
 									}
 								>
@@ -141,7 +141,7 @@ export default function TrustLayout() {
 			</main>
 
 			{/* Footer */}
-			<footer className="border-t border-neutral-200 bg-neutral-50 dark:border-neutral-800 dark:bg-slate-900">
+			<footer className="border-t border-neutral-200 bg-neutral-50 dark:border-neutral-800 dark:bg-surface">
 				<div className="mx-auto max-w-7xl px-4 py-10 sm:px-6 lg:px-8">
 					<div className="grid grid-cols-2 gap-8 md:grid-cols-4">
 						<div className="col-span-2 md:col-span-1">

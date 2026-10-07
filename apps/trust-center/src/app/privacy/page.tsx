@@ -54,7 +54,7 @@ export default function PrivacyPage() {
 						return (
 							<div
 								key={key}
-								className="rounded-md border border-neutral-200 bg-white p-6 shadow-card dark:border-neutral-800 dark:bg-slate-900 sm:p-8"
+								className="rounded-md border border-neutral-200 bg-white p-6 shadow-card dark:border-neutral-800 dark:bg-surface sm:p-8"
 							>
 								<div className="flex items-center gap-3">
 									<div className="flex h-10 w-10 items-center justify-center rounded-lg bg-primary-50 dark:bg-white/10">
@@ -82,7 +82,7 @@ export default function PrivacyPage() {
 
 				<Link
 					to="/privacy/device"
-					className="group mt-8 flex items-start gap-4 rounded-xl border border-neutral-200 bg-white p-5 transition-all hover:border-primary-200 dark:border-neutral-800 dark:bg-slate-900 dark:hover:border-primary-800"
+					className="group mt-8 flex items-start gap-4 rounded-xl border border-neutral-200 bg-white p-5 transition-all hover:border-primary-200 dark:border-neutral-800 dark:bg-surface dark:hover:border-primary-800"
 				>
 					<div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-primary-50 text-primary-600 dark:bg-white/10 dark:text-sky-300">
 						<Smartphone className="h-5 w-5" />
@@ -98,7 +98,7 @@ export default function PrivacyPage() {
 					<ArrowRight className="mt-2.5 h-5 w-5 shrink-0 text-[var(--color-text-muted)] transition-transform group-hover:translate-x-0.5" />
 				</Link>
 
-				<div className="mt-12 rounded-md border border-neutral-200 bg-neutral-50 p-6 dark:border-neutral-800 dark:bg-slate-900/50 sm:p-8">
+				<div className="mt-12 rounded-md border border-neutral-200 bg-neutral-50 p-6 dark:border-neutral-800 dark:bg-surface/50 sm:p-8">
 					<div className="flex items-center gap-3">
 						<Shield className="h-6 w-6 text-primary-600 dark:text-sky-300" />
 						<h2 className="text-lg font-bold text-[var(--color-text-primary)]">
