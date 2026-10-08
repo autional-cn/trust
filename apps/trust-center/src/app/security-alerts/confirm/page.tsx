@@ -61,8 +61,8 @@ export default function SecurityAlertsConfirmPage() {
 
 				{state === 'success' && (
 					<>
-						<div className="mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-success-soft dark:bg-success-soft/30">
-							<CheckCircle2 className="h-8 w-8 text-success-text dark:text-success-text" />
+						<div className="mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-success-soft/30">
+							<CheckCircle2 className="h-8 w-8 text-success-text" />
 						</div>
 						<h1 className="text-2xl font-bold text-[var(--color-text-primary)]">
 							{t('securityAlerts.confirm.successTitle')}
@@ -75,8 +75,8 @@ export default function SecurityAlertsConfirmPage() {
 
 				{failed && (
 					<>
-						<div className="mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-danger-soft dark:bg-danger-soft/30">
-							<XCircle className="h-8 w-8 text-danger-text dark:text-danger-text" />
+						<div className="mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-danger-soft/30">
+							<XCircle className="h-8 w-8 text-danger-text" />
 						</div>
 						<h1 className="text-2xl font-bold text-[var(--color-text-primary)]">
 							{t('securityAlerts.confirm.failTitle')}

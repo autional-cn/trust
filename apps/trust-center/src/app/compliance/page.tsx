@@ -53,7 +53,7 @@ export default function CompliancePage() {
 
 				{/* Dynamic Compliance Score */}
 				{publicScore != null && (
-					<div className="mt-8 rounded-xl border border-primary-200 bg-gradient-to-br from-primary-50 to-white p-6 dark:border-primary-800 dark:from-primary-800 dark:to-surface00">
+					<div className="mt-8 rounded-xl border border-primary-200 bg-gradient-to-br from-primary-50 to-white p-6 dark:border-primary-800 dark:from-primary-800 dark:to-surface">
 						<div className="flex flex-col items-start gap-4 sm:flex-row sm:items-center sm:justify-between">
 							<div className="flex items-center gap-4">
 								<div className="flex h-14 w-14 items-center justify-center rounded-xl bg-primary-100 dark:bg-white/10">

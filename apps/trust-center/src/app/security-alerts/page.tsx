@@ -96,7 +96,7 @@ export default function SecurityAlertsPage() {
 
 				{submitState === 'success' ? (
 					<div className="mt-10 rounded-md border border-success-soft bg-success-soft p-8 text-center dark:border-success-soft dark:bg-success-soft/20">
-						<div className="mx-auto flex h-14 w-14 items-center justify-center rounded-full bg-success-soft dark:bg-success-soft/30">
+						<div className="mx-auto flex h-14 w-14 items-center justify-center rounded-full bg-success-soft/30">
 							<CheckCircle2 className="h-7 w-7 text-success-text" />
 						</div>
 						<h2 className="mt-4 text-xl font-semibold text-[var(--color-text-primary)]">
