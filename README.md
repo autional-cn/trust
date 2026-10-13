@@ -1,3 +1,5 @@
+> **本仓库已归档**（只读）：源码与后续开发已迁移至 [github.com/autional/trust](https://github.com/autional/trust)；线上服务见 [trust.autional.cn](https://trust.autional.cn)。
+
 # Autional 信任中心
 
 **域名**：[trust.autional.cn](https://trust.autional.cn)
